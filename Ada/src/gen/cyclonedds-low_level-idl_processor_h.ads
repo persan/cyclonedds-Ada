@@ -15,65 +15,110 @@ with CycloneDDS.Low_Level.idl_retcode_h;
 
 package CycloneDDS.Low_Level.idl_processor_h is
 
-   IDL_FLAG_KEYLIST : constant := (2**0);  --  /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:30
+   IDL_FLAG_KEYLIST : constant := (2**0);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:30
 
-   IDL_FLAG_CASE_SENSITIVE : constant := (2**1);  --  /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:34
+   IDL_FLAG_CASE_SENSITIVE : constant := (2**1);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:34
 
-   IDL_FLAG_EXTENDED_DATA_TYPES : constant := (2**2);  --  /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:36
+   IDL_FLAG_EXTENDED_DATA_TYPES : constant := (2**2);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:36
 
-   IDL_FLAG_ANONYMOUS_TYPES : constant := (2**3);  --  /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:38
+   IDL_FLAG_ANONYMOUS_TYPES : constant := (2**3);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:38
 
-   IDL_FLAG_ANNOTATIONS : constant := (2**4);  --  /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:40
+   IDL_FLAG_ANNOTATIONS : constant := (2**4);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:40
 
-   IDL_WRITE : constant := (2**31);  --  /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:42
+   IDL_WRITE : constant := (2**31);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:42
 
+  -- * Copyright(c) 2021 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
+  --*
+  -- * @file
+  -- * Types and functions for the IDL compiler.
+  --  
+
+  -- enable "#pragma keylist" for backwards compatibility  
+  -- case-sensitive extension can be used to allow e.g. field names in structs
+  --   and unions that differ solely in case from the name of the respective
+  --   struct or union. i.e. "struct FOO_ { octet foo_[42]; };"  
+
+  -- enable building block extended data types  
+  -- enable building block anonymous types  
+  -- enable building block annotations  
+  -- flag used by idlc to indicate end-of-buffer (private)  
    type idl_buffer;
-   subtype idl_buffer_t is idl_buffer;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:44
+   subtype idl_buffer_t is idl_buffer;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:44
 
    type idl_buffer is record
-      data : Interfaces.C.Strings.chars_ptr;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:46
-      size : aliased size_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:47
-      used : aliased size_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:48
+      data : Interfaces.C.Strings.chars_ptr;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:46
+      size : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:47
+      used : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:48
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:45
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:45
 
+  --*< total number of bytes available  
+  --*< number of bytes used  
    type idl_pstate;
-   subtype idl_pstate_t is idl_pstate;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:51
+   subtype idl_pstate_t is idl_pstate;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:51
 
-   subtype anon_enum15036 is unsigned;
-   anon_enum15036_IDL_SCAN : constant anon_enum15036 := 0;
-   anon_enum15036_IDL_SCAN_DIRECTIVE : constant anon_enum15036 := 128;
-   anon_enum15036_IDL_SCAN_DIRECTIVE_NAME : constant anon_enum15036 := 129;
-   anon_enum15036_IDL_SCAN_LINE : constant anon_enum15036 := 192;
-   anon_enum15036_IDL_SCAN_PATH : constant anon_enum15036 := 193;
-   anon_enum15036_IDL_SCAN_FLAGS : constant anon_enum15036 := 194;
-   anon_enum15036_IDL_SCAN_FILE : constant anon_enum15036 := 195;
-   anon_enum15036_IDL_SCAN_EXTRA_TOKENS : constant anon_enum15036 := 196;
-   anon_enum15036_IDL_SCAN_PRAGMA : constant anon_enum15036 := 160;
-   anon_enum15036_IDL_SCAN_UNKNOWN_PRAGMA : constant anon_enum15036 := 161;
-   anon_enum15036_IDL_SCAN_KEYLIST : constant anon_enum15036 := 176;
-   anon_enum15036_IDL_SCAN_DATA_TYPE : constant anon_enum15036 := 177;
-   anon_enum15036_IDL_SCAN_NAME : constant anon_enum15036 := 178;
-   anon_enum15036_IDL_SCAN_SCOPE : constant anon_enum15036 := 179;
-   anon_enum15036_IDL_SCAN_KEY : constant anon_enum15036 := 180;
-   anon_enum15036_IDL_SCAN_FIELD : constant anon_enum15036 := 181;
-   anon_enum15036_IDL_SCAN_ACCESS : constant anon_enum15036 := 182;
-   anon_enum15036_IDL_SCAN_GRAMMAR : constant anon_enum15036 := 256;
-   anon_enum15036_IDL_SCAN_ANNOTATION : constant anon_enum15036 := 257;
-   anon_enum15036_IDL_SCAN_ANNOTATION_NAME : constant anon_enum15036 := 258;
-   anon_enum15036_IDL_SCAN_ANNOTATION_APPL : constant anon_enum15036 := 259;
-   anon_enum15036_IDL_SCAN_ANNOTATION_APPL_SCOPE : constant anon_enum15036 := 260;
-   anon_enum15036_IDL_SCAN_ANNOTATION_APPL_SCOPED_NAME : constant anon_enum15036 := 261;
-   anon_enum15036_IDL_SCAN_ANNOTATION_APPL_NAME : constant anon_enum15036 := 262;
-   anon_enum15036_IDL_EOF : constant anon_enum15036 := 512;
-   type anon_struct15035 is record
-      state : anon_enum15036;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:103
-      cursor : Interfaces.C.Strings.chars_ptr;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:104
-      limit : Interfaces.C.Strings.chars_ptr;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:105
-      position : aliased CycloneDDS.Low_Level.idl_symbol_h.idl_position_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:106
+  --*< processor options  
+  --*< normalized paths used in include statements  
+  --*< filenames used in #line directives  
+  --*< dynamically sized input buffer  
+  --* scanning preprocessor directive  
+  --* scanning #line directive  
+  --* scanning #pragma directive  
+  --* scanning #pragma keylist directive  
+  --* scanning IDL  
+  -- scanning "@annotation" or scoped name after "@" in IDL  
+  --* expect identifier, i.e. annotation in "@annotation"  
+  --* expect identifier, i.e. foo in "@annotation foo"  
+  --* expect scope or identifier, i.e. :: in "@::" and foo in "@foo"  
+  --* expect scope, i.e. :: in "@foo::bar::"  
+  --* expect identifier in scoped name, i.e. foo in "@foo::bar"  
+  --* final identifier in scoped name, i.e. bar in "@foo::bar" or "@bar"  
+  --* end of input  
+  --*< default state  
+   subtype anon2150_enum2662 is unsigned;
+   IDL_SCAN : constant anon2150_enum2662 := 0;
+   IDL_SCAN_DIRECTIVE : constant anon2150_enum2662 := 128;
+   IDL_SCAN_DIRECTIVE_NAME : constant anon2150_enum2662 := 129;
+   IDL_SCAN_LINE : constant anon2150_enum2662 := 192;
+   IDL_SCAN_PATH : constant anon2150_enum2662 := 193;
+   IDL_SCAN_FLAGS : constant anon2150_enum2662 := 194;
+   IDL_SCAN_FILE : constant anon2150_enum2662 := 195;
+   IDL_SCAN_EXTRA_TOKENS : constant anon2150_enum2662 := 196;
+   IDL_SCAN_PRAGMA : constant anon2150_enum2662 := 160;
+   IDL_SCAN_UNKNOWN_PRAGMA : constant anon2150_enum2662 := 161;
+   IDL_SCAN_KEYLIST : constant anon2150_enum2662 := 176;
+   IDL_SCAN_DATA_TYPE : constant anon2150_enum2662 := 177;
+   IDL_SCAN_NAME : constant anon2150_enum2662 := 178;
+   IDL_SCAN_SCOPE : constant anon2150_enum2662 := 179;
+   IDL_SCAN_KEY : constant anon2150_enum2662 := 180;
+   IDL_SCAN_FIELD : constant anon2150_enum2662 := 181;
+   IDL_SCAN_ACCESS : constant anon2150_enum2662 := 182;
+   IDL_SCAN_GRAMMAR : constant anon2150_enum2662 := 256;
+   IDL_SCAN_ANNOTATION : constant anon2150_enum2662 := 257;
+   IDL_SCAN_ANNOTATION_NAME : constant anon2150_enum2662 := 258;
+   IDL_SCAN_ANNOTATION_APPL : constant anon2150_enum2662 := 259;
+   IDL_SCAN_ANNOTATION_APPL_SCOPE : constant anon2150_enum2662 := 260;
+   IDL_SCAN_ANNOTATION_APPL_SCOPED_NAME : constant anon2150_enum2662 := 261;
+   IDL_SCAN_ANNOTATION_APPL_NAME : constant anon2150_enum2662 := 262;
+   IDL_EOF : constant anon2150_enum2662 := 512;
+   type anon2150_struct2661 is record
+      state : anon2150_enum2662;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:103
+      cursor : Interfaces.C.Strings.chars_ptr;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:104
+      limit : Interfaces.C.Strings.chars_ptr;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:105
+      position : aliased CycloneDDS.Low_Level.idl_symbol_h.idl_position_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:106
    end record
    with Convention => C_Pass_By_Copy;
-   type anon_enum15038 is 
+   type anon2150_enum2664 is 
      (IDL_PARSE,
       IDL_PARSE_ANNOTATION,
       IDL_PARSE_ANNOTATION_BODY,
@@ -82,86 +127,89 @@ package CycloneDDS.Low_Level.idl_processor_h is
       IDL_PARSE_ANNOTATION_APPL_PARAMS,
       IDL_PARSE_UNKNOWN_ANNOTATION_APPL_PARAMS)
    with Convention => C;
-   type anon_struct15037 is record
-      state : anon_enum15038;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:117
-      yypstate : System.Address;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:118
+   type anon2150_struct2663 is record
+      state : anon2150_enum2664;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:117
+      yypstate : System.Address;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:118
    end record
    with Convention => C_Pass_By_Copy;
    type idl_pstate is record
-      keylists : aliased Extensions.bool;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:53
-      annotations : aliased Extensions.bool;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:54
-      flags : aliased Interfaces.Unsigned_32;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:55
-      paths : access CycloneDDS.Low_Level.idl_symbol_h.idl_file;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:56
-      files : access CycloneDDS.Low_Level.idl_symbol_h.idl_file;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:57
-      sources : access CycloneDDS.Low_Level.idl_symbol_h.idl_source;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:58
-      global_scope : access CycloneDDS.Low_Level.idl_scope_h.idl_scope;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:59
-      annotation_scope : access CycloneDDS.Low_Level.idl_scope_h.idl_scope;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:59
-      scope : access CycloneDDS.Low_Level.idl_scope_h.idl_scope;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:59
-      directive : System.Address;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:60
-      builtin_root : access CycloneDDS.Low_Level.idl_tree_h.idl_node;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:61
-      root : access CycloneDDS.Low_Level.idl_tree_h.idl_node;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:61
-      buffer : aliased idl_buffer_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:62
-      scanner : aliased anon_struct15035;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:107
-      parser : aliased anon_struct15037;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:119
+      keylists : aliased Extensions.bool;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:53
+      annotations : aliased Extensions.bool;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:54
+      flags : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:55
+      paths : access CycloneDDS.Low_Level.idl_symbol_h.idl_file_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:56
+      files : access CycloneDDS.Low_Level.idl_symbol_h.idl_file_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:57
+      sources : access CycloneDDS.Low_Level.idl_symbol_h.idl_source_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:58
+      global_scope : access CycloneDDS.Low_Level.idl_scope_h.idl_scope_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:59
+      annotation_scope : access CycloneDDS.Low_Level.idl_scope_h.idl_scope_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:59
+      scope : access CycloneDDS.Low_Level.idl_scope_h.idl_scope_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:59
+      directive : System.Address;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:60
+      builtin_root : access CycloneDDS.Low_Level.idl_tree_h.idl_node_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:61
+      root : access CycloneDDS.Low_Level.idl_tree_h.idl_node_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:61
+      buffer : aliased idl_buffer_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:62
+      scanner : aliased anon2150_struct2661;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:107
+      parser : aliased anon2150_struct2663;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:119
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:52
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:52
 
+  --*< state of Bison generated parser  
    type idl_builtin_annotation;
-   subtype idl_builtin_annotation_t is idl_builtin_annotation;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:122
+   subtype idl_builtin_annotation_t is idl_builtin_annotation;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:122
 
+  --*< precise syntax  
    type idl_builtin_annotation is record
-      syntax : Interfaces.C.Strings.chars_ptr;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:124
-      summary : Interfaces.C.Strings.chars_ptr;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:125
-      callback : CycloneDDS.Low_Level.idl_tree_h.idl_annotation_callback_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:126
+      syntax : Interfaces.C.Strings.chars_ptr;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:124
+      summary : Interfaces.C.Strings.chars_ptr;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:125
+      callback : CycloneDDS.Low_Level.idl_tree_h.idl_annotation_callback_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:126
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:123
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:123
 
+  --*< brief yet significant description  
    function idl_create_pstate
-     (flags : Interfaces.Unsigned_32;
+     (flags : unsigned;
       annotations : access constant idl_builtin_annotation_t;
-      pstatep : System.Address) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:130
+      pstatep : System.Address) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:130
    with Import => True, 
         Convention => C, 
         External_Name => "idl_create_pstate";
 
-   procedure idl_delete_pstate (pstate : access idl_pstate_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:136
+   procedure idl_delete_pstate (pstate : access idl_pstate_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:136
    with Import => True, 
         Convention => C, 
         External_Name => "idl_delete_pstate";
 
-   function idl_parse (pstate : access idl_pstate_t) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:139
+   function idl_parse (pstate : access idl_pstate_t) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:139
    with Import => True, 
         Convention => C, 
         External_Name => "idl_parse";
 
-   function idl_parse_string (pstate : access idl_pstate_t; str : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:142
+   function idl_parse_string (pstate : access idl_pstate_t; str : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:142
    with Import => True, 
         Convention => C, 
         External_Name => "idl_parse_string";
 
    procedure idl_verror
      (pstate : access idl_pstate_t;
-      loc : access constant CycloneDDS.Low_Level.idl_symbol_h.idl_location;
+      loc : access constant CycloneDDS.Low_Level.idl_symbol_h.idl_location_t;
       fmt : Interfaces.C.Strings.chars_ptr;
-      ap : access System.Address)  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:145
+      ap : access System.Address)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:145
    with Import => True, 
         Convention => C, 
         External_Name => "idl_verror";
 
    procedure idl_error
      (pstate : access idl_pstate_t;
-      loc : access constant CycloneDDS.Low_Level.idl_symbol_h.idl_location;
+      loc : access constant CycloneDDS.Low_Level.idl_symbol_h.idl_location_t;
       fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      )  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:148
+      )  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:148
    with Import => True, 
         Convention => C, 
         External_Name => "idl_error";
 
    procedure idl_warning
      (pstate : access idl_pstate_t;
-      loc : access constant CycloneDDS.Low_Level.idl_symbol_h.idl_location;
+      loc : access constant CycloneDDS.Low_Level.idl_symbol_h.idl_location_t;
       fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      )  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/processor.h:151
+      )  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/processor.h:151
    with Import => True, 
         Convention => C, 
         External_Name => "idl_warning";

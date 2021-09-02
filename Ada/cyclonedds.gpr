@@ -1,3 +1,4 @@
-project Cyclonedds is
-    for Source_Dirs use ();
+abstract project Cyclonedds is
+   for Source_Files use ();
 end Cyclonedds;
+

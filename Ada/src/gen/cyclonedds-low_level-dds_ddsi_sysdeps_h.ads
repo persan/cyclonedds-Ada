@@ -15,10 +15,21 @@ package CycloneDDS.Low_Level.dds_ddsi_sysdeps_h is
    --    return (void) 0;
    --  arg-macro: function ASSERT_MUTEX_HELD (x)
    --    return (void) 0;
+  -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
    procedure log_stacktrace
      (logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg;
       name : Interfaces.C.Strings.chars_ptr;
-      tid : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/sysdeps.h:25
+      tid : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/sysdeps.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "log_stacktrace";

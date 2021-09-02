@@ -44,38 +44,49 @@ package CycloneDDS.Low_Level.dds_ddsrt_bswap_h is
    --    ddsrt_bswap8 (x)
    --  arg-macro: procedure ddsrt_fromBE8u (x)
    --    ddsrt_bswap8u (x)
+  -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
    type ddsrt_byte_order_selector is 
      (DDSRT_BOSEL_NATIVE,
       DDSRT_BOSEL_BE,
       DDSRT_BOSEL_LE)
-   with Convention => C;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:25
+   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:25
 
-   function ddsrt_bswap2u (x : Interfaces.Unsigned_16) return Interfaces.Unsigned_16  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:31
+   function ddsrt_bswap2u (x : unsigned_short) return unsigned_short  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:31
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap2u";
 
-   function ddsrt_bswap2 (x : Interfaces.Integer_16) return Interfaces.Integer_16  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:36
+   function ddsrt_bswap2 (x : short) return short  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:36
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap2";
 
-   function ddsrt_bswap4u (x : Interfaces.Unsigned_32) return Interfaces.Unsigned_32  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:41
+   function ddsrt_bswap4u (x : unsigned) return unsigned  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:41
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap4u";
 
-   function ddsrt_bswap4 (x : Interfaces.Integer_32) return Interfaces.Integer_32  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:46
+   function ddsrt_bswap4 (x : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:46
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap4";
 
-   function ddsrt_bswap8u (x : Interfaces.Unsigned_64) return Interfaces.Unsigned_64  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:51
+   function ddsrt_bswap8u (x : unsigned_long) return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:51
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap8u";
 
-   function ddsrt_bswap8 (x : Interfaces.Integer_64) return Interfaces.Integer_64  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/bswap.h:58
+   function ddsrt_bswap8 (x : long) return CycloneDDS.Low_Level.bits_stdint_intn_h.int64_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/bswap.h:58
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap8";

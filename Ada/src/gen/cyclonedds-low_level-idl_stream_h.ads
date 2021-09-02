@@ -9,21 +9,32 @@ with System;
 
 package CycloneDDS.Low_Level.idl_stream_h is
 
-   function idl_fopen (pathname : Interfaces.C.Strings.chars_ptr; mode : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.x86_64_linux_gnu_bits_types_struct_FILE_h.u_IO_FILE  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/stream.h:21
+  -- * Copyright(c) 2021 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
+   function idl_fopen (pathname : Interfaces.C.Strings.chars_ptr; mode : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.bits_types_FILE_h.FILE  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/stream.h:21
    with Import => True, 
         Convention => C, 
         External_Name => "idl_fopen";
 
-   function idl_fprintf (fp : access CycloneDDS.Low_Level.x86_64_linux_gnu_bits_types_struct_FILE_h.u_IO_FILE; fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      ) return int  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/stream.h:23
+   function idl_fprintf (fp : access CycloneDDS.Low_Level.bits_types_FILE_h.FILE; fmt : Interfaces.C.Strings.chars_ptr  -- , ...
+      ) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/stream.h:23
    with Import => True, 
         Convention => C, 
         External_Name => "idl_fprintf";
 
    function idl_vfprintf
-     (fp : access CycloneDDS.Low_Level.x86_64_linux_gnu_bits_types_struct_FILE_h.u_IO_FILE;
+     (fp : access CycloneDDS.Low_Level.bits_types_FILE_h.FILE;
       fmt : Interfaces.C.Strings.chars_ptr;
-      ap : access System.Address) return int  -- /home/stprsa/cyclonedds/Ada/../target/include/idl/stream.h:26
+      ap : access System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/stream.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "idl_vfprintf";

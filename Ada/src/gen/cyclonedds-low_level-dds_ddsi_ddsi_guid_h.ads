@@ -7,38 +7,49 @@ with Interfaces.C; use Interfaces.C;
 
 package CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h is
 
-   type anon_array2012 is array (0 .. 11) of aliased unsigned_char;
-   type anon_array2014 is array (0 .. 2) of aliased Interfaces.Unsigned_32;
+  -- * Copyright(c) 2019 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
+   type anon4078_array4080 is array (0 .. 11) of aliased unsigned_char;
+   type anon4078_array4081 is array (0 .. 2) of aliased unsigned;
    type ddsi_guid_prefix (discr : unsigned := 0) is record
       case discr is
          when 0 =>
-            s : aliased anon_array2012;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:22
+            s : aliased anon4078_array4080;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:22
          when others =>
-            u : aliased anon_array2014;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:23
+            u : aliased anon4078_array4081;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:23
       end case;
    end record
    with Convention => C_Pass_By_Copy,
-        Unchecked_Union => True;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:21
+        Unchecked_Union => True;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:21
 
-   subtype ddsi_guid_prefix_t is ddsi_guid_prefix;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:24
+   subtype ddsi_guid_prefix_t is ddsi_guid_prefix;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:24
 
    type ddsi_entityid (discr : unsigned := 0) is record
       case discr is
          when others =>
-            u : aliased Interfaces.Unsigned_32;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:26
+            u : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:26
       end case;
    end record
    with Convention => C_Pass_By_Copy,
-        Unchecked_Union => True;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:25
+        Unchecked_Union => True;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:25
 
-   subtype ddsi_entityid_t is ddsi_entityid;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:27
+   subtype ddsi_entityid_t is ddsi_entityid;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:27
 
    type ddsi_guid is record
-      prefix : aliased ddsi_guid_prefix_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:29
-      entityid : aliased ddsi_entityid_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:30
+      prefix : aliased ddsi_guid_prefix_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:29
+      entityid : aliased ddsi_entityid_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:30
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:28
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:28
 
-   subtype ddsi_guid_t is ddsi_guid;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_guid.h:31
+   subtype ddsi_guid_t is ddsi_guid;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_guid.h:31
 
 end CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h;

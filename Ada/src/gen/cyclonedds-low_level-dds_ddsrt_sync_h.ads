@@ -9,111 +9,296 @@ with CycloneDDS.Low_Level.dds_ddsrt_time_h;
 
 package CycloneDDS.Low_Level.dds_ddsrt_sync_h is
 
-   procedure ddsrt_mutex_init (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:41
+  -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
+  --*
+  -- * @brief Initialize a mutex.
+  -- *
+  -- * @param[in]  mutex  Mutex to itialize.
+  --  
+
+   procedure ddsrt_mutex_init (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:41
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mutex_init";
 
-   procedure ddsrt_mutex_destroy (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:51
+  --*
+  -- * @brief Destroy a mutex.
+  -- *
+  -- * @param[in]  mutex  Mutex to destroy.
+  --  
+
+   procedure ddsrt_mutex_destroy (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:51
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mutex_destroy";
 
-   procedure ddsrt_mutex_lock (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:61
+  --*
+  -- * @brief Acquire a mutex.
+  -- *
+  -- * @param[in]  mutex  Mutex to acquire.
+  --  
+
+   procedure ddsrt_mutex_lock (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:61
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mutex_lock";
 
-   function ddsrt_mutex_trylock (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t) return Extensions.bool  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:73
+  --*
+  -- * @brief Acquire a mutex if it is not already acquired.
+  -- *
+  -- * @param[in]  mutex  Mutex to acquire.
+  -- *
+  -- * @returns true if the mutex was acquired, false otherwise.
+  --  
+
+   function ddsrt_mutex_trylock (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:73
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mutex_trylock";
 
-   procedure ddsrt_mutex_unlock (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:84
+  --*
+  -- * @brief Release an acquired mutex.
+  -- *
+  -- * @param[in]  mutex  Mutex to release.
+  --  
+
+   procedure ddsrt_mutex_unlock (mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:84
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mutex_unlock";
 
-   procedure ddsrt_cond_init (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:94
+  --*
+  -- * @brief Initialize a condition variable.
+  -- *
+  -- * @param[in]  cond  Condition variable to initialize.
+  --  
+
+   procedure ddsrt_cond_init (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:94
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_init";
 
-   procedure ddsrt_cond_destroy (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:104
+  --*
+  -- * @brief Destroy a condition variable.
+  -- *
+  -- * @param[in]  cond  Condition variable to destroy.
+  --  
+
+   procedure ddsrt_cond_destroy (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:104
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_destroy";
 
-   procedure ddsrt_cond_wait (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t; mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:119
+  --*
+  -- * @brief Wait for a condition variable to be signalled.
+  -- *
+  -- * @param[in]  cond   Condition variable to block on.
+  -- * @param[in]  mutex  Mutex to associate with condition variable.
+  -- *
+  -- * @pre The calling thread must hold the mutex specified by @mutex.
+  -- *
+  -- * @post The calling thread will hold the mutex specified by @mutex.
+  --  
+
+   procedure ddsrt_cond_wait (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t; mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:119
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_wait";
 
+  --*
+  -- * @brief Wait until @abstime for a condition variable to be signalled.
+  -- *
+  -- * @param[in]  cond     Condition variable to block on.
+  -- * @param[in]  mutex    Mutex to associate with condition variable.
+  -- * @param[in]  abstime  Time in nanoseconds since UNIX Epoch.
+  -- *
+  -- * @pre The calling thread must hold the mutex specified by @mutex.
+  -- *
+  -- * @post The calling thread will hold the mutex specified by @mutex.
+  -- *
+  -- * @returns false if the condition variable was not signalled before the
+  -- *          absolute time specified by @abstime passed, otherwise true.
+  --  
+
    function ddsrt_cond_waituntil
      (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t;
       mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;
-      abstime : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_time_t) return Extensions.bool  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:139
+      abstime : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_time_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:139
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_waituntil";
 
+  --*
+  -- * @brief Wait for @reltime for a condition variable to be signalled.
+  -- *
+  -- * @param[in]  cond     Condition variable to block on.
+  -- * @param[in]  mutex    Mutex to associate with condition variable.
+  -- * @param[in]  reltime  Time in nanoseconds since UNIX Epoch.
+  -- *
+  -- * @pre The calling thread must hold the mutex specified by @mutex.
+  -- *
+  -- * @post The calling thread will hold the mutex specified by @mutex.
+  -- *
+  -- * @returns false if the condition variable was not signalled before the
+  -- *          relative time specified by @reltime passed, otherwise true.
+  --  
+
    function ddsrt_cond_waitfor
      (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t;
       mutex : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;
-      reltime : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:160
+      reltime : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:160
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_waitfor";
 
-   procedure ddsrt_cond_signal (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:176
+  --*
+  -- * @brief Signal a condition variable and unblock at least one thread.
+  -- *
+  -- * @param[in]  cond  Condition variable to signal.
+  -- *
+  -- * @pre The mutex associated with the condition in general should be acquired
+  -- *      by the calling thread before setting the condition state and
+  -- *      signalling.
+  --  
+
+   procedure ddsrt_cond_signal (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:176
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_signal";
 
-   procedure ddsrt_cond_broadcast (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:190
+  --*
+  -- * @brief Signal a condition variable and unblock all threads.
+  -- *
+  -- * @param[in]  cond  Condition variable to signal.
+  -- *
+  -- * @pre The mutex associated with the condition in general should be acquired
+  -- *      by the calling thread before setting the condition state and
+  -- *      signalling
+  --  
+
+   procedure ddsrt_cond_broadcast (cond : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:190
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_cond_broadcast";
 
-   procedure ddsrt_rwlock_init (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:200
+  --*
+  -- * @brief Initialize a read-write lock.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to initialize.
+  --  
+
+   procedure ddsrt_rwlock_init (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:200
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_init";
 
-   procedure ddsrt_rwlock_destroy (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:210
+  --*
+  -- * @brief Destroy a read-write lock.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to destroy.
+  --  
+
+   procedure ddsrt_rwlock_destroy (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:210
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_destroy";
 
-   procedure ddsrt_rwlock_read (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:222
+  --*
+  -- * @brief Acquire a read-write lock for reading.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to acquire.
+  -- *
+  -- * @post Data related to the critical section must not be changed by the
+  -- *       calling thread.
+  --  
+
+   procedure ddsrt_rwlock_read (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:222
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_read";
 
-   procedure ddsrt_rwlock_write (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:232
+  --*
+  -- * @brief Acquire a read-write lock for writing.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to acquire.
+  --  
+
+   procedure ddsrt_rwlock_write (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:232
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_write";
 
-   function ddsrt_rwlock_tryread (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t) return Extensions.bool  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:250
+  --*
+  -- * @brief Try to acquire a read-write lock for reading.
+  -- *
+  -- * Try to acquire a read-write lock while for reading, immediately return if
+  -- * the lock is already exclusively acquired by another thread.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to aqcuire.
+  -- *
+  -- * @post Data related to the critical section must not changed by the
+  -- *       calling thread.
+  -- *
+  -- * @returns true if the lock was acquired, otherwise false.
+  --  
+
+   function ddsrt_rwlock_tryread (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:250
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_tryread";
 
-   function ddsrt_rwlock_trywrite (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t) return Extensions.bool  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:266
+  --*
+  -- * @brief Try to acquire a read-write lock for writing.
+  -- *
+  -- * Try to acquire a read-write lock for writing, immediately return if the
+  -- * lock is already acquired, either for reading or writing, by another thread.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to acquire.
+  -- *
+  -- * @returns true if the lock was acquired, otherwise false.
+  --  
+
+   function ddsrt_rwlock_trywrite (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:266
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_trywrite";
 
-   procedure ddsrt_rwlock_unlock (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:277
+  --*
+  -- * @brief Release a previously acquired read-write lock.
+  -- *
+  -- * @param[in]  rwlock  Read-write lock to release.
+  --  
+
+   procedure ddsrt_rwlock_unlock (rwlock : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_rwlock_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:277
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_rwlock_unlock";
 
+  -- Initialization callback used by ddsrt_once  
    type ddsrt_once_fn is access procedure
-   with Convention => C;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:282
+   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:282
 
-   procedure ddsrt_once (control : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_once_t; init_fn : ddsrt_once_fn)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsrt/sync.h:294
+  --*
+  -- * @brief Invoke init_fn exactly once for a given control.
+  -- *
+  -- * The first thread to call this function with a given control will call the
+  -- * function specified by @init_fn with no arguments. All following calls with
+  -- * the same control will not call the specified function.
+  -- *
+  -- * @pre The control parameter is properly initialized with DDSRT_ONCE_INIT.
+  --  
+
+   procedure ddsrt_once (control : access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_once_t; init_fn : ddsrt_once_fn)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sync.h:294
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_once";

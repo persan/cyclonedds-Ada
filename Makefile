@@ -1,11 +1,14 @@
 all: cyclonedds.build
 
+CPUS=$(shell lscpu | grep "^CPU(s):" | awk "{print \$2}")
+export CC=$(shell which gcc)
+export CXX=$(shell which g++)
+
 .PHONY:cyclonedds.build
 cyclonedds.build:cyclonedds
-	mkdir -p ${@}
-	cd ${@}; cmake ${CURDIR}/${<} -DCMAKE_INSTALL_PREFIX=${CURDIR}/target -DBUILD_EXAMPLES=ON ..
-	make -C ${CURDIR}/${@} -j 16
-	make -C ${CURDIR}/${@} install
+	cmake -DCMAKE_INSTALL_PREFIX=${CURDIR}/target -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
+	make -C ${@} -j ${CPUS}
+	make -C ${@} install
 
 
 cyclonedds:

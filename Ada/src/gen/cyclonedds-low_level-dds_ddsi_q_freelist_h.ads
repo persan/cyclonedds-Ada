@@ -12,56 +12,67 @@ with Interfaces.C.Extensions;
 
 package CycloneDDS.Low_Level.dds_ddsi_q_freelist_h is
 
-   FREELIST_NONE : constant := 1;  --  /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:22
-   FREELIST_ATOMIC_LIFO : constant := 2;  --  /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:23
-   FREELIST_DOUBLE : constant := 3;  --  /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:24
+   FREELIST_NONE : constant := 1;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:22
+   FREELIST_ATOMIC_LIFO : constant := 2;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:23
+   FREELIST_DOUBLE : constant := 3;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:24
    --  unsupported macro: FREELIST_TYPE FREELIST_DOUBLE
 
-   NN_FREELIST_NPAR : constant := 4;  --  /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:53
-   NN_FREELIST_NPAR_LG2 : constant := 2;  --  /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:54
-   NN_FREELIST_MAGSIZE : constant := 256;  --  /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:55
+   NN_FREELIST_NPAR : constant := 4;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:53
+   NN_FREELIST_NPAR_LG2 : constant := 2;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:54
+   NN_FREELIST_MAGSIZE : constant := 256;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:55
 
-   type anon_array4021 is array (0 .. 255) of System.Address;
+  -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
+   type anon6018_array6019 is array (0 .. 255) of System.Address;
    type nn_freelistM is record
-      x : anon_array4021;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:58
-      next : System.Address;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:59
+      x : anon6018_array6019;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:58
+      next : System.Address;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:59
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:57
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:57
 
    type nn_freelist1 is record
-      lock : aliased CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:63
-      count : aliased Interfaces.Unsigned_32;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:64
-      m : access nn_freelistM;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:65
+      lock : aliased CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:63
+      count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:64
+      m : access nn_freelistM;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:65
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:62
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:62
 
-   type anon_array4025 is array (0 .. 3) of aliased nn_freelist1;
+   type anon6022_array6023 is array (0 .. 3) of aliased nn_freelist1;
    type nn_freelist is record
-      inner : aliased anon_array4025;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:69
-      cc : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint32_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:70
-      lock : aliased CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:71
-      mlist : access nn_freelistM;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:72
-      emlist : access nn_freelistM;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:73
-      count : aliased Interfaces.Unsigned_32;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:74
-      max : aliased Interfaces.Unsigned_32;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:75
-      linkoff : aliased size_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:76
+      inner : aliased anon6022_array6023;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:69
+      cc : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint32_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:70
+      lock : aliased CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:71
+      mlist : access nn_freelistM;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:72
+      emlist : access nn_freelistM;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:73
+      count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:74
+      max : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:75
+      linkoff : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:76
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:68
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:68
 
    procedure nn_freelist_init
      (fl : access nn_freelist;
-      max : Interfaces.Unsigned_32;
-      linkoff : size_t)  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:81
+      max : unsigned;
+      linkoff : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:81
    with Import => True, 
         Convention => C, 
         External_Name => "nn_freelist_init";
 
-   procedure nn_freelist_fini (fl : access nn_freelist; free : access procedure (arg1 : System.Address))  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:82
+   procedure nn_freelist_fini (fl : access nn_freelist; free : access procedure (arg1 : System.Address))  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:82
    with Import => True, 
         Convention => C, 
         External_Name => "nn_freelist_fini";
 
-   function nn_freelist_push (fl : access nn_freelist; elem : System.Address) return Extensions.bool  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:83
+   function nn_freelist_push (fl : access nn_freelist; elem : System.Address) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:83
    with Import => True, 
         Convention => C, 
         External_Name => "nn_freelist_push";
@@ -70,12 +81,12 @@ package CycloneDDS.Low_Level.dds_ddsi_q_freelist_h is
      (fl : access nn_freelist;
       first : System.Address;
       last : System.Address;
-      n : Interfaces.Unsigned_32) return System.Address  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:84
+      n : unsigned) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:84
    with Import => True, 
         Convention => C, 
         External_Name => "nn_freelist_pushmany";
 
-   function nn_freelist_pop (fl : access nn_freelist) return System.Address  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/q_freelist.h:85
+   function nn_freelist_pop (fl : access nn_freelist) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_freelist.h:85
    with Import => True, 
         Convention => C, 
         External_Name => "nn_freelist_pop";

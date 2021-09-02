@@ -9,10 +9,21 @@ with Interfaces.C.Strings;
 
 package CycloneDDS.Low_Level.dds_ddsi_ddsi_vnet_h is
 
+  -- * Copyright(c) 2021 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
+
    function ddsi_vnet_init
      (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv;
       name : Interfaces.C.Strings.chars_ptr;
-      locator_kind : Interfaces.Integer_32) return int  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_vnet.h:19
+      locator_kind : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_vnet.h:19
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_vnet_init";

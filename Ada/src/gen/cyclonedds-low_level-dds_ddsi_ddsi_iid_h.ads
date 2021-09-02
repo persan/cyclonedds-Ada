@@ -8,24 +8,35 @@ with CycloneDDS.Low_Level.dds_ddsrt_atomics_h;
 
 package CycloneDDS.Low_Level.dds_ddsi_ddsi_iid_h is
 
-   type anon_array3324 is array (0 .. 3) of aliased Interfaces.Unsigned_32;
-   type ddsi_iid is record
-      counter : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint64_t;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_iid.h:24
-      key : aliased anon_array3324;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_iid.h:25
-   end record
-   with Convention => C_Pass_By_Copy;  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_iid.h:23
+  -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
+  -- *
+  -- * This program and the accompanying materials are made available under the
+  -- * terms of the Eclipse Public License v. 2.0 which is available at
+  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+  -- * v. 1.0 which is available at
+  -- * http://www.eclipse.org/org/documents/edl-v10.php.
+  -- *
+  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+  --  
 
-   procedure ddsi_iid_init  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_iid.h:28
+   type anon6962_array2939 is array (0 .. 3) of aliased unsigned;
+   type ddsi_iid is record
+      counter : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint64_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_iid.h:24
+      key : aliased anon6962_array2939;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_iid.h:25
+   end record
+   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_iid.h:23
+
+   procedure ddsi_iid_init  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_iid.h:28
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_iid_init";
 
-   procedure ddsi_iid_fini  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_iid.h:29
+   procedure ddsi_iid_fini  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_iid.h:29
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_iid_fini";
 
-   function ddsi_iid_gen return Interfaces.Unsigned_64  -- /home/stprsa/cyclonedds/Ada/../target/include/dds/ddsi/ddsi_iid.h:30
+   function ddsi_iid_gen return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_iid.h:30
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_iid_gen";
