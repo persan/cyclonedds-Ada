@@ -1,0 +1,8 @@
+with "cyclonedds.gpr";
+with "cyclonedds-c.gpr";
+library project Cyclonedds.Ada is
+    for Source_Dirs use ("src/**");
+    for Object_Dir use ".obj";
+    for library_name use "Cyclonedds-Ada";
+    for library_dir use "lib";
+end Cyclonedds.Ada;
