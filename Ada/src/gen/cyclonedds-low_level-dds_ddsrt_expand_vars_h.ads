@@ -20,7 +20,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_expand_vars_h is
   --  
 
    type expand_lookup_fn is access function (arg1 : Interfaces.C.Strings.chars_ptr; arg2 : System.Address) return Interfaces.C.Strings.chars_ptr
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/expand_vars.h:23
+   with Convention => C;  -- /usr/gnat/include/dds/ddsrt/expand_vars.h:23
 
   --*
   -- * @brief Expand variables within string.
@@ -44,7 +44,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_expand_vars_h is
    function ddsrt_expand_vars
      (string : Interfaces.C.Strings.chars_ptr;
       lookup : expand_lookup_fn;
-      data : System.Address) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/expand_vars.h:44
+      data : System.Address) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/expand_vars.h:44
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_expand_vars";
@@ -72,7 +72,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_expand_vars_h is
    function ddsrt_expand_vars_sh
      (string : Interfaces.C.Strings.chars_ptr;
       lookup : expand_lookup_fn;
-      data : System.Address) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/expand_vars.h:69
+      data : System.Address) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/expand_vars.h:69
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_expand_vars_sh";

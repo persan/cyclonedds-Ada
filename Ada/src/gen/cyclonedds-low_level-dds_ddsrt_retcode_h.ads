@@ -8,22 +8,22 @@ with Interfaces.C.Strings;
 
 package CycloneDDS.Low_Level.dds_ddsrt_retcode_h is
 
-   DDS_RETCODE_OK : constant := (0);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:31
-   DDS_RETCODE_ERROR : constant := (-1);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:32
-   DDS_RETCODE_UNSUPPORTED : constant := (-2);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:33
-   DDS_RETCODE_BAD_PARAMETER : constant := (-3);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:34
-   DDS_RETCODE_PRECONDITION_NOT_MET : constant := (-4);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:35
-   DDS_RETCODE_OUT_OF_RESOURCES : constant := (-5);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:36
-   DDS_RETCODE_NOT_ENABLED : constant := (-6);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:37
-   DDS_RETCODE_IMMUTABLE_POLICY : constant := (-7);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:38
-   DDS_RETCODE_INCONSISTENT_POLICY : constant := (-8);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:39
-   DDS_RETCODE_ALREADY_DELETED : constant := (-9);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:40
-   DDS_RETCODE_TIMEOUT : constant := (-10);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:41
-   DDS_RETCODE_NO_DATA : constant := (-11);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:42
-   DDS_RETCODE_ILLEGAL_OPERATION : constant := (-12);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:43
-   DDS_RETCODE_NOT_ALLOWED_BY_SECURITY : constant := (-13);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:44
+   DDS_RETCODE_OK : constant := (0);  --  /usr/gnat/include/dds/ddsrt/retcode.h:31
+   DDS_RETCODE_ERROR : constant := (-1);  --  /usr/gnat/include/dds/ddsrt/retcode.h:32
+   DDS_RETCODE_UNSUPPORTED : constant := (-2);  --  /usr/gnat/include/dds/ddsrt/retcode.h:33
+   DDS_RETCODE_BAD_PARAMETER : constant := (-3);  --  /usr/gnat/include/dds/ddsrt/retcode.h:34
+   DDS_RETCODE_PRECONDITION_NOT_MET : constant := (-4);  --  /usr/gnat/include/dds/ddsrt/retcode.h:35
+   DDS_RETCODE_OUT_OF_RESOURCES : constant := (-5);  --  /usr/gnat/include/dds/ddsrt/retcode.h:36
+   DDS_RETCODE_NOT_ENABLED : constant := (-6);  --  /usr/gnat/include/dds/ddsrt/retcode.h:37
+   DDS_RETCODE_IMMUTABLE_POLICY : constant := (-7);  --  /usr/gnat/include/dds/ddsrt/retcode.h:38
+   DDS_RETCODE_INCONSISTENT_POLICY : constant := (-8);  --  /usr/gnat/include/dds/ddsrt/retcode.h:39
+   DDS_RETCODE_ALREADY_DELETED : constant := (-9);  --  /usr/gnat/include/dds/ddsrt/retcode.h:40
+   DDS_RETCODE_TIMEOUT : constant := (-10);  --  /usr/gnat/include/dds/ddsrt/retcode.h:41
+   DDS_RETCODE_NO_DATA : constant := (-11);  --  /usr/gnat/include/dds/ddsrt/retcode.h:42
+   DDS_RETCODE_ILLEGAL_OPERATION : constant := (-12);  --  /usr/gnat/include/dds/ddsrt/retcode.h:43
+   DDS_RETCODE_NOT_ALLOWED_BY_SECURITY : constant := (-13);  --  /usr/gnat/include/dds/ddsrt/retcode.h:44
 
-   DDS_XRETCODE_BASE : constant := (-50);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:49
+   DDS_XRETCODE_BASE : constant := (-50);  --  /usr/gnat/include/dds/ddsrt/retcode.h:49
    --  arg-macro: function DDS_XRETCODE (x)
    --    return DDS_XRETCODE_BASE - (x);
    --  unsupported macro: DDS_RETCODE_IN_PROGRESS DDS_XRETCODE(1)
@@ -37,7 +37,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_retcode_h is
    --  unsupported macro: DDS_RETCODE_OUT_OF_RANGE DDS_XRETCODE(9)
    --  unsupported macro: DDS_RETCODE_NOT_FOUND DDS_XRETCODE(10)
 
-   subtype dds_return_t is int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:12
+   subtype dds_return_t is int;  -- /usr/gnat/include/dds/ddsrt/retcode.h:12
 
   --  State is unchanged following a function call returning an error
   --  other than UNSPECIFIED, OUT_OF_RESOURCES and ALREADY_DELETED.
@@ -88,7 +88,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_retcode_h is
   -- * @returns  String corresponding to the error value
   --  
 
-   function dds_strretcode (ret : dds_return_t) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/retcode.h:91
+   function dds_strretcode (ret : dds_return_t) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/retcode.h:91
    with Import => True, 
         Convention => C, 
         External_Name => "dds_strretcode";

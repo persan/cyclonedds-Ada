@@ -25,27 +25,27 @@ package CycloneDDS.Low_Level.dds_ddsi_q_config_h is
    function config_init
      (config : Interfaces.C.Strings.chars_ptr;
       cfg : access CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config;
-      domid : unsigned) return access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_config.h:27
+      domid : unsigned) return access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst  -- /usr/gnat/include/dds/ddsi/q_config.h:27
    with Import => True, 
         Convention => C, 
         External_Name => "config_init";
 
-   procedure config_print_cfgst (the_cfgst : access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst; logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_config.h:28
+   procedure config_print_cfgst (the_cfgst : access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst; logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg)  -- /usr/gnat/include/dds/ddsi/q_config.h:28
    with Import => True, 
         Convention => C, 
         External_Name => "config_print_cfgst";
 
-   procedure config_print_rawconfig (cfg : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config; logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_config.h:29
+   procedure config_print_rawconfig (cfg : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config; logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg)  -- /usr/gnat/include/dds/ddsi/q_config.h:29
    with Import => True, 
         Convention => C, 
         External_Name => "config_print_rawconfig";
 
-   procedure config_free_source_info (the_cfgst : access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_config.h:30
+   procedure config_free_source_info (the_cfgst : access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst)  -- /usr/gnat/include/dds/ddsi/q_config.h:30
    with Import => True, 
         Convention => C, 
         External_Name => "config_free_source_info";
 
-   procedure config_fini (the_cfgst : access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_config.h:31
+   procedure config_fini (the_cfgst : access CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.cfgst)  -- /usr/gnat/include/dds/ddsi/q_config.h:31
    with Import => True, 
         Convention => C, 
         External_Name => "config_fini";

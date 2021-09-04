@@ -11,7 +11,7 @@ with CycloneDDS.Low_Level.dds_ddsrt_retcode_h;
 
 package CycloneDDS.Low_Level.dds_ddsrt_dynlib_h is
 
-   DDSRT_HAVE_DYNLIB : constant := (1);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/dynlib.h:22
+   DDSRT_HAVE_DYNLIB : constant := (1);  --  /usr/gnat/include/dds/ddsrt/dynlib.h:22
 
   -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
   -- *
@@ -27,7 +27,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_dynlib_h is
   --typedef void *ddsrt_dynlib_t;
    type ddsrt_dynlib is null record;   -- incomplete struct
 
-   type ddsrt_dynlib_t is access all ddsrt_dynlib;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/dynlib.h:35
+   type ddsrt_dynlib_t is access all ddsrt_dynlib;  -- /usr/gnat/include/dds/ddsrt/dynlib.h:35
 
   --*
   -- * @brief Load a dynamic shared library.
@@ -63,7 +63,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_dynlib_h is
    function ddsrt_dlopen
      (name : Interfaces.C.Strings.chars_ptr;
       translate : Extensions.bool;
-      handle : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/dynlib.h:69
+      handle : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/dynlib.h:69
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_dlopen";
@@ -87,7 +87,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_dynlib_h is
   -- *             Use ddsrt_dlerror() to diagnose the failure.
   --  
 
-   function ddsrt_dlclose (handle : ddsrt_dynlib_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/dynlib.h:93
+   function ddsrt_dlclose (handle : ddsrt_dynlib_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/dynlib.h:93
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_dlclose";
@@ -115,7 +115,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_dynlib_h is
    function ddsrt_dlsym
      (handle : ddsrt_dynlib_t;
       symbol : Interfaces.C.Strings.chars_ptr;
-      address : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/dynlib.h:116
+      address : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/dynlib.h:116
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_dlsym";
@@ -143,7 +143,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_dynlib_h is
   -- *             Buffer is not large enough to hold the error message
   --  
 
-   function ddsrt_dlerror (buf : Interfaces.C.Strings.chars_ptr; buflen : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/dynlib.h:144
+   function ddsrt_dlerror (buf : Interfaces.C.Strings.chars_ptr; buflen : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/dynlib.h:144
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_dlerror";

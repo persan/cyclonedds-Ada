@@ -26,7 +26,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
    --  unsupported macro: DDSRT_WCTIME_NEVER ((ddsrt_wctime_t) { DDS_NEVER })
    --  unsupported macro: DDSRT_ETIME_NEVER ((ddsrt_etime_t) { DDS_NEVER })
    --  unsupported macro: DDSRT_WCTIME_INVALID ((ddsrt_wctime_t) { INT64_MIN })
-   DDSRT_RFC3339STRLEN : constant := (25);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:163
+   DDSRT_RFC3339STRLEN : constant := (25);  --  /usr/gnat/include/dds/ddsrt/time.h:163
 
   -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
   -- *
@@ -57,10 +57,10 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- 
 
   --* Absolute Time definition  
-   subtype dds_time_t is long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:45
+   subtype dds_time_t is long;  -- /usr/gnat/include/dds/ddsrt/time.h:45
 
   --* Relative Time definition in nanoseconds  
-   subtype dds_duration_t is long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:48
+   subtype dds_duration_t is long;  -- /usr/gnat/include/dds/ddsrt/time.h:48
 
   --* @name Macro definition for time units in nanoseconds.
   --  @{* 
@@ -75,19 +75,19 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
 
   --* @} 
    type ddsrt_mtime_t is record
-      v : aliased dds_time_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:77
+      v : aliased dds_time_t;  -- /usr/gnat/include/dds/ddsrt/time.h:77
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:78
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/time.h:78
 
    type ddsrt_wctime_t is record
-      v : aliased dds_time_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:81
+      v : aliased dds_time_t;  -- /usr/gnat/include/dds/ddsrt/time.h:81
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:82
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/time.h:82
 
    type ddsrt_etime_t is record
-      v : aliased dds_time_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:85
+      v : aliased dds_time_t;  -- /usr/gnat/include/dds/ddsrt/time.h:85
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:86
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/time.h:86
 
   --*
   -- * @brief Get the current time in nanoseconds since the UNIX Epoch.
@@ -95,7 +95,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns Current time.
   --  
 
-   function dds_time return dds_time_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:98
+   function dds_time return dds_time_t  -- /usr/gnat/include/dds/ddsrt/time.h:98
    with Import => True, 
         Convention => C, 
         External_Name => "dds_time";
@@ -109,7 +109,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @param[in]  reltime  Relative time in nanoseconds.
   --  
 
-   procedure dds_sleepfor (reltime : dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:108
+   procedure dds_sleepfor (reltime : dds_duration_t)  -- /usr/gnat/include/dds/ddsrt/time.h:108
    with Import => True, 
         Convention => C, 
         External_Name => "dds_sleepfor";
@@ -121,7 +121,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns Curren time.
   --  
 
-   function ddsrt_time_wallclock return ddsrt_wctime_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:116
+   function ddsrt_time_wallclock return ddsrt_wctime_t  -- /usr/gnat/include/dds/ddsrt/time.h:116
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_time_wallclock";
@@ -140,7 +140,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns Monotonic time if available, otherwise real time.
   --  
 
-   function ddsrt_time_monotonic return ddsrt_mtime_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:131
+   function ddsrt_time_monotonic return ddsrt_mtime_t  -- /usr/gnat/include/dds/ddsrt/time.h:131
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_time_monotonic";
@@ -158,7 +158,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns Elapsed time if available, otherwise return monotonic time.
   --  
 
-   function ddsrt_time_elapsed return ddsrt_etime_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:145
+   function ddsrt_time_elapsed return ddsrt_etime_t  -- /usr/gnat/include/dds/ddsrt/time.h:145
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_time_elapsed";
@@ -183,7 +183,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
    function ddsrt_ctime
      (abstime : dds_time_t;
       str : Interfaces.C.Strings.chars_ptr;
-      size : unsigned_long) return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:165
+      size : unsigned_long) return unsigned_long  -- /usr/gnat/include/dds/ddsrt/time.h:165
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_ctime";
@@ -201,7 +201,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns A timestamp in nanoseconds since UNIX Epoch.
   --  
 
-   function ddsrt_time_add_duration (abstime : dds_time_t; reltime : dds_duration_t) return dds_time_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:179
+   function ddsrt_time_add_duration (abstime : dds_time_t; reltime : dds_duration_t) return dds_time_t  -- /usr/gnat/include/dds/ddsrt/time.h:179
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_time_add_duration";
@@ -219,7 +219,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns A timestamp in nanoseconds since UNIX Epoch.
   --  
 
-   function ddsrt_mtime_add_duration (abstime : ddsrt_mtime_t; reltime : dds_duration_t) return ddsrt_mtime_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:198
+   function ddsrt_mtime_add_duration (abstime : ddsrt_mtime_t; reltime : dds_duration_t) return ddsrt_mtime_t  -- /usr/gnat/include/dds/ddsrt/time.h:198
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mtime_add_duration";
@@ -237,7 +237,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns A timestamp in nanoseconds since UNIX Epoch.
   --  
 
-   function ddsrt_wctime_add_duration (abstime : ddsrt_wctime_t; reltime : dds_duration_t) return ddsrt_wctime_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:216
+   function ddsrt_wctime_add_duration (abstime : ddsrt_wctime_t; reltime : dds_duration_t) return ddsrt_wctime_t  -- /usr/gnat/include/dds/ddsrt/time.h:216
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_wctime_add_duration";
@@ -255,7 +255,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
   -- * @returns A timestamp in nanoseconds since UNIX Epoch.
   --  
 
-   function ddsrt_etime_add_duration (abstime : ddsrt_etime_t; reltime : dds_duration_t) return ddsrt_etime_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:234
+   function ddsrt_etime_add_duration (abstime : ddsrt_etime_t; reltime : dds_duration_t) return ddsrt_etime_t  -- /usr/gnat/include/dds/ddsrt/time.h:234
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_etime_add_duration";
@@ -280,7 +280,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
    procedure ddsrt_mtime_to_sec_usec
      (sec : access int;
       usec : access int;
-      t : ddsrt_mtime_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:278
+      t : ddsrt_mtime_t)  -- /usr/gnat/include/dds/ddsrt/time.h:278
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mtime_to_sec_usec";
@@ -296,7 +296,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
    procedure ddsrt_wctime_to_sec_usec
      (sec : access int;
       usec : access int;
-      t : ddsrt_wctime_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:287
+      t : ddsrt_wctime_t)  -- /usr/gnat/include/dds/ddsrt/time.h:287
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_wctime_to_sec_usec";
@@ -312,7 +312,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_time_h is
    procedure ddsrt_etime_to_sec_usec
      (sec : access int;
       usec : access int;
-      t : ddsrt_etime_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/time.h:296
+      t : ddsrt_etime_t)  -- /usr/gnat/include/dds/ddsrt/time.h:296
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_etime_to_sec_usec";

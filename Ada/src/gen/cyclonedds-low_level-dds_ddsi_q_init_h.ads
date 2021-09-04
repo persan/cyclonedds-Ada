@@ -18,12 +18,12 @@ package CycloneDDS.Low_Level.dds_ddsi_q_init_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function create_multicast_sockets (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_init.h:19
+   function create_multicast_sockets (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /usr/gnat/include/dds/ddsi/q_init.h:19
    with Import => True, 
         Convention => C, 
         External_Name => "create_multicast_sockets";
 
-   function joinleave_spdp_defmcip (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv; dojoin : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_init.h:20
+   function joinleave_spdp_defmcip (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv; dojoin : int) return int  -- /usr/gnat/include/dds/ddsi/q_init.h:20
    with Import => True, 
         Convention => C, 
         External_Name => "joinleave_spdp_defmcip";

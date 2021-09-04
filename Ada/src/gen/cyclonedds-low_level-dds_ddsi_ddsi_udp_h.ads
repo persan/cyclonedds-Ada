@@ -22,17 +22,17 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_udp_h is
 
   -- base IPv4 MC address is ipv4, host bits are bits base .. base+count-1, this machine is bit idx  
    type nn_udpv4mcgen_address is record
-      ipv4 : aliased CycloneDDS.Low_Level.netinet_in_h.in_addr;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:21
-      base : aliased unsigned_char;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:22
-      count : aliased unsigned_char;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:23
-      idx : aliased unsigned_char;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:24
+      ipv4 : aliased CycloneDDS.Low_Level.netinet_in_h.in_addr;  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:21
+      base : aliased unsigned_char;  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:22
+      count : aliased unsigned_char;  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:23
+      idx : aliased unsigned_char;  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:24
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:19
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:19
 
   -- must be last: then sorting will put them consecutively  
-   subtype nn_udpv4mcgen_address_t is nn_udpv4mcgen_address;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:25
+   subtype nn_udpv4mcgen_address_t is nn_udpv4mcgen_address;  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:25
 
-   function ddsi_udp_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_udp.h:27
+   function ddsi_udp_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /usr/gnat/include/dds/ddsi/ddsi_udp.h:27
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_udp_init";

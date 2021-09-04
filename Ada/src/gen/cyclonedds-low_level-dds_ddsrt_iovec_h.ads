@@ -20,10 +20,10 @@ package CycloneDDS.Low_Level.dds_ddsrt_iovec_h is
   --  
 
   -- Equivalent to a DWORD
-   subtype ddsrt_iovec_t is CycloneDDS.Low_Level.bits_types_struct_iovec_h.iovec;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/iovec.h:34
+   subtype ddsrt_iovec_t is CycloneDDS.Low_Level.bits_types_struct_iovec_h.iovec;  -- /usr/gnat/include/dds/ddsrt/iovec.h:34
 
-   subtype ddsrt_iov_len_t is unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/iovec.h:35
+   subtype ddsrt_iov_len_t is unsigned_long;  -- /usr/gnat/include/dds/ddsrt/iovec.h:35
 
-   subtype ddsrt_msg_iovlen_t is unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/iovec.h:38
+   subtype ddsrt_msg_iovlen_t is unsigned_long;  -- /usr/gnat/include/dds/ddsrt/iovec.h:38
 
 end CycloneDDS.Low_Level.dds_ddsrt_iovec_h;

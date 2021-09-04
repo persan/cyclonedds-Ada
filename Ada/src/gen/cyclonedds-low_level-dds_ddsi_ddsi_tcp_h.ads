@@ -18,7 +18,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_tcp_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function ddsi_tcp_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_tcp.h:21
+   function ddsi_tcp_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /usr/gnat/include/dds/ddsi/ddsi_tcp.h:21
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_tcp_init";

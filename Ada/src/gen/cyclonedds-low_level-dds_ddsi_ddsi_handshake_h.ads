@@ -32,7 +32,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
       STATE_HANDSHAKE_PROCESSED,
       STATE_HANDSHAKE_SEND_TOKENS,
       STATE_HANDSHAKE_OK)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:26
+   with Convention => C;  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:26
 
   -- The handshake will not use the related handshake object after this callback
   -- * was executed. This means that it can be deleted in this callback.  
@@ -42,7 +42,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
          arg2 : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant;
          arg3 : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant;
          arg4 : ddsi_handshake_state)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:37
+   with Convention => C;  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:37
 
   --*
   -- * @brief Release the handshake.
@@ -53,7 +53,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @param[in] handshake    The handshake.
   --  
 
-   procedure ddsi_handshake_release (handshake : access ddsi_handshake)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:55
+   procedure ddsi_handshake_release (handshake : access ddsi_handshake)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:55
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_release";
@@ -75,7 +75,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
      (handshake : access ddsi_handshake;
       pp : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant;
       proxypp : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant;
-      msg : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_security_msg_h.nn_participant_generic_message)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:69
+      msg : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_security_msg_h.nn_participant_generic_message)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:69
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_handle_message";
@@ -91,7 +91,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @param[in] handshake     The handshake.
   --  
 
-   procedure ddsi_handshake_crypto_tokens_received (handshake : access ddsi_handshake)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:81
+   procedure ddsi_handshake_crypto_tokens_received (handshake : access ddsi_handshake)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:81
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_crypto_tokens_received";
@@ -109,7 +109,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @returns handle to the shared sercet.
   --  
 
-   function ddsi_handshake_get_shared_secret (handshake : access constant ddsi_handshake) return long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:95
+   function ddsi_handshake_get_shared_secret (handshake : access constant ddsi_handshake) return long  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:95
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_get_shared_secret";
@@ -125,7 +125,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @returns The handshake handle.
   --  
 
-   function ddsi_handshake_get_handle (handshake : access constant ddsi_handshake) return long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:107
+   function ddsi_handshake_get_handle (handshake : access constant ddsi_handshake) return long  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:107
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_get_handle";
@@ -148,7 +148,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
    procedure ddsi_handshake_register
      (pp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant;
       proxypp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant;
-      callback : ddsi_handshake_end_cb_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:123
+      callback : ddsi_handshake_end_cb_t)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:123
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_register";
@@ -165,7 +165,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- *
   --  
 
-   procedure ddsi_handshake_remove (pp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant; proxypp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:136
+   procedure ddsi_handshake_remove (pp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant; proxypp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:136
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_remove";
@@ -194,7 +194,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @returns The handshake
   --  
 
-   function ddsi_handshake_find (pp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant; proxypp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant) return access ddsi_handshake  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:162
+   function ddsi_handshake_find (pp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.participant; proxypp : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_participant) return access ddsi_handshake  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:162
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_find";
@@ -205,7 +205,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @param[in] gv         The global parameters
   --  
 
-   procedure ddsi_handshake_admin_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:169
+   procedure ddsi_handshake_admin_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:169
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_admin_init";
@@ -216,7 +216,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   --* @param[in] gv         The global parameters
   -- 
 
-   procedure ddsi_handshake_admin_stop (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:176
+   procedure ddsi_handshake_admin_stop (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:176
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_admin_stop";
@@ -227,7 +227,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_handshake_h is
   -- * @param[in] gv         The global parameters
   --  
 
-   procedure ddsi_handshake_admin_deinit (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_handshake.h:183
+   procedure ddsi_handshake_admin_deinit (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /usr/gnat/include/dds/ddsi/ddsi_handshake.h:183
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_handshake_admin_deinit";

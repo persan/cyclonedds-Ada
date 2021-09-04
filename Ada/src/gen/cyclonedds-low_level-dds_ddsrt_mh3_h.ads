@@ -23,7 +23,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_mh3_h is
    function ddsrt_mh3
      (key : System.Address;
       len : unsigned_long;
-      seed : unsigned) return unsigned  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/mh3.h:25
+      seed : unsigned) return unsigned  -- /usr/gnat/include/dds/ddsrt/mh3.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_mh3";

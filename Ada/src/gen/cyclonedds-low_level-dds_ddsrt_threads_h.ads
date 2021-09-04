@@ -49,7 +49,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   --  
 
    type ddsrt_thread_routine_t is access function (arg1 : System.Address) return unsigned
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:61
+   with Convention => C;  -- /usr/gnat/include/dds/ddsrt/threads.h:61
 
   --*
   -- * @brief Definition of the thread attributes
@@ -59,17 +59,17 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   --* Specifies the thread priority  
   --* Specifies the thread stack size  
    type ddsrt_threadattr_t is record
-      schedClass : aliased CycloneDDS.Low_Level.dds_ddsrt_sched_h.ddsrt_sched_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:68
-      schedPriority : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:70
-      stackSize : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:72
+      schedClass : aliased CycloneDDS.Low_Level.dds_ddsrt_sched_h.ddsrt_sched_t;  -- /usr/gnat/include/dds/ddsrt/threads.h:68
+      schedPriority : aliased int;  -- /usr/gnat/include/dds/ddsrt/threads.h:70
+      stackSize : aliased unsigned;  -- /usr/gnat/include/dds/ddsrt/threads.h:72
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:73
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/threads.h:73
 
   --*
   -- * @brief Initialize thread attributes to platform defaults.
   --  
 
-   procedure ddsrt_threadattr_init (attr : access ddsrt_threadattr_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:79
+   procedure ddsrt_threadattr_init (attr : access ddsrt_threadattr_t)  -- /usr/gnat/include/dds/ddsrt/threads.h:79
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_threadattr_init";
@@ -103,7 +103,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
       name : Interfaces.C.Strings.chars_ptr;
       attr : access constant ddsrt_threadattr_t;
       start_routine : ddsrt_thread_routine_t;
-      arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:107
+      arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/threads.h:107
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_create";
@@ -114,7 +114,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * @returns The integer representation of the current thread.
   --  
 
-   function ddsrt_gettid return CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_tid_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:121
+   function ddsrt_gettid return CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_tid_t  -- /usr/gnat/include/dds/ddsrt/threads.h:121
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_gettid";
@@ -125,7 +125,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * @returns The integer representation of the given thread.
   --  
 
-   function ddsrt_gettid_for_thread (thread : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t) return CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_tid_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:129
+   function ddsrt_gettid_for_thread (thread : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t) return CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_tid_t  -- /usr/gnat/include/dds/ddsrt/threads.h:129
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_gettid_for_thread";
@@ -136,7 +136,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * @returns Thread ID of the calling thread.
   --  
 
-   function ddsrt_thread_self return CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:138
+   function ddsrt_thread_self return CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t  -- /usr/gnat/include/dds/ddsrt/threads.h:138
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_self";
@@ -147,7 +147,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * @returns true if thread ids match, otherwise false.
   --  
 
-   function ddsrt_thread_equal (t1 : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t; t2 : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:146
+   function ddsrt_thread_equal (t1 : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t; t2 : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsrt/threads.h:146
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_equal";
@@ -171,7 +171,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- *             An error occurred while waiting for the thread to terminate.
   --  
 
-   function ddsrt_thread_join (thread : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t; thread_result : access unsigned) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:167
+   function ddsrt_thread_join (thread : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t; thread_result : access unsigned) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/threads.h:167
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_join";
@@ -188,7 +188,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- *          written is returned.
   --  
 
-   function ddsrt_thread_getname (name : Interfaces.C.Strings.chars_ptr; size : unsigned_long) return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:183
+   function ddsrt_thread_getname (name : Interfaces.C.Strings.chars_ptr; size : unsigned_long) return unsigned_long  -- /usr/gnat/include/dds/ddsrt/threads.h:183
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_getname";
@@ -202,7 +202,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * @param[in]  name  Name for current thread.
   --  
 
-   procedure ddsrt_thread_setname (name : Interfaces.C.Strings.chars_ptr)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:197
+   procedure ddsrt_thread_setname (name : Interfaces.C.Strings.chars_ptr)  -- /usr/gnat/include/dds/ddsrt/threads.h:197
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_setname";
@@ -226,7 +226,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- *             Not supported on the platform
   --  
 
-   function ddsrt_thread_list (tids : access CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_list_id_t; size : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:220
+   function ddsrt_thread_list (tids : access CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_list_id_t; size : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/threads.h:220
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_list";
@@ -258,7 +258,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
    function ddsrt_thread_getname_anythread
      (tid : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_list_id_t;
       name : Interfaces.C.Strings.chars_ptr;
-      size : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:245
+      size : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/threads.h:245
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_getname_anythread";
@@ -274,7 +274,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * @param[in]  arg      Argument that will be passed to the cleanup handler.
   --  
 
-   function ddsrt_thread_cleanup_push (routine : access procedure (arg1 : System.Address); arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:259
+   function ddsrt_thread_cleanup_push (routine : access procedure (arg1 : System.Address); arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/threads.h:259
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_cleanup_push";
@@ -286,7 +286,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * optionally invoke it (if execute is non-zero).
   --  
 
-   function ddsrt_thread_cleanup_pop (execute : int) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:270
+   function ddsrt_thread_cleanup_pop (execute : int) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/threads.h:270
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_cleanup_pop";
@@ -298,7 +298,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * default initialization is done automatically.
   --  
 
-   procedure ddsrt_thread_init (reason : unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:280
+   procedure ddsrt_thread_init (reason : unsigned)  -- /usr/gnat/include/dds/ddsrt/threads.h:280
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_init";
@@ -312,7 +312,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_threads_h is
   -- * only for threads that were not created with @ddsrt_thread_create.
   --  
 
-   procedure ddsrt_thread_fini (reason : unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/threads.h:291
+   procedure ddsrt_thread_fini (reason : unsigned)  -- /usr/gnat/include/dds/ddsrt/threads.h:291
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_thread_fini";

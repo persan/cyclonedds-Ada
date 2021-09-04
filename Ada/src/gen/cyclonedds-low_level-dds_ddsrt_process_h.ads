@@ -7,8 +7,8 @@ with Interfaces.C; use Interfaces.C;
 
 package CycloneDDS.Low_Level.dds_ddsrt_process_h is
 
-   PRIdPID : aliased constant String := "d" & ASCII.NUL;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/process.h:40
-   DDSRT_HAVE_MULTI_PROCESS : constant := 1;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/process.h:41
+   PRIdPID : aliased constant String := "d" & ASCII.NUL;  --  /usr/gnat/include/dds/ddsrt/process.h:40
+   DDSRT_HAVE_MULTI_PROCESS : constant := 1;  --  /usr/gnat/include/dds/ddsrt/process.h:41
 
   -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
   -- *
@@ -25,7 +25,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_process_h is
   -- DDSRT_WITH_FREERTOS  
   -- _WIN32  
   -- typedef struct wind_rtp *RTP_ID  
-   subtype ddsrt_pid_t is CycloneDDS.Low_Level.unistd_h.pid_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/process.h:39
+   subtype ddsrt_pid_t is CycloneDDS.Low_Level.unistd_h.pid_t;  -- /usr/gnat/include/dds/ddsrt/process.h:39
 
   --*
   -- * @brief Return process ID (PID) of the calling process.
@@ -33,7 +33,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_process_h is
   -- * @returns The process ID of the calling process.
   --  
 
-   function ddsrt_getpid return ddsrt_pid_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/process.h:56
+   function ddsrt_getpid return ddsrt_pid_t  -- /usr/gnat/include/dds/ddsrt/process.h:56
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_getpid";

@@ -20,13 +20,13 @@ package CycloneDDS.Low_Level.idl_stream_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function idl_fopen (pathname : Interfaces.C.Strings.chars_ptr; mode : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.bits_types_FILE_h.FILE  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/stream.h:21
+   function idl_fopen (pathname : Interfaces.C.Strings.chars_ptr; mode : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.bits_types_FILE_h.FILE  -- /usr/gnat/include/idl/stream.h:21
    with Import => True, 
         Convention => C, 
         External_Name => "idl_fopen";
 
    function idl_fprintf (fp : access CycloneDDS.Low_Level.bits_types_FILE_h.FILE; fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      ) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/stream.h:23
+      ) return int  -- /usr/gnat/include/idl/stream.h:23
    with Import => True, 
         Convention => C, 
         External_Name => "idl_fprintf";
@@ -34,7 +34,7 @@ package CycloneDDS.Low_Level.idl_stream_h is
    function idl_vfprintf
      (fp : access CycloneDDS.Low_Level.bits_types_FILE_h.FILE;
       fmt : Interfaces.C.Strings.chars_ptr;
-      ap : access System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/stream.h:26
+      ap : access System.Address) return int  -- /usr/gnat/include/idl/stream.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "idl_vfprintf";

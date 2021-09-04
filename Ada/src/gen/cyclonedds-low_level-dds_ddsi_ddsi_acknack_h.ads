@@ -28,7 +28,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_acknack_h is
       AANR_SUPPRESSED_NACK,
       AANR_NACK,
       AANR_NACKFRAG_ONLY)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_acknack.h:27
+   with Convention => C;  -- /usr/gnat/include/dds/ddsi/ddsi_acknack.h:27
 
   --!< sending nothing: too short a time since the last ACK
   --!< sending an ACK and there's nothing to NACK
@@ -40,7 +40,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_acknack_h is
       pwr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_writer;
       rwn : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.pwr_rd_match;
       tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;
-      avoid_suppressed_nack : Extensions.bool)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_acknack.h:35
+      avoid_suppressed_nack : Extensions.bool)  -- /usr/gnat/include/dds/ddsi/ddsi_acknack.h:35
    with Import => True, 
         Convention => C, 
         External_Name => "sched_acknack_if_needed";
@@ -50,7 +50,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_acknack_h is
       pwr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_writer;
       rwn : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.pwr_rd_match;
       tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;
-      avoid_suppressed_nack : Extensions.bool) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_acknack.h:37
+      avoid_suppressed_nack : Extensions.bool) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /usr/gnat/include/dds/ddsi/ddsi_acknack.h:37
    with Import => True, 
         Convention => C, 
         External_Name => "make_and_resched_acknack";

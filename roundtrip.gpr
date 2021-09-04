@@ -1,0 +1,33 @@
+with "cyclonedds-c.gpr";
+project RoundTrip is
+   type Boolean is ("False", "True");
+   GENERATE : Boolean := external ("GENERATE", "False");
+   package Compiler is
+      case GENERATE is
+         when "True" =>
+            for Driver ("C") use "";
+            for Driver ("idl") use "idlc";
+         when "False" =>
+            for Driver ("C") use "gcc";
+            for Driver ("idl") use "";
+      end case;
+      for Switches ("C") use ("-g", "-O2");
+   end Compiler;
+
+   for Languages use ("C", "idl");
+
+   case GENERATE is
+      when "True" =>
+         for Object_Dir use ".";
+      when "False" =>
+         for Main use ("ping.c", "pong.c");
+         for Object_Dir use ".obj";
+   end case;
+
+   for Exec_Dir use ".";
+   package Naming is
+      for Body_Suffix ("Idl") use ".idl";
+   end Naming;
+
+end RoundTrip;
+

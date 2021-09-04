@@ -1,0 +1,12 @@
+with "cyclonedds.gpr";
+
+library project CycloneDDS.C is
+
+   for Source_Dirs use ();
+   for Externally_Built use "True";
+   for Library_Name use "ddsc";
+   for Library_Kind use "dynamic";
+   for Library_Dir use "../../lib64";
+
+end CycloneDDS.C;
+

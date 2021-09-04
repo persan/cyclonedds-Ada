@@ -8,7 +8,7 @@ with CycloneDDS.Low_Level.dds_dds_h;
 
 package CycloneDDS.Low_Level.dds_ddsc_dds_internal_api_h is
 
-   DDS_READ_WITHOUT_LOCK : constant := (16#FFFFFFED#);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_internal_api.h:25
+   DDS_READ_WITHOUT_LOCK : constant := (16#FFFFFFED#);  --  /usr/gnat/include/dds/ddsc/dds_internal_api.h:25
 
   -- * Copyright(c) 2006 to 2020 ADLINK Technology Limited and others
   -- *
@@ -38,7 +38,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_internal_api_h is
   -- * dds_reader_lock_samples() and DDS_READ_WITHOUT_LOCK are needed.
   --  
 
-   function dds_reader_lock_samples (entity : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t) return unsigned  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_internal_api.h:39
+   function dds_reader_lock_samples (entity : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t) return unsigned  -- /usr/gnat/include/dds/ddsc/dds_internal_api.h:39
    with Import => True, 
         Convention => C, 
         External_Name => "dds_reader_lock_samples";

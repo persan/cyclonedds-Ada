@@ -29,7 +29,7 @@ package CycloneDDS.Low_Level.dds_ddsi_sysdeps_h is
    procedure log_stacktrace
      (logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg;
       name : Interfaces.C.Strings.chars_ptr;
-      tid : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/sysdeps.h:25
+      tid : CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t)  -- /usr/gnat/include/dds/ddsi/sysdeps.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "log_stacktrace";

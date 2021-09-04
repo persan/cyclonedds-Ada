@@ -24,7 +24,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_pcap_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function new_pcap_file (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv; name : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.bits_types_FILE_h.FILE  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_pcap.h:24
+   function new_pcap_file (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv; name : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.bits_types_FILE_h.FILE  -- /usr/gnat/include/dds/ddsi/q_pcap.h:24
    with Import => True, 
         Convention => C, 
         External_Name => "new_pcap_file";
@@ -35,7 +35,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_pcap_h is
       src : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr_storage;
       dst : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr_storage;
       buf : access unsigned_char;
-      sz : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_pcap.h:26
+      sz : unsigned_long)  -- /usr/gnat/include/dds/ddsi/q_pcap.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "write_pcap_received";
@@ -45,7 +45,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_pcap_h is
       tstamp : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_wctime_t;
       src : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr_storage;
       hdr : access constant CycloneDDS.Low_Level.dds_ddsrt_sockets_posix_h.ddsrt_msghdr_t;
-      sz : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_pcap.h:27
+      sz : unsigned_long)  -- /usr/gnat/include/dds/ddsi/q_pcap.h:27
    with Import => True, 
         Convention => C, 
         External_Name => "write_pcap_sent";

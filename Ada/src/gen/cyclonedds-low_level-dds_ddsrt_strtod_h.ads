@@ -43,7 +43,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtod_h is
    function ddsrt_strtod
      (nptr : Interfaces.C.Strings.chars_ptr;
       endptr : System.Address;
-      dblptr : access double) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtod.h:40
+      dblptr : access double) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/strtod.h:40
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strtod";
@@ -62,7 +62,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtod_h is
    function ddsrt_strtof
      (nptr : Interfaces.C.Strings.chars_ptr;
       endptr : System.Address;
-      fltptr : access float) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtod.h:53
+      fltptr : access float) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/strtod.h:53
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strtof";
@@ -80,7 +80,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtod_h is
    function ddsrt_dtostr
      (src : double;
       str : Interfaces.C.Strings.chars_ptr;
-      size : unsigned_long) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtod.h:65
+      size : unsigned_long) return int  -- /usr/gnat/include/dds/ddsrt/strtod.h:65
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_dtostr";
@@ -98,7 +98,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtod_h is
    function ddsrt_ftostr
      (src : float;
       str : Interfaces.C.Strings.chars_ptr;
-      size : unsigned_long) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtod.h:77
+      size : unsigned_long) return int  -- /usr/gnat/include/dds/ddsrt/strtod.h:77
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_ftostr";

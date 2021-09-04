@@ -23,12 +23,12 @@ package CycloneDDS.Low_Level.idlc_generator_h is
   --  
 
    type idlc_generator_options_t is access function return System.Address
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idlc/generator.h:28
+   with Convention => C;  -- /usr/gnat/include/idlc/generator.h:28
 
    type idlc_generator_annotations_t is access function return System.Address
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idlc/generator.h:29
+   with Convention => C;  -- /usr/gnat/include/idlc/generator.h:29
 
    type idlc_generate_t is access function (arg1 : access constant CycloneDDS.Low_Level.idl_processor_h.idl_pstate_t) return int
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idlc/generator.h:30
+   with Convention => C;  -- /usr/gnat/include/idlc/generator.h:30
 
 end CycloneDDS.Low_Level.idlc_generator_h;

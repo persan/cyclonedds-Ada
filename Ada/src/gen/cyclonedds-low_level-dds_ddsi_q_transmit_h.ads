@@ -43,7 +43,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
       xp : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.nn_xpack;
       wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata;
-      tk : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tkmap_h.ddsi_tkmap_instance) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:37
+      tk : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tkmap_h.ddsi_tkmap_instance) return int  -- /usr/gnat/include/dds/ddsi/q_transmit.h:37
    with Import => True, 
         Convention => C, 
         External_Name => "write_sample_gc";
@@ -53,7 +53,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
       xp : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.nn_xpack;
       wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata;
-      tk : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tkmap_h.ddsi_tkmap_instance) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:38
+      tk : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tkmap_h.ddsi_tkmap_instance) return int  -- /usr/gnat/include/dds/ddsi/q_transmit.h:38
    with Import => True, 
         Convention => C, 
         External_Name => "write_sample_nogc";
@@ -62,7 +62,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
      (ts1 : access CycloneDDS.Low_Level.dds_ddsi_q_thread_h.thread_state1;
       xp : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.nn_xpack;
       wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
-      serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:39
+      serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata) return int  -- /usr/gnat/include/dds/ddsi/q_transmit.h:39
    with Import => True, 
         Convention => C, 
         External_Name => "write_sample_gc_notk";
@@ -71,7 +71,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
      (ts1 : access CycloneDDS.Low_Level.dds_ddsi_q_thread_h.thread_state1;
       xp : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.nn_xpack;
       wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
-      serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:40
+      serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata) return int  -- /usr/gnat/include/dds/ddsi/q_transmit.h:40
    with Import => True, 
         Convention => C, 
         External_Name => "write_sample_nogc_notk";
@@ -87,7 +87,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
       prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader;
       msg : System.Address;
       isnew : int;
-      advertised_fragnum : unsigned) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:43
+      advertised_fragnum : unsigned) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsi/q_transmit.h:43
    with Import => True, 
         Convention => C, 
         External_Name => "create_fragment_message";
@@ -98,7 +98,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
       plist : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_plist_h.ddsi_plist;
       serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata;
       prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader;
-      isnew : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:44
+      isnew : int) return int  -- /usr/gnat/include/dds/ddsi/q_transmit.h:44
    with Import => True, 
         Convention => C, 
         External_Name => "enqueue_sample_wrlock_held";
@@ -107,7 +107,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
      (wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       seq : CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.seqno_t;
       serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata;
-      prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:45
+      prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader)  -- /usr/gnat/include/dds/ddsi/q_transmit.h:45
    with Import => True, 
         Convention => C, 
         External_Name => "enqueue_spdp_sample_wrlock_held";
@@ -119,7 +119,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
       hbansreq : int;
       hbliveliness : int;
       dst : CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_entityid_t;
-      issync : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:46
+      issync : int)  -- /usr/gnat/include/dds/ddsi/q_transmit.h:46
    with Import => True, 
         Convention => C, 
         External_Name => "add_Heartbeat";
@@ -127,7 +127,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
    function write_hb_liveliness
      (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv;
       wr_guid : access CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid;
-      xp : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.nn_xpack) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:47
+      xp : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.nn_xpack) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsi/q_transmit.h:47
    with Import => True, 
         Convention => C, 
         External_Name => "write_hb_liveliness";
@@ -138,7 +138,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_transmit_h is
       plist : access CycloneDDS.Low_Level.dds_ddsi_ddsi_plist_h.ddsi_plist;
       serdata : access CycloneDDS.Low_Level.dds_ddsi_ddsi_serdata_h.ddsi_serdata;
       tk : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tkmap_h.ddsi_tkmap_instance;
-      prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_transmit.h:48
+      prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader) return int  -- /usr/gnat/include/dds/ddsi/q_transmit.h:48
    with Import => True, 
         Convention => C, 
         External_Name => "write_sample_p2p_wrlock_held";

@@ -35,7 +35,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
   -- * @returns The integer value for the character, or -1 in case @chr cannot be translated to a numeric value
   --  
 
-   function ddsrt_todigit (chr : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:35
+   function ddsrt_todigit (chr : int) return int  -- /usr/gnat/include/dds/ddsrt/strtol.h:35
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_todigit";
@@ -70,7 +70,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
      (str : Interfaces.C.Strings.chars_ptr;
       endptr : System.Address;
       base : int;
-      llng : access Long_Long_Integer) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:63
+      llng : access Long_Long_Integer) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/strtol.h:63
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strtoll";
@@ -105,7 +105,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
      (str : Interfaces.C.Strings.chars_ptr;
       endptr : System.Address;
       base : int;
-      ullng : access Extensions.unsigned_long_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:95
+      ullng : access Extensions.unsigned_long_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/strtol.h:95
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strtoull";
@@ -126,7 +126,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
   -- *             String converted to an integer, but was out of range.
   --  
 
-   function ddsrt_atoll (str : Interfaces.C.Strings.chars_ptr; llng : access Long_Long_Integer) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:117
+   function ddsrt_atoll (str : Interfaces.C.Strings.chars_ptr; llng : access Long_Long_Integer) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/strtol.h:117
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_atoll";
@@ -147,7 +147,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
   -- *             String converted to an integer, but was out of range.
   --  
 
-   function ddsrt_atoull (str : Interfaces.C.Strings.chars_ptr; ullng : access Extensions.unsigned_long_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:137
+   function ddsrt_atoull (str : Interfaces.C.Strings.chars_ptr; ullng : access Extensions.unsigned_long_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/strtol.h:137
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_atoull";
@@ -168,7 +168,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
      (num : Long_Long_Integer;
       str : Interfaces.C.Strings.chars_ptr;
       len : unsigned_long;
-      endptr : System.Address) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:153
+      endptr : System.Address) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/strtol.h:153
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_lltostr";
@@ -189,7 +189,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_strtol_h is
      (num : Extensions.unsigned_long_long;
       str : Interfaces.C.Strings.chars_ptr;
       len : unsigned_long;
-      endptr : System.Address) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/strtol.h:171
+      endptr : System.Address) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/strtol.h:171
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_ulltostr";

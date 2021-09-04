@@ -24,12 +24,12 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_statistics_h is
       rexmit_bytes : access unsigned_long;
       throttle_count : access unsigned;
       time_throttled : access unsigned_long;
-      time_retransmit : access unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_statistics.h:24
+      time_retransmit : access unsigned_long)  -- /usr/gnat/include/dds/ddsi/ddsi_statistics.h:24
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_get_writer_stats";
 
-   procedure ddsi_get_reader_stats (rd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.reader; discarded_bytes : access unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_statistics.h:25
+   procedure ddsi_get_reader_stats (rd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.reader; discarded_bytes : access unsigned_long)  -- /usr/gnat/include/dds/ddsi/ddsi_statistics.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_get_reader_stats";

@@ -21,72 +21,72 @@ package CycloneDDS.Low_Level.idl_string_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function idl_isalnum (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:22
+   function idl_isalnum (c : int) return int  -- /usr/gnat/include/idl/string.h:22
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isalnum";
 
-   function idl_isalpha (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:23
+   function idl_isalpha (c : int) return int  -- /usr/gnat/include/idl/string.h:23
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isalpha";
 
-   function idl_isblank (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:24
+   function idl_isblank (c : int) return int  -- /usr/gnat/include/idl/string.h:24
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isblank";
 
-   function idl_iscntrl (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:25
+   function idl_iscntrl (c : int) return int  -- /usr/gnat/include/idl/string.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "idl_iscntrl";
 
-   function idl_isgraph (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:26
+   function idl_isgraph (c : int) return int  -- /usr/gnat/include/idl/string.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isgraph";
 
-   function idl_islower (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:27
+   function idl_islower (c : int) return int  -- /usr/gnat/include/idl/string.h:27
    with Import => True, 
         Convention => C, 
         External_Name => "idl_islower";
 
-   function idl_isprint (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:28
+   function idl_isprint (c : int) return int  -- /usr/gnat/include/idl/string.h:28
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isprint";
 
-   function idl_ispunct (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:29
+   function idl_ispunct (c : int) return int  -- /usr/gnat/include/idl/string.h:29
    with Import => True, 
         Convention => C, 
         External_Name => "idl_ispunct";
 
-   function idl_isspace (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:30
+   function idl_isspace (c : int) return int  -- /usr/gnat/include/idl/string.h:30
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isspace";
 
-   function idl_isupper (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:31
+   function idl_isupper (c : int) return int  -- /usr/gnat/include/idl/string.h:31
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isupper";
 
-   function idl_isdigit (c : int; base : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:32
+   function idl_isdigit (c : int; base : int) return int  -- /usr/gnat/include/idl/string.h:32
    with Import => True, 
         Convention => C, 
         External_Name => "idl_isdigit";
 
-   function idl_toupper (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:33
+   function idl_toupper (c : int) return int  -- /usr/gnat/include/idl/string.h:33
    with Import => True, 
         Convention => C, 
         External_Name => "idl_toupper";
 
-   function idl_tolower (c : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:34
+   function idl_tolower (c : int) return int  -- /usr/gnat/include/idl/string.h:34
    with Import => True, 
         Convention => C, 
         External_Name => "idl_tolower";
 
-   function idl_strcasecmp (s1 : Interfaces.C.Strings.chars_ptr; s2 : Interfaces.C.Strings.chars_ptr) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:36
+   function idl_strcasecmp (s1 : Interfaces.C.Strings.chars_ptr; s2 : Interfaces.C.Strings.chars_ptr) return int  -- /usr/gnat/include/idl/string.h:36
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strcasecmp";
@@ -94,17 +94,17 @@ package CycloneDDS.Low_Level.idl_string_h is
    function idl_strncasecmp
      (s1 : Interfaces.C.Strings.chars_ptr;
       s2 : Interfaces.C.Strings.chars_ptr;
-      n : unsigned_long) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:38
+      n : unsigned_long) return int  -- /usr/gnat/include/idl/string.h:38
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strncasecmp";
 
-   function idl_strdup (str : Interfaces.C.Strings.chars_ptr) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:40
+   function idl_strdup (str : Interfaces.C.Strings.chars_ptr) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/idl/string.h:40
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strdup";
 
-   function idl_strndup (str : Interfaces.C.Strings.chars_ptr; len : unsigned_long) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:42
+   function idl_strndup (str : Interfaces.C.Strings.chars_ptr; len : unsigned_long) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/idl/string.h:42
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strndup";
@@ -113,7 +113,7 @@ package CycloneDDS.Low_Level.idl_string_h is
      (str : Interfaces.C.Strings.chars_ptr;
       size : unsigned_long;
       fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      ) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:44
+      ) return int  -- /usr/gnat/include/idl/string.h:44
    with Import => True, 
         Convention => C, 
         External_Name => "idl_snprintf";
@@ -122,13 +122,13 @@ package CycloneDDS.Low_Level.idl_string_h is
      (str : Interfaces.C.Strings.chars_ptr;
       size : unsigned_long;
       fmt : Interfaces.C.Strings.chars_ptr;
-      ap : access System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:47
+      ap : access System.Address) return int  -- /usr/gnat/include/idl/string.h:47
    with Import => True, 
         Convention => C, 
         External_Name => "idl_vsnprintf";
 
    function idl_asprintf (strp : System.Address; fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      ) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:49
+      ) return int  -- /usr/gnat/include/idl/string.h:49
    with Import => True, 
         Convention => C, 
         External_Name => "idl_asprintf";
@@ -136,7 +136,7 @@ package CycloneDDS.Low_Level.idl_string_h is
    function idl_vasprintf
      (strp : System.Address;
       fmt : Interfaces.C.Strings.chars_ptr;
-      ap : access System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:52
+      ap : access System.Address) return int  -- /usr/gnat/include/idl/string.h:52
    with Import => True, 
         Convention => C, 
         External_Name => "idl_vasprintf";
@@ -144,12 +144,12 @@ package CycloneDDS.Low_Level.idl_string_h is
    function idl_strtoull
      (str : Interfaces.C.Strings.chars_ptr;
       endptr : System.Address;
-      base : int) return Extensions.unsigned_long_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:54
+      base : int) return Extensions.unsigned_long_long  -- /usr/gnat/include/idl/string.h:54
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strtoull";
 
-   function idl_strtold (str : Interfaces.C.Strings.chars_ptr; endptr : System.Address) return long_double  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:56
+   function idl_strtold (str : Interfaces.C.Strings.chars_ptr; endptr : System.Address) return long_double  -- /usr/gnat/include/idl/string.h:56
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strtold";
@@ -157,7 +157,7 @@ package CycloneDDS.Low_Level.idl_string_h is
    function idl_strtok_r
      (str : Interfaces.C.Strings.chars_ptr;
       delim : Interfaces.C.Strings.chars_ptr;
-      saveptr : System.Address) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/string.h:58
+      saveptr : System.Address) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/idl/string.h:58
    with Import => True, 
         Convention => C, 
         External_Name => "idl_strtok_r";

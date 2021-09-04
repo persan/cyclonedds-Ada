@@ -44,7 +44,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_sched_h is
      (DDSRT_SCHED_DEFAULT,
       DDSRT_SCHED_REALTIME,
       DDSRT_SCHED_TIMESHARE)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/sched.h:42
+   with Convention => C;  -- /usr/gnat/include/dds/ddsrt/sched.h:42
 
   --* @}  
 end CycloneDDS.Low_Level.dds_ddsrt_sched_h;

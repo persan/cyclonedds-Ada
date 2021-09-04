@@ -23,16 +23,16 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h is
   -- address field in locator maintained in network byte order, the rest in host  
    type ddsi_locator_t_array1802 is array (0 .. 15) of aliased unsigned_char;
    type ddsi_locator_t is record
-      kind : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:26
-      port : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:27
-      address : aliased ddsi_locator_t_array1802;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:28
+      kind : aliased int;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:26
+      port : aliased unsigned;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:27
+      address : aliased ddsi_locator_t_array1802;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:28
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:29
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:29
 
    type ddsi_xlocator_t is record
-      c : aliased ddsi_locator_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:31
-      conn : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:32
+      c : aliased ddsi_locator_t;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:31
+      conn : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:32
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_locator.h:33
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/ddsi_locator.h:33
 
 end CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h;

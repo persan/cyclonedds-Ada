@@ -22,7 +22,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_qosmatch_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function partitions_match_p (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos; b : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_qosmatch.h:22
+   function partitions_match_p (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos; b : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos) return int  -- /usr/gnat/include/dds/ddsi/q_qosmatch.h:22
    with Import => True, 
         Convention => C, 
         External_Name => "partitions_match_p";
@@ -42,7 +42,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_qosmatch_h is
       rd_qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       wr_qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       mask : unsigned_long;
-      reason : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_policy_id_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_qosmatch.h:35
+      reason : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_policy_id_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_qosmatch.h:35
    with Import => True, 
         Convention => C, 
         External_Name => "qos_match_mask_p";
@@ -51,7 +51,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_qosmatch_h is
      (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv;
       rd_qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       wr_qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
-      reason : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_policy_id_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_qosmatch.h:49
+      reason : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_policy_id_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_qosmatch.h:49
    with Import => True, 
         Convention => C, 
         External_Name => "qos_match_p";

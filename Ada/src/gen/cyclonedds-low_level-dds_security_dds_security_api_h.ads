@@ -25,9 +25,9 @@ package CycloneDDS.Low_Level.dds_security_dds_security_api_h is
         (arg1 : Interfaces.C.Strings.chars_ptr;
          arg2 : System.Address;
          arg3 : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/dds_security_api.h:27
+   with Convention => C;  -- /usr/gnat/include/dds/security/dds_security_api.h:27
 
    type plugin_finalize is access function (arg1 : System.Address) return int
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/dds_security_api.h:28
+   with Convention => C;  -- /usr/gnat/include/dds/security/dds_security_api.h:28
 
 end CycloneDDS.Low_Level.dds_security_dds_security_api_h;

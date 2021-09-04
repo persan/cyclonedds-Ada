@@ -31,7 +31,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
   -- *          @s2 or a positive integer if @s1 is greater than @s2.
   --  
 
-   function ddsrt_strcasecmp (s1 : Interfaces.C.Strings.chars_ptr; s2 : Interfaces.C.Strings.chars_ptr) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:33
+   function ddsrt_strcasecmp (s1 : Interfaces.C.Strings.chars_ptr; s2 : Interfaces.C.Strings.chars_ptr) return int  -- /usr/gnat/include/dds/ddsrt/string.h:33
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strcasecmp";
@@ -50,7 +50,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
    function ddsrt_strncasecmp
      (s1 : Interfaces.C.Strings.chars_ptr;
       s2 : Interfaces.C.Strings.chars_ptr;
-      n : unsigned_long) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:49
+      n : unsigned_long) return int  -- /usr/gnat/include/dds/ddsrt/string.h:49
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strncasecmp";
@@ -68,7 +68,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
   -- * @returns The original value of @stringp.
   --  
 
-   function ddsrt_strsep (stringp : System.Address; delim : Interfaces.C.Strings.chars_ptr) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:68
+   function ddsrt_strsep (stringp : System.Address; delim : Interfaces.C.Strings.chars_ptr) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/string.h:68
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strsep";
@@ -87,7 +87,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
   -- *          by @ptr or NULL if not enough memory was available.
   --  
 
-   function ddsrt_memdup (ptr : System.Address; len : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:86
+   function ddsrt_memdup (ptr : System.Address; len : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/string.h:86
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_memdup";
@@ -105,7 +105,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
   -- *          memory was available.
   --  
 
-   function ddsrt_strdup (str : Interfaces.C.Strings.chars_ptr) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:105
+   function ddsrt_strdup (str : Interfaces.C.Strings.chars_ptr) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/string.h:105
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strdup";
@@ -124,7 +124,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
   -- *          if not enough memory was available.
   --  
 
-   function ddsrt_strndup (str : Interfaces.C.Strings.chars_ptr; len : unsigned_long) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:124
+   function ddsrt_strndup (str : Interfaces.C.Strings.chars_ptr; len : unsigned_long) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/string.h:124
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strndup";
@@ -148,7 +148,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
    function ddsrt_strlcpy
      (dest : Interfaces.C.Strings.chars_ptr;
       src : Interfaces.C.Strings.chars_ptr;
-      size : unsigned_long) return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:147
+      size : unsigned_long) return unsigned_long  -- /usr/gnat/include/dds/ddsrt/string.h:147
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strlcpy";
@@ -173,7 +173,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
    function ddsrt_strlcat
      (dest : Interfaces.C.Strings.chars_ptr;
       src : Interfaces.C.Strings.chars_ptr;
-      size : unsigned_long) return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:171
+      size : unsigned_long) return unsigned_long  -- /usr/gnat/include/dds/ddsrt/string.h:171
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strlcat";
@@ -198,7 +198,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
    function ddsrt_strerror_r
      (errnum : int;
       buf : Interfaces.C.Strings.chars_ptr;
-      buflen : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:194
+      buflen : unsigned_long) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/string.h:194
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_strerror_r";
@@ -219,7 +219,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_string_h is
      (str : Interfaces.C.Strings.chars_ptr;
       srch : Interfaces.C.Strings.chars_ptr;
       subst : Interfaces.C.Strings.chars_ptr;
-      max : unsigned_long) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/string.h:211
+      max : unsigned_long) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/string.h:211
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_str_replace";

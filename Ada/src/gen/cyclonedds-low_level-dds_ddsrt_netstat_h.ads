@@ -10,7 +10,7 @@ with CycloneDDS.Low_Level.dds_ddsrt_retcode_h;
 
 package CycloneDDS.Low_Level.dds_ddsrt_netstat_h is
 
-   DDSRT_HAVE_NETSTAT : constant := (1);  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:21
+   DDSRT_HAVE_NETSTAT : constant := (1);  --  /usr/gnat/include/dds/ddsrt/netstat.h:21
 
   -- * Copyright(c) 2019 ADLINK Technology Limited and others
   -- *
@@ -24,12 +24,12 @@ package CycloneDDS.Low_Level.dds_ddsrt_netstat_h is
   --  
 
    type ddsrt_netstat is record
-      ipkt : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:33
-      opkt : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:34
-      ibytes : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:35
-      obytes : aliased unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:36
+      ipkt : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/netstat.h:33
+      opkt : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/netstat.h:34
+      ibytes : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/netstat.h:35
+      obytes : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/netstat.h:36
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:32
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/netstat.h:32
 
   --*
   -- * @brief Platform dependent control structure for network statistics
@@ -41,7 +41,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_netstat_h is
   -- * @brief Prepare for gathering network statistics for specified interface.
   --  
 
-   function ddsrt_netstat_new (control : System.Address; device : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:48
+   function ddsrt_netstat_new (control : System.Address; device : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/netstat.h:48
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_netstat_new";
@@ -50,7 +50,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_netstat_h is
   -- * @brief Release resources for gathering network statistics.
   --  
 
-   function ddsrt_netstat_free (control : access ddsrt_netstat_control) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:56
+   function ddsrt_netstat_free (control : access ddsrt_netstat_control) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/netstat.h:56
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_netstat_free";
@@ -59,7 +59,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_netstat_h is
   -- * @brief Get network statistics.
   --  
 
-   function ddsrt_netstat_get (control : access ddsrt_netstat_control; stats : access ddsrt_netstat) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/netstat.h:63
+   function ddsrt_netstat_get (control : access ddsrt_netstat_control; stats : access ddsrt_netstat) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/netstat.h:63
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_netstat_get";

@@ -21,11 +21,11 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
 
    type os_sockWaitset is null record;   -- incomplete struct
 
-   type os_sockWaitset is access all os_sockWaitset;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:19
+   type os_sockWaitset is access all os_sockWaitset;  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:19
 
    type os_sockWaitsetCtx is null record;   -- incomplete struct
 
-   type os_sockWaitsetCtx is access all os_sockWaitsetCtx;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:20
+   type os_sockWaitsetCtx is access all os_sockWaitsetCtx;  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:20
 
   --  Allocates a new connection waitset. The waitset is thread-safe in
   --  that multiple threads may add and remove connections from the wait set
@@ -34,7 +34,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  loop.
   -- 
 
-   function os_sockWaitsetNew return os_sockWaitset  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:30
+   function os_sockWaitsetNew return os_sockWaitset  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:30
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetNew";
@@ -43,7 +43,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  be closed.
   -- 
 
-   procedure os_sockWaitsetFree (ws : os_sockWaitset)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:36
+   procedure os_sockWaitsetFree (ws : os_sockWaitset)  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:36
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetFree";
@@ -61,7 +61,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  following os_sockWaitsetWait.
   -- 
 
-   procedure os_sockWaitsetTrigger (ws : os_sockWaitset)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:53
+   procedure os_sockWaitsetTrigger (ws : os_sockWaitset)  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:53
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetTrigger";
@@ -74,7 +74,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  Returns < 0 on error, 0 if already present, 1 if added
   -- 
 
-   function os_sockWaitsetAdd (ws : os_sockWaitset; conn : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:65
+   function os_sockWaitsetAdd (ws : os_sockWaitset; conn : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn) return int  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:65
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetAdd";
@@ -85,7 +85,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  but before all events had been enumerated.
   -- 
 
-   procedure os_sockWaitsetPurge (ws : os_sockWaitset; index : unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:73
+   procedure os_sockWaitsetPurge (ws : os_sockWaitset; index : unsigned)  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:73
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetPurge";
@@ -99,7 +99,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  following os_sockWaitsetWait.
   -- 
 
-   function os_sockWaitsetWait (ws : os_sockWaitset) return os_sockWaitsetCtx  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:87
+   function os_sockWaitsetWait (ws : os_sockWaitset) return os_sockWaitsetCtx  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:87
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetWait";
@@ -115,13 +115,13 @@ package CycloneDDS.Low_Level.dds_ddsi_q_sockwaitset_h is
   --  data is available.
   -- 
 
-   function os_sockWaitsetNextEvent (ctx : os_sockWaitsetCtx; conn : System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:102
+   function os_sockWaitsetNextEvent (ctx : os_sockWaitsetCtx; conn : System.Address) return int  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:102
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetNextEvent";
 
   -- Remove connection  
-   procedure os_sockWaitsetRemove (ws : os_sockWaitset; conn : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_sockwaitset.h:105
+   procedure os_sockWaitsetRemove (ws : os_sockWaitset; conn : access CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn)  -- /usr/gnat/include/dds/ddsi/q_sockwaitset.h:105
    with Import => True, 
         Convention => C, 
         External_Name => "os_sockWaitsetRemove";

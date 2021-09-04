@@ -22,7 +22,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   subtype dds_security_time_event_handle_t is unsigned_long;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:24
+   subtype dds_security_time_event_handle_t is unsigned_long;  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:24
 
   --*
   -- * The dispatcher that will trigger the timed callbacks.
@@ -39,7 +39,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
    type dds_security_timed_cb_kind_t is 
      (DDS_SECURITY_TIMED_CB_KIND_TIMEOUT,
       DDS_SECURITY_TIMED_CB_KIND_DELETE)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:39
+   with Convention => C;  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:39
 
   --*
   -- * Template for the timed callback functions.
@@ -62,7 +62,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
          arg2 : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_time_t;
          arg3 : dds_security_timed_cb_kind_t;
          arg4 : System.Address)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:57
+   with Convention => C;  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:57
 
   --*
   -- * Create a new dispatcher for timed callbacks.
@@ -72,7 +72,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
   -- * @param evq           The event queue used to handle the timers.
   --  
 
-   function dds_security_timed_dispatcher_new (evq : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.xeventq) return access dds_security_timed_dispatcher  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:66
+   function dds_security_timed_dispatcher_new (evq : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.xeventq) return access dds_security_timed_dispatcher  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:66
    with Import => True, 
         Convention => C, 
         External_Name => "dds_security_timed_dispatcher_new";
@@ -87,7 +87,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
   -- * 
   --  
 
-   procedure dds_security_timed_dispatcher_free (d : access dds_security_timed_dispatcher)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:77
+   procedure dds_security_timed_dispatcher_free (d : access dds_security_timed_dispatcher)  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:77
    with Import => True, 
         Convention => C, 
         External_Name => "dds_security_timed_dispatcher_free";
@@ -113,7 +113,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
   -- *
   --  
 
-   procedure dds_security_timed_dispatcher_enable (d : access dds_security_timed_dispatcher)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:99
+   procedure dds_security_timed_dispatcher_enable (d : access dds_security_timed_dispatcher)  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:99
    with Import => True, 
         Convention => C, 
         External_Name => "dds_security_timed_dispatcher_enable";
@@ -138,7 +138,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
   -- * @return true if disabled, false if it was already disabled
   --  
 
-   function dds_security_timed_dispatcher_disable (d : access dds_security_timed_dispatcher) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:120
+   function dds_security_timed_dispatcher_disable (d : access dds_security_timed_dispatcher) return Extensions.bool  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:120
    with Import => True, 
         Convention => C, 
         External_Name => "dds_security_timed_dispatcher_disable";
@@ -172,7 +172,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
      (d : access dds_security_timed_dispatcher;
       cb : dds_security_timed_cb_t;
       trigger_time : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_time_t;
-      arg : System.Address) return dds_security_time_event_handle_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:146
+      arg : System.Address) return dds_security_time_event_handle_t  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:146
    with Import => True, 
         Convention => C, 
         External_Name => "dds_security_timed_dispatcher_add";
@@ -187,7 +187,7 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_timed_cb_h is
   -- * @param timer         The timer that has to removed.
   --  
 
-   procedure dds_security_timed_dispatcher_remove (d : access dds_security_timed_dispatcher; timer : dds_security_time_event_handle_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/security/core/dds_security_timed_cb.h:157
+   procedure dds_security_timed_dispatcher_remove (d : access dds_security_timed_dispatcher; timer : dds_security_time_event_handle_t)  -- /usr/gnat/include/dds/security/core/dds_security_timed_cb.h:157
    with Import => True, 
         Convention => C, 
         External_Name => "dds_security_timed_dispatcher_remove";

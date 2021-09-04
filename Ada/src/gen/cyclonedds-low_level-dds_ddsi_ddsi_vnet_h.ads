@@ -23,7 +23,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_vnet_h is
    function ddsi_vnet_init
      (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv;
       name : Interfaces.C.Strings.chars_ptr;
-      locator_kind : int) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_vnet.h:19
+      locator_kind : int) return int  -- /usr/gnat/include/dds/ddsi/ddsi_vnet.h:19
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_vnet_init";

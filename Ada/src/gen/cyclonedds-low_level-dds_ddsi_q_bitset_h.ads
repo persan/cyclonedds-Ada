@@ -21,7 +21,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_bitset_h is
    function nn_bitset_isset
      (numbits : unsigned;
       bits : access unsigned;
-      idx : unsigned) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_bitset.h:26
+      idx : unsigned) return int  -- /usr/gnat/include/dds/ddsi/q_bitset.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "nn_bitset_isset";
@@ -29,7 +29,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_bitset_h is
    procedure nn_bitset_set
      (numbits : unsigned;
       bits : access unsigned;
-      idx : unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_bitset.h:31
+      idx : unsigned)  -- /usr/gnat/include/dds/ddsi/q_bitset.h:31
    with Import => True, 
         Convention => C, 
         External_Name => "nn_bitset_set";
@@ -37,17 +37,17 @@ package CycloneDDS.Low_Level.dds_ddsi_q_bitset_h is
    procedure nn_bitset_clear
      (numbits : unsigned;
       bits : access unsigned;
-      idx : unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_bitset.h:37
+      idx : unsigned)  -- /usr/gnat/include/dds/ddsi/q_bitset.h:37
    with Import => True, 
         Convention => C, 
         External_Name => "nn_bitset_clear";
 
-   procedure nn_bitset_zero (numbits : unsigned; bits : access unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_bitset.h:43
+   procedure nn_bitset_zero (numbits : unsigned; bits : access unsigned)  -- /usr/gnat/include/dds/ddsi/q_bitset.h:43
    with Import => True, 
         Convention => C, 
         External_Name => "nn_bitset_zero";
 
-   procedure nn_bitset_one (numbits : unsigned; bits : access unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_bitset.h:48
+   procedure nn_bitset_one (numbits : unsigned; bits : access unsigned)  -- /usr/gnat/include/dds/ddsi/q_bitset.h:48
    with Import => True, 
         Convention => C, 
         External_Name => "nn_bitset_one";

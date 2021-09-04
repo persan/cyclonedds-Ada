@@ -18,18 +18,18 @@ limited with CycloneDDS.Low_Level.dds_ddsrt_log_h;
 
 package CycloneDDS.Low_Level.dds_ddsi_q_thread_h is
 
-   CACHE_LINE_SIZE : constant := 64;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:30
+   CACHE_LINE_SIZE : constant := 64;  --  /usr/gnat/include/dds/ddsi/q_thread.h:30
 
-   VTIME_NEST_MASK : constant := 16#f#;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:34
-   VTIME_TIME_MASK : constant := 16#fffffff0#;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:35
-   VTIME_TIME_SHIFT : constant := 4;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:36
+   VTIME_NEST_MASK : constant := 16#f#;  --  /usr/gnat/include/dds/ddsi/q_thread.h:34
+   VTIME_TIME_MASK : constant := 16#fffffff0#;  --  /usr/gnat/include/dds/ddsi/q_thread.h:35
+   VTIME_TIME_SHIFT : constant := 4;  --  /usr/gnat/include/dds/ddsi/q_thread.h:36
 
-   Q_THREAD_SCHEDCLASS_REALTIME : aliased constant String := "Realtime" & ASCII.NUL;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:45
-   Q_THREAD_SCHEDCLASS_TIMESHARE : aliased constant String := "Timeshare" & ASCII.NUL;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:46
+   Q_THREAD_SCHEDCLASS_REALTIME : aliased constant String := "Realtime" & ASCII.NUL;  --  /usr/gnat/include/dds/ddsi/q_thread.h:45
+   Q_THREAD_SCHEDCLASS_TIMESHARE : aliased constant String := "Timeshare" & ASCII.NUL;  --  /usr/gnat/include/dds/ddsi/q_thread.h:46
 
-   Q_THREAD_SCHEDPRIO_DEFAULT : constant := 0;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:49
+   Q_THREAD_SCHEDPRIO_DEFAULT : constant := 0;  --  /usr/gnat/include/dds/ddsi/q_thread.h:49
 
-   Q_THREAD_DEBUG : constant := 0;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:76
+   Q_THREAD_DEBUG : constant := 0;  --  /usr/gnat/include/dds/ddsi/q_thread.h:76
    --  arg-macro: procedure thread_vtime_trace (ts1)
    --    do { } while (0)
 
@@ -49,10 +49,10 @@ package CycloneDDS.Low_Level.dds_ddsi_q_thread_h is
   --   discovered at run-time, but in practice it's 64 for most CPUs and
   --   128 for some.  
 
-   subtype vtime_t is unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:32
+   subtype vtime_t is unsigned;  -- /usr/gnat/include/dds/ddsi/q_thread.h:32
 
   -- signed version  
-   subtype svtime_t is int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:33
+   subtype svtime_t is int;  -- /usr/gnat/include/dds/ddsi/q_thread.h:33
 
   -- GCC has a nifty feature allowing the specification of the required
   --   alignment: __attribute__ ((aligned (CACHE_LINE_SIZE))) in this
@@ -67,7 +67,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_thread_h is
       THREAD_STATE_INIT,
       THREAD_STATE_LAZILY_CREATED,
       THREAD_STATE_ALIVE)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:51
+   with Convention => C;  -- /usr/gnat/include/dds/ddsi/q_thread.h:51
 
   -- known to be dead  
   -- internal thread, stopped-but-not-reaped  
@@ -89,59 +89,59 @@ package CycloneDDS.Low_Level.dds_ddsi_q_thread_h is
 
    subtype anon6035_array1090 is Interfaces.C.char_array (0 .. 23);
    type thread_state_base is record
-      vtime : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint32_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
-      state : aliased thread_state;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
-      gv : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_voidp_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
-      tid : aliased CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
-      f : access function (arg1 : System.Address) return unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
-      f_arg : System.Address;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
-      name : aliased anon6035_array1090;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:103
+      vtime : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint32_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
+      state : aliased thread_state;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
+      gv : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_voidp_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
+      tid : aliased CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
+      f : access function (arg1 : System.Address) return unsigned;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
+      f_arg : System.Address;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
+      name : aliased anon6035_array1090;  -- /usr/gnat/include/dds/ddsi/q_thread.h:103
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:102
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/q_thread.h:102
 
    subtype anon5118_array1090 is Interfaces.C.char_array (0 .. 23);
    subtype anon5118_array6037 is Interfaces.C.char_array (0 .. 0);
    type thread_state1 is record
-      vtime : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint32_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      state : aliased thread_state;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      gv : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_voidp_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      tid : aliased CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      f : access function (arg1 : System.Address) return unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      f_arg : System.Address;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      name : aliased anon5118_array1090;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:107
-      pad : aliased anon5118_array6037;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:108
+      vtime : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uint32_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      state : aliased thread_state;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      gv : aliased CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_voidp_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      tid : aliased CycloneDDS.Low_Level.dds_ddsrt_threads_posix_h.ddsrt_thread_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      f : access function (arg1 : System.Address) return unsigned;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      f_arg : System.Address;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      name : aliased anon5118_array1090;  -- /usr/gnat/include/dds/ddsi/q_thread.h:107
+      pad : aliased anon5118_array6037;  -- /usr/gnat/include/dds/ddsi/q_thread.h:108
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:106
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/q_thread.h:106
 
    type thread_states is record
-      lock : aliased CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:116
-      nthreads : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:117
-      ts : access thread_state1;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:118
+      lock : aliased CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t;  -- /usr/gnat/include/dds/ddsi/q_thread.h:116
+      nthreads : aliased unsigned;  -- /usr/gnat/include/dds/ddsi/q_thread.h:117
+      ts : access thread_state1;  -- /usr/gnat/include/dds/ddsi/q_thread.h:118
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:115
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/q_thread.h:115
 
   -- [nthreads]  
-   thread_states : aliased thread_states  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:121
+   thread_states : aliased thread_states  -- /usr/gnat/include/dds/ddsi/q_thread.h:121
    with Import => True, 
         Convention => C, 
         External_Name => "thread_states";
 
-   tsd_thread_state : access thread_state1  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:122
+   tsd_thread_state : access thread_state1  -- /usr/gnat/include/dds/ddsi/q_thread.h:122
    with Import => True, 
         Convention => C, 
         External_Name => "tsd_thread_state";
 
-   procedure thread_states_init (maxthreads : unsigned)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:124
+   procedure thread_states_init (maxthreads : unsigned)  -- /usr/gnat/include/dds/ddsi/q_thread.h:124
    with Import => True, 
         Convention => C, 
         External_Name => "thread_states_init";
 
-   function thread_states_fini return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:125
+   function thread_states_fini return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_thread.h:125
    with Import => True, 
         Convention => C, 
         External_Name => "thread_states_fini";
 
-   function lookup_thread_properties (config : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config; name : Interfaces.C.Strings.chars_ptr) return access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config_thread_properties_listelem  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:127
+   function lookup_thread_properties (config : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config; name : Interfaces.C.Strings.chars_ptr) return access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config_thread_properties_listelem  -- /usr/gnat/include/dds/ddsi/q_thread.h:127
    with Import => True, 
         Convention => C, 
         External_Name => "lookup_thread_properties";
@@ -151,7 +151,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_thread_h is
       tprops : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config_thread_properties_listelem;
       name : Interfaces.C.Strings.chars_ptr;
       f : access function (arg1 : System.Address) return unsigned;
-      arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:128
+      arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsi/q_thread.h:128
    with Import => True, 
         Convention => C, 
         External_Name => "create_thread_with_properties";
@@ -161,81 +161,81 @@ package CycloneDDS.Low_Level.dds_ddsi_q_thread_h is
       gv : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv;
       name : Interfaces.C.Strings.chars_ptr;
       f : access function (arg1 : System.Address) return unsigned;
-      arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:129
+      arg : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsi/q_thread.h:129
    with Import => True, 
         Convention => C, 
         External_Name => "create_thread";
 
-   function lookup_thread_state_real return access thread_state1  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:130
+   function lookup_thread_state_real return access thread_state1  -- /usr/gnat/include/dds/ddsi/q_thread.h:130
    with Import => True, 
         Convention => C, 
         External_Name => "lookup_thread_state_real";
 
-   function join_thread (ts1 : access thread_state1) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:131
+   function join_thread (ts1 : access thread_state1) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsi/q_thread.h:131
    with Import => True, 
         Convention => C, 
         External_Name => "join_thread";
 
-   procedure log_stack_traces (logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg; gv : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:132
+   procedure log_stack_traces (logcfg : access constant CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg; gv : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /usr/gnat/include/dds/ddsi/q_thread.h:132
    with Import => True, 
         Convention => C, 
         External_Name => "log_stack_traces";
 
-   function lookup_thread_state return access thread_state1  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:134
+   function lookup_thread_state return access thread_state1  -- /usr/gnat/include/dds/ddsi/q_thread.h:134
    with Import => True, 
         Convention => C, 
         External_Name => "lookup_thread_state";
 
-   function vtime_awake_p (vtime : vtime_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:142
+   function vtime_awake_p (vtime : vtime_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_thread.h:142
    with Import => True, 
         Convention => C, 
         External_Name => "vtime_awake_p";
 
-   function vtime_asleep_p (vtime : vtime_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:147
+   function vtime_asleep_p (vtime : vtime_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_thread.h:147
    with Import => True, 
         Convention => C, 
         External_Name => "vtime_asleep_p";
 
-   function vtime_gt (vtime1 : vtime_t; vtime0 : vtime_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:152
+   function vtime_gt (vtime1 : vtime_t; vtime0 : vtime_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_thread.h:152
    with Import => True, 
         Convention => C, 
         External_Name => "vtime_gt";
 
-   function thread_is_awake return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:158
+   function thread_is_awake return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_thread.h:158
    with Import => True, 
         Convention => C, 
         External_Name => "thread_is_awake";
 
-   function thread_is_asleep return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:165
+   function thread_is_asleep return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_thread.h:165
    with Import => True, 
         Convention => C, 
         External_Name => "thread_is_asleep";
 
-   procedure thread_state_asleep (ts1 : access thread_state1)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:172
+   procedure thread_state_asleep (ts1 : access thread_state1)  -- /usr/gnat/include/dds/ddsi/q_thread.h:172
    with Import => True, 
         Convention => C, 
         External_Name => "thread_state_asleep";
 
   -- nested calls a rare and an extra fence doesn't break things  
-   procedure thread_state_awake (ts1 : access thread_state1; gv : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:186
+   procedure thread_state_awake (ts1 : access thread_state1; gv : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv)  -- /usr/gnat/include/dds/ddsi/q_thread.h:186
    with Import => True, 
         Convention => C, 
         External_Name => "thread_state_awake";
 
   -- nested calls a rare and an extra fence doesn't break things  
-   procedure thread_state_awake_domain_ok (ts1 : access thread_state1)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:200
+   procedure thread_state_awake_domain_ok (ts1 : access thread_state1)  -- /usr/gnat/include/dds/ddsi/q_thread.h:200
    with Import => True, 
         Convention => C, 
         External_Name => "thread_state_awake_domain_ok";
 
   -- nested calls a rare and an extra fence doesn't break things  
-   procedure thread_state_awake_fixed_domain (ts1 : access thread_state1)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:211
+   procedure thread_state_awake_fixed_domain (ts1 : access thread_state1)  -- /usr/gnat/include/dds/ddsi/q_thread.h:211
    with Import => True, 
         Convention => C, 
         External_Name => "thread_state_awake_fixed_domain";
 
   -- fixed domain -> must be an internal thread  
-   procedure thread_state_awake_to_awake_no_nest (ts1 : access thread_state1)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_thread.h:218
+   procedure thread_state_awake_to_awake_no_nest (ts1 : access thread_state1)  -- /usr/gnat/include/dds/ddsi/q_thread.h:218
    with Import => True, 
         Convention => C, 
         External_Name => "thread_state_awake_to_awake_no_nest";

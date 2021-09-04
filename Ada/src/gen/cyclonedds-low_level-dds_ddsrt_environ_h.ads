@@ -41,7 +41,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_environ_h is
   -- *             Unspecified error.
   --  
 
-   function ddsrt_getenv (name : Interfaces.C.Strings.chars_ptr; value : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/environ.h:44
+   function ddsrt_getenv (name : Interfaces.C.Strings.chars_ptr; value : System.Address) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/environ.h:44
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_getenv";
@@ -67,7 +67,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_environ_h is
   -- *             Unspecified system error.
   --  
 
-   function ddsrt_setenv (name : Interfaces.C.Strings.chars_ptr; value : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/environ.h:70
+   function ddsrt_setenv (name : Interfaces.C.Strings.chars_ptr; value : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/environ.h:70
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_setenv";
@@ -89,7 +89,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_environ_h is
   -- *             Unspecified system error.
   --  
 
-   function ddsrt_unsetenv (name : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/environ.h:92
+   function ddsrt_unsetenv (name : Interfaces.C.Strings.chars_ptr) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsrt/environ.h:92
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_unsetenv";
@@ -116,7 +116,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_environ_h is
   -- *             variables expanded.
   --  
 
-   function ddsrt_expand_envvars (string : Interfaces.C.Strings.chars_ptr; domid : unsigned) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/environ.h:118
+   function ddsrt_expand_envvars (string : Interfaces.C.Strings.chars_ptr; domid : unsigned) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/environ.h:118
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_expand_envvars";
@@ -140,7 +140,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_environ_h is
   -- *             variables expanded.
   --  
 
-   function ddsrt_expand_envvars_sh (string : Interfaces.C.Strings.chars_ptr; domid : unsigned) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/environ.h:141
+   function ddsrt_expand_envvars_sh (string : Interfaces.C.Strings.chars_ptr; domid : unsigned) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsrt/environ.h:141
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_expand_envvars_sh";

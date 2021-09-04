@@ -40,32 +40,32 @@ package CycloneDDS.Low_Level.idl_print_h is
          arg2 : unsigned_long;
          arg3 : System.Address;
          arg4 : System.Address) return int
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/print.h:33
+   with Convention => C;  -- /usr/gnat/include/idl/print.h:33
 
   --* @private  
    function idl_printa_arguments_u_u
      (strp : System.Address;
       print : idl_print_t;
       object : System.Address;
-      user_data : System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/print.h:36
+      user_data : System.Address) return int  -- /usr/gnat/include/idl/print.h:36
    with Import => True, 
         Convention => C, 
         External_Name => "idl_printa_arguments__";
 
   --* @private  
-   function idl_printa_size_u_u return unsigned_long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/print.h:40
+   function idl_printa_size_u_u return unsigned_long  -- /usr/gnat/include/idl/print.h:40
    with Import => True, 
         Convention => C, 
         External_Name => "idl_printa_size__";
 
   --* @private  
-   function idl_printa_strp_u_u return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/print.h:43
+   function idl_printa_strp_u_u return System.Address  -- /usr/gnat/include/idl/print.h:43
    with Import => True, 
         Convention => C, 
         External_Name => "idl_printa_strp__";
 
   --* @private  
-   function idl_printa_u_u return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/print.h:46
+   function idl_printa_u_u return int  -- /usr/gnat/include/idl/print.h:46
    with Import => True, 
         Convention => C, 
         External_Name => "idl_printa__";
@@ -74,7 +74,7 @@ package CycloneDDS.Low_Level.idl_print_h is
      (strp : System.Address;
       print : idl_print_t;
       object : System.Address;
-      user_data : System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/idl/print.h:72
+      user_data : System.Address) return int  -- /usr/gnat/include/idl/print.h:72
    with Import => True, 
         Convention => C, 
         External_Name => "idl_print__";

@@ -28,7 +28,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_ipaddr_h is
      (loc : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_locator_t;
       ninterf : unsigned_long;
       interf : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_ownip_h.nn_interface;
-      interf_idx : access unsigned_long) return CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_nearby_address_result  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:21
+      interf_idx : access unsigned_long) return CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_nearby_address_result  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:21
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_is_nearby_address";
@@ -36,12 +36,12 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_ipaddr_h is
    function ddsi_ipaddr_from_string
      (loc : access CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_locator_t;
       str : Interfaces.C.Strings.chars_ptr;
-      kind : int) return CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_locator_from_string_result  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:22
+      kind : int) return CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_locator_from_string_result  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:22
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_from_string";
 
-   function ddsi_ipaddr_compare (sa1 : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr; sa2 : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:23
+   function ddsi_ipaddr_compare (sa1 : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr; sa2 : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr) return int  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:23
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_compare";
@@ -51,7 +51,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_ipaddr_h is
       sizeof_dst : unsigned_long;
       loc : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_locator_t;
       with_port : int;
-      interf : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_ownip_h.nn_interface) return Interfaces.C.Strings.chars_ptr  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:24
+      interf : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_ownip_h.nn_interface) return Interfaces.C.Strings.chars_ptr  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:24
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_to_string";
@@ -59,7 +59,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_ipaddr_h is
    procedure ddsi_ipaddr_to_loc
      (dst : access CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_locator_t;
       src : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr;
-      kind : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:25
+      kind : int)  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_to_loc";
@@ -68,12 +68,12 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_ipaddr_h is
      (tran : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_factory;
       dst : access CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_xlocator_t;
       src : access constant CycloneDDS.Low_Level.bits_socket_h.sockaddr;
-      kind : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:26
+      kind : int)  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_to_xloc";
 
-   procedure ddsi_ipaddr_from_loc (dst : access CycloneDDS.Low_Level.bits_socket_h.sockaddr_storage; src : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_locator_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_ipaddr.h:27
+   procedure ddsi_ipaddr_from_loc (dst : access CycloneDDS.Low_Level.bits_socket_h.sockaddr_storage; src : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_locator_h.ddsi_locator_t)  -- /usr/gnat/include/dds/ddsi/ddsi_ipaddr.h:27
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_ipaddr_from_loc";

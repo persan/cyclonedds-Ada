@@ -19,7 +19,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_wraddrset_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function compute_writer_addrset (wr : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer) return access CycloneDDS.Low_Level.dds_ddsi_q_addrset_h.addrset  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_wraddrset.h:25
+   function compute_writer_addrset (wr : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer) return access CycloneDDS.Low_Level.dds_ddsi_q_addrset_h.addrset  -- /usr/gnat/include/dds/ddsi/ddsi_wraddrset.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "compute_writer_addrset";

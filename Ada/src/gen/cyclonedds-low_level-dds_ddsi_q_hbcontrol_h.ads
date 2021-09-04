@@ -24,16 +24,16 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
   --  
 
    type hbcontrol is record
-      t_of_last_write : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:26
-      t_of_last_hb : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:27
-      t_of_last_ackhb : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:28
-      tsched : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:29
-      hbs_since_last_write : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:30
-      last_packetid : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:31
+      t_of_last_write : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:26
+      t_of_last_hb : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:27
+      t_of_last_ackhb : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:28
+      tsched : aliased CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:29
+      hbs_since_last_write : aliased unsigned;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:30
+      last_packetid : aliased unsigned;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:31
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:25
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:25
 
-   procedure writer_hbcontrol_init (hbc : access hbcontrol)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:34
+   procedure writer_hbcontrol_init (hbc : access hbcontrol)  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:34
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_init";
@@ -41,12 +41,12 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
    function writer_hbcontrol_intv
      (wr : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       whcst : access constant CycloneDDS.Low_Level.dds_ddsi_q_whc_h.whc_state;
-      tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t) return long  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:35
+      tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t) return long  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:35
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_intv";
 
-   procedure writer_hbcontrol_note_asyncwrite (wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer; tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:36
+   procedure writer_hbcontrol_note_asyncwrite (wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer; tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t)  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:36
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_note_asyncwrite";
@@ -54,7 +54,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
    function writer_hbcontrol_ack_required
      (wr : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       whcst : access constant CycloneDDS.Low_Level.dds_ddsi_q_whc_h.whc_state;
-      tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:37
+      tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t) return int  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:37
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_ack_required";
@@ -64,7 +64,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
       whcst : access constant CycloneDDS.Low_Level.dds_ddsi_q_whc_h.whc_state;
       tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;
       packetid : unsigned;
-      hbansreq : access int) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:38
+      hbansreq : access int) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:38
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_piggyback";
@@ -72,7 +72,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
    function writer_hbcontrol_must_send
      (wr : access constant CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       whcst : access constant CycloneDDS.Low_Level.dds_ddsi_q_whc_h.whc_state;
-      tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:39
+      tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t) return int  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:39
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_must_send";
@@ -82,7 +82,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
       whcst : access constant CycloneDDS.Low_Level.dds_ddsi_q_whc_h.whc_state;
       tnow : CycloneDDS.Low_Level.dds_ddsrt_time_h.ddsrt_mtime_t;
       hbansreq : int;
-      issync : int) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:40
+      issync : int) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:40
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_create_heartbeat";
@@ -91,7 +91,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_hbcontrol_h is
      (wr : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.writer;
       whcst : access constant CycloneDDS.Low_Level.dds_ddsi_q_whc_h.whc_state;
       hbansreq : int;
-      prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_hbcontrol.h:43
+      prd : access CycloneDDS.Low_Level.dds_ddsi_q_entity_h.proxy_reader) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.nn_xmsg  -- /usr/gnat/include/dds/ddsi/q_hbcontrol.h:43
    with Import => True, 
         Convention => C, 
         External_Name => "writer_hbcontrol_p2p";

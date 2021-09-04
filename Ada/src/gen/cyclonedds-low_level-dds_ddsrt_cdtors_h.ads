@@ -18,22 +18,22 @@ package CycloneDDS.Low_Level.dds_ddsrt_cdtors_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   procedure ddsrt_init  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/cdtors.h:22
+   procedure ddsrt_init  -- /usr/gnat/include/dds/ddsrt/cdtors.h:22
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_init";
 
-   procedure ddsrt_fini  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/cdtors.h:24
+   procedure ddsrt_fini  -- /usr/gnat/include/dds/ddsrt/cdtors.h:24
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_fini";
 
-   function ddsrt_get_singleton_mutex return access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/cdtors.h:26
+   function ddsrt_get_singleton_mutex return access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_mutex_t  -- /usr/gnat/include/dds/ddsrt/cdtors.h:26
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_get_singleton_mutex";
 
-   function ddsrt_get_singleton_cond return access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/cdtors.h:28
+   function ddsrt_get_singleton_cond return access CycloneDDS.Low_Level.dds_ddsrt_sync_posix_h.ddsrt_cond_t  -- /usr/gnat/include/dds/ddsrt/cdtors.h:28
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_get_singleton_cond";

@@ -2,7 +2,6 @@
 
 CFLAGS+=-fdump-ada-spec -C
 CFLAGS+=-fada-spec-parent=CycloneDDS.Low_Level
-CFLAGS+=-I ${CURDIR}/../target/include
 
 
 all:gen

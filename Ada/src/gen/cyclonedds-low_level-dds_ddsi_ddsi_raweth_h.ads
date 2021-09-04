@@ -18,7 +18,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_raweth_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function ddsi_raweth_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/ddsi_raweth.h:19
+   function ddsi_raweth_init (gv : access CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h.ddsi_domaingv) return int  -- /usr/gnat/include/dds/ddsi/ddsi_raweth.h:19
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi_raweth_init";

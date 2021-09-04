@@ -1,0 +1,8 @@
+with "cyclonedds.gpr";
+with "cyclonedds-c.gpr";
+abstract project CycloneDDS.idl is
+    for Source_Dirs use ();
+    package Linker is
+    for linker_options use ("-l" & "idl");
+    end Linker;
+end CycloneDDS.idl;

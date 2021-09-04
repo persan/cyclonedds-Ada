@@ -26,7 +26,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_io_h is
    function ddsrt_vasprintf
      (strp : System.Address;
       fmt : Interfaces.C.Strings.chars_ptr;
-      ap : access System.Address) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/io.h:29
+      ap : access System.Address) return int  -- /usr/gnat/include/dds/ddsrt/io.h:29
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_vasprintf";
@@ -36,7 +36,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_io_h is
   --  
 
    function ddsrt_asprintf (strp : System.Address; fmt : Interfaces.C.Strings.chars_ptr  -- , ...
-      ) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/io.h:38
+      ) return int  -- /usr/gnat/include/dds/ddsrt/io.h:38
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_asprintf";

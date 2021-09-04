@@ -40,68 +40,68 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   --  
 
    type dds_offered_deadline_missed_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:40
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:41
-      last_instance_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:42
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:40
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:41
+      last_instance_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:42
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:38
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:38
 
-   subtype dds_offered_deadline_missed_status_t is dds_offered_deadline_missed_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:44
+   subtype dds_offered_deadline_missed_status_t is dds_offered_deadline_missed_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:44
 
   --*
   -- * \ref DCPS_Status_OfferedIncompatibleQoS
   --  
 
    type dds_offered_incompatible_qos_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:51
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:52
-      last_policy_id : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:53
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:51
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:52
+      last_policy_id : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:53
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:49
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:49
 
-   subtype dds_offered_incompatible_qos_status_t is dds_offered_incompatible_qos_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:55
+   subtype dds_offered_incompatible_qos_status_t is dds_offered_incompatible_qos_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:55
 
   --*
   -- * \ref DCPS_Status_PublicationMatched
   --  
 
    type dds_publication_matched_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:62
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:63
-      current_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:64
-      current_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:65
-      last_subscription_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:66
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:62
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:63
+      current_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:64
+      current_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:65
+      last_subscription_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:66
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:60
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:60
 
-   subtype dds_publication_matched_status_t is dds_publication_matched_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:68
+   subtype dds_publication_matched_status_t is dds_publication_matched_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:68
 
   --*
   -- * \ref DCPS_Status_LivelinessLost
   --  
 
    type dds_liveliness_lost_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:75
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:76
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:75
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:76
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:73
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:73
 
-   subtype dds_liveliness_lost_status_t is dds_liveliness_lost_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:78
+   subtype dds_liveliness_lost_status_t is dds_liveliness_lost_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:78
 
   --*
   -- * \ref DCPS_Status_SubscriptionMatched
   --  
 
    type dds_subscription_matched_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:85
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:86
-      current_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:87
-      current_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:88
-      last_publication_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:89
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:85
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:86
+      current_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:87
+      current_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:88
+      last_publication_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:89
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:83
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:83
 
-   subtype dds_subscription_matched_status_t is dds_subscription_matched_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:91
+   subtype dds_subscription_matched_status_t is dds_subscription_matched_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:91
 
   --*
   -- * dds_sample_rejected_status_kind
@@ -112,86 +112,86 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
       DDS_REJECTED_BY_INSTANCES_LIMIT,
       DDS_REJECTED_BY_SAMPLES_LIMIT,
       DDS_REJECTED_BY_SAMPLES_PER_INSTANCE_LIMIT)
-   with Convention => C;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:103
+   with Convention => C;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:103
 
   --*
   -- * \ref DCPS_Status_SampleRejected
   --  
 
    type dds_sample_rejected_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:110
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:111
-      last_reason : aliased dds_sample_rejected_status_kind;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:112
-      last_instance_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:113
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:110
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:111
+      last_reason : aliased dds_sample_rejected_status_kind;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:112
+      last_instance_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:113
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:108
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:108
 
-   subtype dds_sample_rejected_status_t is dds_sample_rejected_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:115
+   subtype dds_sample_rejected_status_t is dds_sample_rejected_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:115
 
   --*
   -- * \ref DCPS_Status_LivelinessChanged
   --  
 
    type dds_liveliness_changed_status is record
-      alive_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:122
-      not_alive_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:123
-      alive_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:124
-      not_alive_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:125
-      last_publication_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:126
+      alive_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:122
+      not_alive_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:123
+      alive_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:124
+      not_alive_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:125
+      last_publication_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:126
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:120
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:120
 
-   subtype dds_liveliness_changed_status_t is dds_liveliness_changed_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:128
+   subtype dds_liveliness_changed_status_t is dds_liveliness_changed_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:128
 
   --*
   -- * \ref DCPS_Status_RequestedDeadlineMissed
   --  
 
    type dds_requested_deadline_missed_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:135
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:136
-      last_instance_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:137
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:135
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:136
+      last_instance_handle : aliased CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_instance_handle_t;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:137
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:133
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:133
 
-   subtype dds_requested_deadline_missed_status_t is dds_requested_deadline_missed_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:139
+   subtype dds_requested_deadline_missed_status_t is dds_requested_deadline_missed_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:139
 
   --*
   -- * \ref DCPS_Status_RequestedIncompatibleQoS
   --  
 
    type dds_requested_incompatible_qos_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:146
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:147
-      last_policy_id : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:148
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:146
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:147
+      last_policy_id : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:148
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:144
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:144
 
-   subtype dds_requested_incompatible_qos_status_t is dds_requested_incompatible_qos_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:150
+   subtype dds_requested_incompatible_qos_status_t is dds_requested_incompatible_qos_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:150
 
   --*
   -- * \ref DCPS_Status_SampleLost
   --  
 
    type dds_sample_lost_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:157
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:158
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:157
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:158
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:155
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:155
 
-   subtype dds_sample_lost_status_t is dds_sample_lost_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:160
+   subtype dds_sample_lost_status_t is dds_sample_lost_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:160
 
   --*
   -- * \ref DCPS_Status_InconsistentTopic
   --  
 
    type dds_inconsistent_topic_status is record
-      total_count : aliased unsigned;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:167
-      total_count_change : aliased int;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:168
+      total_count : aliased unsigned;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:167
+      total_count_change : aliased int;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:168
    end record
-   with Convention => C_Pass_By_Copy;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:165
+   with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:165
 
-   subtype dds_inconsistent_topic_status_t is dds_inconsistent_topic_status;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:170
+   subtype dds_inconsistent_topic_status_t is dds_inconsistent_topic_status;  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:170
 
   --  get_<status> APIs return the status of an entity and resets the status
   -- 
@@ -219,7 +219,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_inconsistent_topic_status (topic : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_inconsistent_topic_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:200
+   function dds_get_inconsistent_topic_status (topic : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_inconsistent_topic_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:200
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_inconsistent_topic_status";
@@ -247,7 +247,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_publication_matched_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_publication_matched_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:227
+   function dds_get_publication_matched_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_publication_matched_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:227
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_publication_matched_status";
@@ -275,7 +275,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_liveliness_lost_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_liveliness_lost_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:254
+   function dds_get_liveliness_lost_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_liveliness_lost_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:254
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_liveliness_lost_status";
@@ -303,7 +303,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_offered_deadline_missed_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_offered_deadline_missed_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:281
+   function dds_get_offered_deadline_missed_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_offered_deadline_missed_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:281
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_offered_deadline_missed_status";
@@ -331,7 +331,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_offered_incompatible_qos_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_offered_incompatible_qos_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:308
+   function dds_get_offered_incompatible_qos_status (writer : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_offered_incompatible_qos_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:308
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_offered_incompatible_qos_status";
@@ -359,7 +359,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_subscription_matched_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_subscription_matched_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:335
+   function dds_get_subscription_matched_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_subscription_matched_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:335
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_subscription_matched_status";
@@ -387,7 +387,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_liveliness_changed_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_liveliness_changed_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:362
+   function dds_get_liveliness_changed_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_liveliness_changed_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:362
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_liveliness_changed_status";
@@ -415,7 +415,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *                  The entity has already been deleted.
   --  
 
-   function dds_get_sample_rejected_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_sample_rejected_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:389
+   function dds_get_sample_rejected_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_sample_rejected_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:389
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_sample_rejected_status";
@@ -444,7 +444,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *            The entity has already been deleted.
   --  
 
-   function dds_get_sample_lost_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_sample_lost_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:417
+   function dds_get_sample_lost_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_sample_lost_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:417
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_sample_lost_status";
@@ -473,7 +473,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *            The entity has already been deleted.
   --  
 
-   function dds_get_requested_deadline_missed_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_requested_deadline_missed_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:445
+   function dds_get_requested_deadline_missed_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_requested_deadline_missed_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:445
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_requested_deadline_missed_status";
@@ -502,7 +502,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_status_h is
   -- *            The entity has already been deleted.
   --  
 
-   function dds_get_requested_incompatible_qos_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_requested_incompatible_qos_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_status.h:473
+   function dds_get_requested_incompatible_qos_status (reader : CycloneDDS.Low_Level.dds_dds_h.dds_entity_t; status : access dds_requested_incompatible_qos_status_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_status.h:473
    with Import => True, 
         Convention => C, 
         External_Name => "dds_get_requested_incompatible_qos_status";

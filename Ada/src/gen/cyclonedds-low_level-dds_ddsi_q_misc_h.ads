@@ -23,47 +23,47 @@ package CycloneDDS.Low_Level.dds_ddsi_q_misc_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   function fromSN (sn : CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_sequence_number_t) return CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.seqno_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:21
+   function fromSN (sn : CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_sequence_number_t) return CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.seqno_t  -- /usr/gnat/include/dds/ddsi/q_misc.h:21
    with Import => True, 
         Convention => C, 
         External_Name => "fromSN";
 
-   function toSN (n : CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.seqno_t) return CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_sequence_number_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:25
+   function toSN (n : CycloneDDS.Low_Level.dds_ddsi_q_rtps_h.seqno_t) return CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_sequence_number_t  -- /usr/gnat/include/dds/ddsi/q_misc.h:25
    with Import => True, 
         Convention => C, 
         External_Name => "toSN";
 
-   function normalize_data_datafrag_flags (smhdr : access constant CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.SubmessageHeader_t) return unsigned_char  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:32
+   function normalize_data_datafrag_flags (smhdr : access constant CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.SubmessageHeader_t) return unsigned_char  -- /usr/gnat/include/dds/ddsi/q_misc.h:32
    with Import => True, 
         Convention => C, 
         External_Name => "normalize_data_datafrag_flags";
 
-   function WildcardOverlap (p1 : Interfaces.C.Strings.chars_ptr; p2 : Interfaces.C.Strings.chars_ptr) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:35
+   function WildcardOverlap (p1 : Interfaces.C.Strings.chars_ptr; p2 : Interfaces.C.Strings.chars_ptr) return int  -- /usr/gnat/include/dds/ddsi/q_misc.h:35
    with Import => True, 
         Convention => C, 
         External_Name => "WildcardOverlap";
 
-   nullguid : aliased constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:38
+   nullguid : aliased constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_t  -- /usr/gnat/include/dds/ddsi/q_misc.h:38
    with Import => True, 
         Convention => C, 
         External_Name => "nullguid";
 
-   function guid_prefix_zero (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_prefix_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:39
+   function guid_prefix_zero (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_prefix_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsi/q_misc.h:39
    with Import => True, 
         Convention => C, 
         External_Name => "guid_prefix_zero";
 
-   function guid_prefix_eq (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_prefix_t; b : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_prefix_t) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:40
+   function guid_prefix_eq (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_prefix_t; b : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_prefix_t) return int  -- /usr/gnat/include/dds/ddsi/q_misc.h:40
    with Import => True, 
         Convention => C, 
         External_Name => "guid_prefix_eq";
 
-   function guid_eq (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid; b : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:41
+   function guid_eq (a : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid; b : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid) return int  -- /usr/gnat/include/dds/ddsi/q_misc.h:41
    with Import => True, 
         Convention => C, 
         External_Name => "guid_eq";
 
-   function ddsi2_patmatch (pat : Interfaces.C.Strings.chars_ptr; str : Interfaces.C.Strings.chars_ptr) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:42
+   function ddsi2_patmatch (pat : Interfaces.C.Strings.chars_ptr; str : Interfaces.C.Strings.chars_ptr) return int  -- /usr/gnat/include/dds/ddsi/q_misc.h:42
    with Import => True, 
         Convention => C, 
         External_Name => "ddsi2_patmatch";
@@ -71,7 +71,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_misc_h is
    function find_partitionmapping
      (cfg : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config;
       partition : Interfaces.C.Strings.chars_ptr;
-      topic : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config_partitionmapping_listelem  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:47
+      topic : Interfaces.C.Strings.chars_ptr) return access CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config_partitionmapping_listelem  -- /usr/gnat/include/dds/ddsi/q_misc.h:47
    with Import => True, 
         Convention => C, 
         External_Name => "find_partitionmapping";
@@ -79,7 +79,7 @@ package CycloneDDS.Low_Level.dds_ddsi_q_misc_h is
    function is_ignored_partition
      (cfg : access constant CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h.ddsi_config;
       partition : Interfaces.C.Strings.chars_ptr;
-      topic : Interfaces.C.Strings.chars_ptr) return int  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsi/q_misc.h:48
+      topic : Interfaces.C.Strings.chars_ptr) return int  -- /usr/gnat/include/dds/ddsi/q_misc.h:48
    with Import => True, 
         Convention => C, 
         External_Name => "is_ignored_partition";

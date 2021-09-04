@@ -38,7 +38,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- *          not enough free memory was available.
   --  
 
-   function ddsrt_malloc (size : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:42
+   function ddsrt_malloc (size : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/heap.h:42
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_malloc";
@@ -55,7 +55,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- *          memory was available.
   --  
 
-   function ddsrt_malloc_s (size : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:59
+   function ddsrt_malloc_s (size : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/heap.h:59
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_malloc_s";
@@ -74,7 +74,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- *          free memory was available.
   --  
 
-   function ddsrt_calloc (count : unsigned_long; size : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:78
+   function ddsrt_calloc (count : unsigned_long; size : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/heap.h:78
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_calloc";
@@ -93,7 +93,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- *          available.
   --  
 
-   function ddsrt_calloc_s (count : unsigned_long; size : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:98
+   function ddsrt_calloc_s (count : unsigned_long; size : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/heap.h:98
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_calloc_s";
@@ -110,7 +110,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- *          memory was available.
   --  
 
-   function ddsrt_realloc (memblk : System.Address; size : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:116
+   function ddsrt_realloc (memblk : System.Address; size : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/heap.h:116
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_realloc";
@@ -127,7 +127,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- *          was available.
   --  
 
-   function ddsrt_realloc_s (memblk : System.Address; size : unsigned_long) return System.Address  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:134
+   function ddsrt_realloc_s (memblk : System.Address; size : unsigned_long) return System.Address  -- /usr/gnat/include/dds/ddsrt/heap.h:134
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_realloc_s";
@@ -141,7 +141,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_heap_h is
   -- * @param[in]  ptr  Pointer to previously allocated block of memory.
   --  
 
-   procedure ddsrt_free (ptr : System.Address)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/heap.h:149
+   procedure ddsrt_free (ptr : System.Address)  -- /usr/gnat/include/dds/ddsrt/heap.h:149
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_free";

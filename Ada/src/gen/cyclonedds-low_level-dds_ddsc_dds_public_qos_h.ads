@@ -15,7 +15,7 @@ with Interfaces.C.Strings;
 
 package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
 
-   DDS_HAS_PROPERTY_LIST_QOS : constant := 1;  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:29
+   DDS_HAS_PROPERTY_LIST_QOS : constant := 1;  --  /usr/gnat/include/dds/ddsc/dds_public_qos.h:29
 
   -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
   -- *
@@ -46,12 +46,12 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - Pointer to the initialized dds_qos_t structure, NULL if unsuccessful.
   --  
 
-   function dds_create_qos return access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:41
+   function dds_create_qos return access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:41
    with Import => True, 
         Convention => C, 
         External_Name => "dds_create_qos";
 
-   function dds_qos_create return access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:43
+   function dds_qos_create return access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:43
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qos_create";
@@ -62,12 +62,12 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] qos - Pointer to dds_qos_t structure
   --  
 
-   procedure dds_delete_qos (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:51
+   procedure dds_delete_qos (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:51
    with Import => True, 
         Convention => C, 
         External_Name => "dds_delete_qos";
 
-   procedure dds_qos_delete (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:54
+   procedure dds_qos_delete (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:54
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qos_delete";
@@ -78,12 +78,12 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in,out] qos - Pointer to the dds_qos_t structure
   --  
 
-   procedure dds_reset_qos (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:62
+   procedure dds_reset_qos (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:62
    with Import => True, 
         Convention => C, 
         External_Name => "dds_reset_qos";
 
-   procedure dds_qos_reset (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:65
+   procedure dds_qos_reset (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:65
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qos_reset";
@@ -97,12 +97,12 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - Return-code indicating success or failure
   --  
 
-   function dds_copy_qos (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:77
+   function dds_copy_qos (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:77
    with Import => True, 
         Convention => C, 
         External_Name => "dds_copy_qos";
 
-   function dds_qos_copy (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:80
+   function dds_qos_copy (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t) return CycloneDDS.Low_Level.dds_ddsrt_retcode_h.dds_return_t  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:80
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qos_copy";
@@ -116,12 +116,12 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] src - Pointer to the source qos structure
   --  
 
-   procedure dds_merge_qos (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:91
+   procedure dds_merge_qos (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:91
    with Import => True, 
         Convention => C, 
         External_Name => "dds_merge_qos";
 
-   procedure dds_qos_merge (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:94
+   procedure dds_qos_merge (dst : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; src : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:94
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qos_merge";
@@ -135,7 +135,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] b - Pointer to the source qos structure
   --  
 
-   function dds_qos_equal (a : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; b : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:105
+   function dds_qos_equal (a : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; b : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:105
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qos_equal";
@@ -151,7 +151,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_userdata
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       value : System.Address;
-      sz : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:115
+      sz : unsigned_long)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:115
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_userdata";
@@ -167,7 +167,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_topicdata
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       value : System.Address;
-      sz : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:128
+      sz : unsigned_long)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:128
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_topicdata";
@@ -183,7 +183,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_groupdata
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       value : System.Address;
-      sz : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:141
+      sz : unsigned_long)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:141
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_groupdata";
@@ -195,7 +195,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] kind - Durability kind value \ref DCPS_QoS_Durability
   --  
 
-   procedure dds_qset_durability (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_durability_kind_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:153
+   procedure dds_qset_durability (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_durability_kind_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:153
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_durability";
@@ -213,7 +213,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_history
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_history_kind_t;
-      depth : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:165
+      depth : int)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:165
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_history";
@@ -231,7 +231,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       max_samples : int;
       max_instances : int;
-      max_samples_per_instance : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:179
+      max_samples_per_instance : int)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:179
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_resource_limits";
@@ -249,7 +249,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       access_scope : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_presentation_access_scope_kind_t;
       coherent_access : Extensions.bool;
-      ordered_access : Extensions.bool)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:194
+      ordered_access : Extensions.bool)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:194
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_presentation";
@@ -261,7 +261,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] lifespan - Lifespan duration (expiration time relative to source timestamp of a sample)
   --  
 
-   procedure dds_qset_lifespan (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; lifespan : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:207
+   procedure dds_qset_lifespan (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; lifespan : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:207
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_lifespan";
@@ -273,7 +273,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] deadline - Deadline duration
   --  
 
-   procedure dds_qset_deadline (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; deadline : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:218
+   procedure dds_qset_deadline (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; deadline : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:218
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_deadline";
@@ -285,7 +285,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] duration - Latency budget duration
   --  
 
-   procedure dds_qset_latency_budget (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; duration : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:229
+   procedure dds_qset_latency_budget (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; duration : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:229
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_latency_budget";
@@ -297,7 +297,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] kind - Ownership kind
   --  
 
-   procedure dds_qset_ownership (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ownership_kind_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:240
+   procedure dds_qset_ownership (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ownership_kind_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:240
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_ownership";
@@ -309,7 +309,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * param[in] value - Ownership strength value
   --  
 
-   procedure dds_qset_ownership_strength (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:251
+   procedure dds_qset_ownership_strength (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : int)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:251
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_ownership_strength";
@@ -325,7 +325,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_liveliness
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_liveliness_kind_t;
-      lease_duration : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:261
+      lease_duration : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:261
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_liveliness";
@@ -337,7 +337,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] minimum_separation - Minimum duration between sample delivery for an instance
   --  
 
-   procedure dds_qset_time_based_filter (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; minimum_separation : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:273
+   procedure dds_qset_time_based_filter (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; minimum_separation : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:273
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_time_based_filter";
@@ -353,7 +353,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_partition
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       n : unsigned;
-      ps : System.Address)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:285
+      ps : System.Address)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:285
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_partition";
@@ -366,7 +366,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] name - Pointer to the name
   --  
 
-   procedure dds_qset_partition1 (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; name : Interfaces.C.Strings.chars_ptr)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:298
+   procedure dds_qset_partition1 (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; name : Interfaces.C.Strings.chars_ptr)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:298
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_partition1";
@@ -382,7 +382,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_reliability
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_reliability_kind_t;
-      max_blocking_time : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:310
+      max_blocking_time : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:310
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_reliability";
@@ -394,7 +394,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] value - Priority value
   --  
 
-   procedure dds_qset_transport_priority (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:322
+   procedure dds_qset_transport_priority (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : int)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:322
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_transport_priority";
@@ -406,7 +406,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] kind - Destination-order kind
   --  
 
-   procedure dds_qset_destination_order (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_destination_order_kind_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:331
+   procedure dds_qset_destination_order (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_destination_order_kind_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:331
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_destination_order";
@@ -418,7 +418,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] autodispose - Automatic disposal of unregistered instances
   --  
 
-   procedure dds_qset_writer_data_lifecycle (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; autodispose : Extensions.bool)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:342
+   procedure dds_qset_writer_data_lifecycle (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; autodispose : Extensions.bool)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:342
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_writer_data_lifecycle";
@@ -434,7 +434,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_reader_data_lifecycle
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       autopurge_nowriter_samples_delay : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t;
-      autopurge_disposed_samples_delay : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:352
+      autopurge_disposed_samples_delay : CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:352
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_reader_data_lifecycle";
@@ -458,7 +458,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
       history_depth : int;
       max_samples : int;
       max_instances : int;
-      max_samples_per_instance : int)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:369
+      max_samples_per_instance : int)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:369
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_durability_service";
@@ -470,7 +470,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] ignore - True if readers and writers owned by the same participant should be ignored
   --  
 
-   procedure dds_qset_ignorelocal (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; ignore : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ignorelocal_kind_t)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:385
+   procedure dds_qset_ignorelocal (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; ignore : CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ignorelocal_kind_t)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:385
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_ignorelocal";
@@ -491,7 +491,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    procedure dds_qset_prop
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       name : Interfaces.C.Strings.chars_ptr;
-      value : Interfaces.C.Strings.chars_ptr)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:402
+      value : Interfaces.C.Strings.chars_ptr)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:402
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_prop";
@@ -506,7 +506,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] name - Pointer to name of the property
   --  
 
-   procedure dds_qunset_prop (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; name : Interfaces.C.Strings.chars_ptr)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:417
+   procedure dds_qunset_prop (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; name : Interfaces.C.Strings.chars_ptr)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:417
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qunset_prop";
@@ -529,7 +529,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
      (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       name : Interfaces.C.Strings.chars_ptr;
       value : System.Address;
-      sz : unsigned_long)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:435
+      sz : unsigned_long)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:435
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_bprop";
@@ -544,7 +544,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @param[in] name - Pointer to name of the property
   --  
 
-   procedure dds_qunset_bprop (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; name : Interfaces.C.Strings.chars_ptr)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:451
+   procedure dds_qunset_bprop (qos : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; name : Interfaces.C.Strings.chars_ptr)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:451
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qunset_bprop";
@@ -568,7 +568,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
       ignore_string_bounds : Extensions.bool;
       ignore_member_names : Extensions.bool;
       prevent_type_widening : Extensions.bool;
-      force_type_validation : Extensions.bool)  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:467
+      force_type_validation : Extensions.bool)  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:467
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qset_type_consistency";
@@ -586,7 +586,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_userdata
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       value : System.Address;
-      sz : access unsigned_long) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:486
+      sz : access unsigned_long) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:486
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_userdata";
@@ -604,7 +604,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_topicdata
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       value : System.Address;
-      sz : access unsigned_long) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:497
+      sz : access unsigned_long) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:497
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_topicdata";
@@ -622,7 +622,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_groupdata
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       value : System.Address;
-      sz : access unsigned_long) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:508
+      sz : access unsigned_long) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:508
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_groupdata";
@@ -636,7 +636,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_durability (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_durability_kind_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:518
+   function dds_qget_durability (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_durability_kind_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:518
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_durability";
@@ -654,7 +654,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_history
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_history_kind_t;
-      depth : access int) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:529
+      depth : access int) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:529
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_history";
@@ -674,7 +674,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       max_samples : access int;
       max_instances : access int;
-      max_samples_per_instance : access int) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:542
+      max_samples_per_instance : access int) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:542
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_resource_limits";
@@ -694,7 +694,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       access_scope : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_presentation_access_scope_kind_t;
       coherent_access : access Extensions.bool;
-      ordered_access : access Extensions.bool) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:559
+      ordered_access : access Extensions.bool) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:559
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_presentation";
@@ -708,7 +708,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_lifespan (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; lifespan : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:574
+   function dds_qget_lifespan (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; lifespan : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:574
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_lifespan";
@@ -722,7 +722,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_deadline (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; deadline : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:587
+   function dds_qget_deadline (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; deadline : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:587
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_deadline";
@@ -736,7 +736,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_latency_budget (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; duration : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:600
+   function dds_qget_latency_budget (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; duration : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:600
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_latency_budget";
@@ -750,7 +750,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_ownership (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ownership_kind_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:613
+   function dds_qget_ownership (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ownership_kind_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:613
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_ownership";
@@ -764,7 +764,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_ownership_strength (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : access int) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:626
+   function dds_qget_ownership_strength (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : access int) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:626
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_ownership_strength";
@@ -782,7 +782,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_liveliness
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_liveliness_kind_t;
-      lease_duration : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:640
+      lease_duration : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:640
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_liveliness";
@@ -796,7 +796,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_time_based_filter (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; minimum_separation : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:654
+   function dds_qget_time_based_filter (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; minimum_separation : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:654
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_time_based_filter";
@@ -814,7 +814,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_partition
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       n : access unsigned;
-      ps : System.Address) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:668
+      ps : System.Address) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:668
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_partition";
@@ -832,7 +832,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_reliability
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_reliability_kind_t;
-      max_blocking_time : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:683
+      max_blocking_time : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:683
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_reliability";
@@ -846,7 +846,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_transport_priority (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : access int) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:697
+   function dds_qget_transport_priority (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; value : access int) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:697
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_transport_priority";
@@ -860,7 +860,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_destination_order (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_destination_order_kind_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:710
+   function dds_qget_destination_order (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; kind : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_destination_order_kind_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:710
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_destination_order";
@@ -874,7 +874,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   -- * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --  
 
-   function dds_qget_writer_data_lifecycle (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; autodispose : access Extensions.bool) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:723
+   function dds_qget_writer_data_lifecycle (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; autodispose : access Extensions.bool) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:723
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_writer_data_lifecycle";
@@ -892,7 +892,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_reader_data_lifecycle
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       autopurge_nowriter_samples_delay : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t;
-      autopurge_disposed_samples_delay : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:737
+      autopurge_disposed_samples_delay : access CycloneDDS.Low_Level.dds_ddsrt_time_h.dds_duration_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:737
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_reader_data_lifecycle";
@@ -918,7 +918,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
       history_depth : access int;
       max_samples : access int;
       max_instances : access int;
-      max_samples_per_instance : access int) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:756
+      max_samples_per_instance : access int) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:756
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_durability_service";
@@ -932,7 +932,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
   --   * @returns - false iff any of the arguments is invalid or the qos is not present in the qos object
   --    
 
-   function dds_qget_ignorelocal (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; ignore : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ignorelocal_kind_t) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:774
+   function dds_qget_ignorelocal (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t; ignore : access CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_ignorelocal_kind_t) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:774
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_ignorelocal";
@@ -950,7 +950,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_propnames
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       n : access unsigned;
-      names : System.Address) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:788
+      names : System.Address) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:788
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_propnames";
@@ -971,7 +971,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_prop
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       name : Interfaces.C.Strings.chars_ptr;
-      value : System.Address) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:806
+      value : System.Address) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:806
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_prop";
@@ -989,7 +989,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
    function dds_qget_bpropnames
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       n : access unsigned;
-      names : System.Address) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:821
+      names : System.Address) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:821
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_bpropnames";
@@ -1012,7 +1012,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
      (qos : access constant CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t;
       name : Interfaces.C.Strings.chars_ptr;
       value : System.Address;
-      sz : access unsigned_long) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:840
+      sz : access unsigned_long) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:840
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_bprop";
@@ -1038,7 +1038,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qos_h is
       ignore_string_bounds : access Extensions.bool;
       ignore_member_names : access Extensions.bool;
       prevent_type_widening : access Extensions.bool;
-      force_type_validation : access Extensions.bool) return Extensions.bool  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsc/dds_public_qos.h:860
+      force_type_validation : access Extensions.bool) return Extensions.bool  -- /usr/gnat/include/dds/ddsc/dds_public_qos.h:860
    with Import => True, 
         Convention => C, 
         External_Name => "dds_qget_type_consistency";

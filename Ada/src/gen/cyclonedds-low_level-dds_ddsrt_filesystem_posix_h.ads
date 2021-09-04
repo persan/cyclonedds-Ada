@@ -9,7 +9,7 @@ limited with CycloneDDS.Low_Level.dirent_h;
 package CycloneDDS.Low_Level.dds_ddsrt_filesystem_posix_h is
 
    --  unsupported macro: DDSRT_PATH_MAX PATH_MAX
-   DDSRT_FILESEPCHAR : aliased constant Character := '/';  --  /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/filesystem/posix.h:24
+   DDSRT_FILESEPCHAR : aliased constant Character := '/';  --  /usr/gnat/include/dds/ddsrt/filesystem/posix.h:24
 
   -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
   -- *
@@ -22,8 +22,8 @@ package CycloneDDS.Low_Level.dds_ddsrt_filesystem_posix_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   type ddsrt_dir_handle_t is access all CycloneDDS.Low_Level.dirent_h.DIR;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/filesystem/posix.h:20
+   type ddsrt_dir_handle_t is access all CycloneDDS.Low_Level.dirent_h.DIR;  -- /usr/gnat/include/dds/ddsrt/filesystem/posix.h:20
 
-   subtype ddsrt_mode_t is CycloneDDS.Low_Level.sys_types_h.mode_t;  -- /home/per/Working/projects@github.com/persan/cyclonedds-Ada/Ada/../target/include/dds/ddsrt/filesystem/posix.h:21
+   subtype ddsrt_mode_t is CycloneDDS.Low_Level.sys_types_h.mode_t;  -- /usr/gnat/include/dds/ddsrt/filesystem/posix.h:21
 
 end CycloneDDS.Low_Level.dds_ddsrt_filesystem_posix_h;
