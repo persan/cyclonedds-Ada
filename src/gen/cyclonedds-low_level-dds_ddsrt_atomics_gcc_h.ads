@@ -32,7 +32,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_atomics_gcc_h is
         Convention => C, 
         External_Name => "ddsrt_atomic_ld64";
 
-   function ddsrt_atomic_ldptr (x : access constant CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uintptr_t) return CycloneDDS.Low_Level.stdint_h.uintptr_t  -- /usr/gnat/include/dds/ddsrt/atomics/gcc.h:44
+   function ddsrt_atomic_ldptr (x : access constant CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uintptr_t) return access unsigned  -- /usr/gnat/include/dds/ddsrt/atomics/gcc.h:44
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_atomic_ldptr";
@@ -52,7 +52,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_atomics_gcc_h is
         Convention => C, 
         External_Name => "ddsrt_atomic_st64";
 
-   procedure ddsrt_atomic_stptr (x : access CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uintptr_t; v : CycloneDDS.Low_Level.stdint_h.uintptr_t)  -- /usr/gnat/include/dds/ddsrt/atomics/gcc.h:67
+   procedure ddsrt_atomic_stptr (x : access CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uintptr_t; v : access unsigned)  -- /usr/gnat/include/dds/ddsrt/atomics/gcc.h:67
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_atomic_stptr";
@@ -252,8 +252,8 @@ package CycloneDDS.Low_Level.dds_ddsrt_atomics_gcc_h is
 
    function ddsrt_atomic_casptr
      (x : access CycloneDDS.Low_Level.dds_ddsrt_atomics_h.ddsrt_atomic_uintptr_t;
-      exp : CycloneDDS.Low_Level.stdint_h.uintptr_t;
-      des : CycloneDDS.Low_Level.stdint_h.uintptr_t) return int  -- /usr/gnat/include/dds/ddsrt/atomics/gcc.h:234
+      exp : access unsigned;
+      des : access unsigned) return int  -- /usr/gnat/include/dds/ddsrt/atomics/gcc.h:234
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_atomic_casptr";

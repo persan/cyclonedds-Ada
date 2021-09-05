@@ -21,19 +21,19 @@ package CycloneDDS.Low_Level.idl_symbol_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   type idl_file;
-   subtype idl_file_t is idl_file;  -- /usr/gnat/include/idl/symbol.h:21
+   
+   
 
-   type idl_file is record
+   type idl_file_t is record
       next : access idl_file_t;  -- /usr/gnat/include/idl/symbol.h:23
       name : Interfaces.C.Strings.chars_ptr;  -- /usr/gnat/include/idl/symbol.h:24
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/symbol.h:22
 
-   type idl_source;
-   subtype idl_source_t is idl_source;  -- /usr/gnat/include/idl/symbol.h:27
+   
+   
 
-   type idl_source is record
+   type idl_source_t is record
       parent : access constant idl_source_t;  -- /usr/gnat/include/idl/symbol.h:29
       previous : access idl_source_t;  -- /usr/gnat/include/idl/symbol.h:30
       next : access idl_source_t;  -- /usr/gnat/include/idl/symbol.h:30
@@ -47,7 +47,7 @@ package CycloneDDS.Low_Level.idl_symbol_h is
   --*< file does not reside in working directory  
   --*< normalized path of filename in #line directive  
   --*< filename in #line directive  
-   type idl_position is record
+   type idl_position_t is record
       source : access constant idl_source_t;  -- /usr/gnat/include/idl/symbol.h:38
       file : access constant idl_file_t;  -- /usr/gnat/include/idl/symbol.h:43
       line : aliased unsigned;  -- /usr/gnat/include/idl/symbol.h:44
@@ -61,23 +61,23 @@ package CycloneDDS.Low_Level.idl_symbol_h is
   --     directives in the file are used merely for error reporting  
 
   --*< (alternate) filename in latest #line directive  
-   subtype idl_position_t is idl_position;  -- /usr/gnat/include/idl/symbol.h:46
+   
 
-   type idl_location is record
+   type idl_location_t is record
       first : aliased idl_position_t;  -- /usr/gnat/include/idl/symbol.h:49
       last : aliased idl_position_t;  -- /usr/gnat/include/idl/symbol.h:50
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/symbol.h:48
 
-   subtype idl_location_t is idl_location;  -- /usr/gnat/include/idl/symbol.h:51
+   
 
   -- symbols are there for the parser(s), nodes are there for the tree.
   --   all nodes are symbols, not all symbols are nodes  
 
-   type idl_symbol;
-   subtype idl_symbol_t is idl_symbol;  -- /usr/gnat/include/idl/symbol.h:56
+   
+   
 
-   type idl_symbol is record
+   type idl_symbol_t is record
       location : aliased idl_location_t;  -- /usr/gnat/include/idl/symbol.h:58
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/symbol.h:57

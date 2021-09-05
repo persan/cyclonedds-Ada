@@ -45,7 +45,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_plist_generic_h is
       XD,
       XDx2,
       Xl,
-      Xo,
+      Xo2,
       Xox2,
       Xb,
       Xbx2,

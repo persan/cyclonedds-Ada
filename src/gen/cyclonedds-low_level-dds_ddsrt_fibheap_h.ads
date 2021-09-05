@@ -32,13 +32,13 @@ package CycloneDDS.Low_Level.dds_ddsrt_fibheap_h is
       degree : Extensions.Unsigned_31;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:27
    end record
    with Convention => C_Pass_By_Copy,
-        Pack => True,
+        
         Alignment => 8;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:23
 
    subtype ddsrt_fibheap_node_t is ddsrt_fibheap_node;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:28
 
    type ddsrt_fibheap_def is record
-      offset : aliased CycloneDDS.Low_Level.stdint_h.uintptr_t;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:31
+      offset : aliased access unsigned;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:31
       cmp : access function (arg1 : System.Address; arg2 : System.Address) return int;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:32
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/fibheap.h:30
@@ -55,7 +55,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_fibheap_h is
 
    procedure ddsrt_fibheap_def_init
      (fhdef : access ddsrt_fibheap_def_t;
-      offset : CycloneDDS.Low_Level.stdint_h.uintptr_t;
+      offset : access unsigned;
       cmp : access function (arg1 : System.Address; arg2 : System.Address) return int)  -- /usr/gnat/include/dds/ddsrt/fibheap.h:41
    with Import => True, 
         Convention => C, 

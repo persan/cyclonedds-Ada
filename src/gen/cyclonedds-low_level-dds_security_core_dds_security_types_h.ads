@@ -76,6 +76,6 @@ package CycloneDDS.Low_Level.dds_security_core_dds_security_types_h is
 
   --* temporary address decleration until it is ready in ddsrt  
   -- word length of the platform  
-   subtype ddsrt_address is CycloneDDS.Low_Level.stdint_h.uintptr_t;  -- /usr/gnat/include/dds/security/core/dds_security_types.h:66
+   subtype ddsrt_address is access unsigned;  -- /usr/gnat/include/dds/security/core/dds_security_types.h:66
 
 end CycloneDDS.Low_Level.dds_security_core_dds_security_types_h;

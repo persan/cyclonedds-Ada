@@ -5,7 +5,7 @@ pragma Warnings ("U");
 with Interfaces.C; use Interfaces.C;
 limited with CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h;
 with Interfaces.C.Extensions;
-limited with CycloneDDS.Low_Level.openssl_ossl_typ_h;
+
 with System;
 
 with CycloneDDS.Low_Level.dds_ddsrt_retcode_h;

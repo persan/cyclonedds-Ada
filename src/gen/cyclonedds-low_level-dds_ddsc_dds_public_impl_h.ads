@@ -11,16 +11,16 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h is
 
    DDS_READ_SAMPLE_STATE : constant := 1;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:75
    DDS_NOT_READ_SAMPLE_STATE : constant := 2;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:76
-   DDS_ANY_SAMPLE_STATE : constant := ((DDS_READ_SAMPLE_STATE + DDS_NOT_READ_SAMPLE_STATE));  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:77
+   DDS_ANY_SAMPLE_STATE : constant := (DDS_READ_SAMPLE_STATE + DDS_NOT_READ_SAMPLE_STATE);  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:77
 
    DDS_NEW_VIEW_STATE : constant := 4;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:79
    DDS_NOT_NEW_VIEW_STATE : constant := 8;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:80
-   DDS_ANY_VIEW_STATE : constant := ((DDS_NEW_VIEW_STATE + DDS_NOT_NEW_VIEW_STATE));  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:81
+   DDS_ANY_VIEW_STATE : constant := (DDS_NEW_VIEW_STATE + DDS_NOT_NEW_VIEW_STATE);  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:81
 
    DDS_ALIVE_INSTANCE_STATE : constant := 16;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:83
    DDS_NOT_ALIVE_DISPOSED_INSTANCE_STATE : constant := 32;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:84
    DDS_NOT_ALIVE_NO_WRITERS_INSTANCE_STATE : constant := 64;  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:85
-   DDS_ANY_INSTANCE_STATE : constant := ((DDS_ALIVE_INSTANCE_STATE + DDS_NOT_ALIVE_DISPOSED_INSTANCE_STATE + DDS_ANY_INSTANCE_STATE ));  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:86
+   DDS_ANY_INSTANCE_STATE : constant := (DDS_ALIVE_INSTANCE_STATE + DDS_NOT_ALIVE_DISPOSED_INSTANCE_STATE + DDS_NOT_ALIVE_NO_WRITERS_INSTANCE_STATE);  --  /usr/gnat/include/dds/ddsc/dds_public_impl.h:86
    --  unsupported macro: DDS_ANY_STATE (DDS_ANY_SAMPLE_STATE | DDS_ANY_VIEW_STATE | DDS_ANY_INSTANCE_STATE)
    --  unsupported macro: DDS_DOMAIN_DEFAULT ((uint32_t) 0xffffffffu)
 

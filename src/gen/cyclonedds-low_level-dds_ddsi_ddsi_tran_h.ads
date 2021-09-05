@@ -15,7 +15,7 @@ with System;
 with CycloneDDS.Low_Level.dds_ddsrt_retcode_h;
 limited with CycloneDDS.Low_Level.dds_ddsi_ddsi_ownip_h;
 with Interfaces.C.Strings;
-limited 
+
 with CycloneDDS.Low_Level.dds_ddsi_ddsi_config_h;
 limited with CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h;
 with CycloneDDS.Low_Level.dds_ddsrt_atomics_h;

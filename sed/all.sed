@@ -155,11 +155,18 @@ s!CycloneDDS.Low_Level.bits_stdint_intn_h.int8_t!char!
 s!with CycloneDDS.Low_Level.netinet_in_h;!!
 s!with CycloneDDS.Low_Level.unistd_h;!!
 s!with CycloneDDS.Low_Level.bits_types_struct_iovec_h;!!
+s!limited with CycloneDDS.Low_Level.bits_socket_h;!!
 s!with CycloneDDS.Low_Level.bits_socket_h;!!
 
-s!CycloneDDS.Low_Level.bits_stdint_intn_h.int8_t!char!
-s!CycloneDDS.Low_Level.bits_stdint_intn_h.int16_t!short!
-s!CycloneDDS.Low_Level.bits_stdint_intn_h.int32_t!int!
-s!CycloneDDS.Low_Level.bits_stdint_intn_h.int64_t!long!
+s!CycloneDDS.Low_Level.bits_stdint_intn_h.int8_t!char!g
+s!CycloneDDS.Low_Level.bits_stdint_intn_h.int16_t!short!g
+s!CycloneDDS.Low_Level.bits_stdint_intn_h.int32_t!int!g
+s!CycloneDDS.Low_Level.bits_stdint_intn_h.int64_t!long!g
 
+
+s!limited with CycloneDDS.Low_Level.openssl_ossl_typ_h;!!
+
+s!CycloneDDS.Low_Level.stdint_h.uintptr_t!access unsigned!g
+
+s!CycloneDDS.Low_Level.unistd_h.ssize_t!size_t!
 

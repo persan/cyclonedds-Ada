@@ -47,7 +47,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_atomics_h is
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/atomics.h:33
 
    type ddsrt_atomic_uintptr_t is record
-      v : aliased CycloneDDS.Low_Level.stdint_h.uintptr_t;  -- /usr/gnat/include/dds/ddsrt/atomics.h:34
+      v : aliased access unsigned;  -- /usr/gnat/include/dds/ddsrt/atomics.h:34
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/atomics.h:34
 

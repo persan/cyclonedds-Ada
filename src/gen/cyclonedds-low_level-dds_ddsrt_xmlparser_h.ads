@@ -28,15 +28,15 @@ package CycloneDDS.Low_Level.dds_ddsrt_xmlparser_h is
 
    type ddsrt_xmlp_proc_elem_open_t is access function
         (arg1 : System.Address;
-         arg2 : CycloneDDS.Low_Level.stdint_h.uintptr_t;
-         arg3 : access CycloneDDS.Low_Level.stdint_h.uintptr_t;
+         arg2 : access unsigned;
+         arg3 : access access unsigned;
          arg4 : Interfaces.C.Strings.chars_ptr;
          arg5 : int) return int
    with Convention => C;  -- /usr/gnat/include/dds/ddsrt/xmlparser.h:24
 
    type ddsrt_xmlp_proc_attr_t is access function
         (arg1 : System.Address;
-         arg2 : CycloneDDS.Low_Level.stdint_h.uintptr_t;
+         arg2 : access unsigned;
          arg3 : Interfaces.C.Strings.chars_ptr;
          arg4 : Interfaces.C.Strings.chars_ptr;
          arg5 : int) return int
@@ -44,14 +44,14 @@ package CycloneDDS.Low_Level.dds_ddsrt_xmlparser_h is
 
    type ddsrt_xmlp_proc_elem_data_t is access function
         (arg1 : System.Address;
-         arg2 : CycloneDDS.Low_Level.stdint_h.uintptr_t;
+         arg2 : access unsigned;
          arg3 : Interfaces.C.Strings.chars_ptr;
          arg4 : int) return int
    with Convention => C;  -- /usr/gnat/include/dds/ddsrt/xmlparser.h:26
 
    type ddsrt_xmlp_proc_elem_close_t is access function
         (arg1 : System.Address;
-         arg2 : CycloneDDS.Low_Level.stdint_h.uintptr_t;
+         arg2 : access unsigned;
          arg3 : int) return int
    with Convention => C;  -- /usr/gnat/include/dds/ddsrt/xmlparser.h:27
 

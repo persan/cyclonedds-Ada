@@ -82,40 +82,40 @@ package CycloneDDS.Low_Level.idl_tree_h is
   -- if no explicit default is specified and range is not covered  
   -- annotations  
   -- bits 19 - 20 are reserved for operators (not exposed in tree)  
-   subtype idl_type_t is idl_type;  -- /usr/gnat/include/idl/tree.h:73
+   
 
-   subtype idl_type is unsigned;
-   IDL_NULL : constant idl_type := 0;
-   IDL_TYPEDEF : constant idl_type := 262144;
-   IDL_STRUCT : constant idl_type := 131072;
-   IDL_UNION : constant idl_type := 65536;
-   IDL_ENUM : constant idl_type := 32768;
-   IDL_SEQUENCE : constant idl_type := 16384;
-   IDL_STRING : constant idl_type := 8192;
-   IDL_WSTRING : constant idl_type := 4096;
-   IDL_FIXED_PT : constant idl_type := 2048;
-   IDL_CHAR : constant idl_type := 1026;
-   IDL_WCHAR : constant idl_type := 1028;
-   IDL_BOOL : constant idl_type := 1030;
-   IDL_OCTET : constant idl_type := 1033;
-   IDL_ANY : constant idl_type := 1034;
-   IDL_SHORT : constant idl_type := 1538;
-   IDL_USHORT : constant idl_type := 1539;
-   IDL_LONG : constant idl_type := 1540;
-   IDL_ULONG : constant idl_type := 1541;
-   IDL_LLONG : constant idl_type := 1542;
-   IDL_ULLONG : constant idl_type := 1543;
-   IDL_INT8 : constant idl_type := 1544;
-   IDL_UINT8 : constant idl_type := 1545;
-   IDL_INT16 : constant idl_type := 1546;
-   IDL_UINT16 : constant idl_type := 1547;
-   IDL_INT32 : constant idl_type := 1548;
-   IDL_UINT32 : constant idl_type := 1549;
-   IDL_INT64 : constant idl_type := 1550;
-   IDL_UINT64 : constant idl_type := 1551;
-   IDL_FLOAT : constant idl_type := 1281;
-   IDL_DOUBLE : constant idl_type := 1282;
-   IDL_LDOUBLE : constant idl_type := 1283;  -- /usr/gnat/include/idl/tree.h:74
+   type idl_type_t is new unsigned;
+   IDL_NULL : constant idl_type_t:= 0;
+   IDL_TYPEDEF : constant idl_type_t:= 262144;
+   IDL_STRUCT : constant idl_type_t:= 131072;
+   IDL_UNION : constant idl_type_t:= 65536;
+   IDL_ENUM : constant idl_type_t:= 32768;
+   IDL_SEQUENCE : constant idl_type_t:= 16384;
+   IDL_STRING : constant idl_type_t:= 8192;
+   IDL_WSTRING : constant idl_type_t:= 4096;
+   IDL_FIXED_PT : constant idl_type_t:= 2048;
+   IDL_CHAR : constant idl_type_t:= 1026;
+   IDL_WCHAR : constant idl_type_t:= 1028;
+   IDL_BOOL : constant idl_type_t:= 1030;
+   IDL_OCTET : constant idl_type_t:= 1033;
+   IDL_ANY : constant idl_type_t:= 1034;
+   IDL_SHORT : constant idl_type_t:= 1538;
+   IDL_USHORT : constant idl_type_t:= 1539;
+   IDL_LONG : constant idl_type_t:= 1540;
+   IDL_ULONG : constant idl_type_t:= 1541;
+   IDL_LLONG : constant idl_type_t:= 1542;
+   IDL_ULLONG : constant idl_type_t:= 1543;
+   IDL_INT8 : constant idl_type_t:= 1544;
+   IDL_UINT8 : constant idl_type_t:= 1545;
+   IDL_INT16 : constant idl_type_t:= 1546;
+   IDL_UINT16 : constant idl_type_t:= 1547;
+   IDL_INT32 : constant idl_type_t:= 1548;
+   IDL_UINT32 : constant idl_type_t:= 1549;
+   IDL_INT64 : constant idl_type_t:= 1550;
+   IDL_UINT64 : constant idl_type_t:= 1551;
+   IDL_FLOAT : constant idl_type_t:= 1281;
+   IDL_DOUBLE : constant idl_type_t:= 1282;
+   IDL_LDOUBLE : constant idl_type_t:= 1283;  -- /usr/gnat/include/idl/tree.h:74
 
   -- constructed types  
   -- template types  
@@ -127,19 +127,19 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --     bindings may choose to map onto different types as well  
 
   -- floating point types  
-   type idl_name;
-   subtype idl_name_t is idl_name;  -- /usr/gnat/include/idl/tree.h:121
+   
+   
 
-   type idl_name is record
+   type idl_name_t is record
       symbol : aliased CycloneDDS.Low_Level.idl_symbol_h.idl_symbol_t;  -- /usr/gnat/include/idl/tree.h:123
       identifier : Interfaces.C.Strings.chars_ptr;  -- /usr/gnat/include/idl/tree.h:124
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:122
 
-   type idl_scoped_name;
-   subtype idl_scoped_name_t is idl_scoped_name;  -- /usr/gnat/include/idl/tree.h:127
+   
+   
 
-   type idl_scoped_name is record
+   type idl_scoped_name_t is record
       symbol : aliased CycloneDDS.Low_Level.idl_symbol_h.idl_symbol_t;  -- /usr/gnat/include/idl/tree.h:129
       absolute : aliased Extensions.bool;  -- /usr/gnat/include/idl/tree.h:130
       length : aliased unsigned_long;  -- /usr/gnat/include/idl/tree.h:131
@@ -149,10 +149,10 @@ package CycloneDDS.Low_Level.idl_tree_h is
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:128
 
   --*< qualified identifier  
-   type idl_field_name;
-   subtype idl_field_name_t is idl_field_name;  -- /usr/gnat/include/idl/tree.h:136
+   
+   
 
-   type idl_field_name is record
+   type idl_field_name_t is record
       symbol : aliased CycloneDDS.Low_Level.idl_symbol_h.idl_symbol_t;  -- /usr/gnat/include/idl/tree.h:138
       length : aliased unsigned_long;  -- /usr/gnat/include/idl/tree.h:139
       names : System.Address;  -- /usr/gnat/include/idl/tree.h:140
@@ -178,18 +178,19 @@ package CycloneDDS.Low_Level.idl_tree_h is
    type idl_describe_t is access function (arg1 : System.Address) return Interfaces.C.Strings.chars_ptr
    with Convention => C;  -- /usr/gnat/include/idl/tree.h:155
 
-   type idl_node;
-   subtype idl_node_t is idl_node;  -- /usr/gnat/include/idl/tree.h:157
+   
+   
 
-   type idl_annotation_appl;
-   type idl_node is record
+   
+      type idl_annotation_appl_t;
+type idl_node_t is record
       symbol : aliased CycloneDDS.Low_Level.idl_symbol_h.idl_symbol_t;  -- /usr/gnat/include/idl/tree.h:159
       mask : aliased idl_mask_t;  -- /usr/gnat/include/idl/tree.h:160
       destructor : idl_delete_t;  -- /usr/gnat/include/idl/tree.h:161
       iterate : idl_iterate_t;  -- /usr/gnat/include/idl/tree.h:162
       describe : idl_describe_t;  -- /usr/gnat/include/idl/tree.h:163
       references : aliased int;  -- /usr/gnat/include/idl/tree.h:164
-      annotations : access idl_annotation_appl;  -- /usr/gnat/include/idl/tree.h:165
+      annotations : access idl_annotation_appl_t;  -- /usr/gnat/include/idl/tree.h:165
       declaration : access constant CycloneDDS.Low_Level.idl_scope_h.idl_declaration;  -- /usr/gnat/include/idl/tree.h:166
       parent : access idl_node_t;  -- /usr/gnat/include/idl/tree.h:167
       previous : access idl_node_t;  -- /usr/gnat/include/idl/tree.h:168
@@ -197,17 +198,17 @@ package CycloneDDS.Low_Level.idl_tree_h is
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:158
 
-   type idl_path;
-   subtype idl_path_t is idl_path;  -- /usr/gnat/include/idl/tree.h:171
+   
+   
 
-   type idl_path is record
+   type idl_path_t is record
       length : aliased unsigned_long;  -- /usr/gnat/include/idl/tree.h:173
       nodes : System.Address;  -- /usr/gnat/include/idl/tree.h:174
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:172
 
-   type idl_id;
-   subtype idl_id_t is idl_id;  -- /usr/gnat/include/idl/tree.h:177
+   
+   
 
   --*< value assigned automatically  
   --*< value assigned by @id  
@@ -217,22 +218,22 @@ package CycloneDDS.Low_Level.idl_tree_h is
       IDL_ID,
       IDL_HASHID)
    with Convention => C;
-   type idl_id is record
+   type idl_id_t is record
       annotation : anon2072_enum2074;  -- /usr/gnat/include/idl/tree.h:183
       value : aliased unsigned;  -- /usr/gnat/include/idl/tree.h:184
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:178
 
-   subtype idl_autoid_t is idl_autoid;  -- /usr/gnat/include/idl/tree.h:187
+   
 
-   type idl_autoid is 
+   type idl_autoid_t is 
      (IDL_AUTOID_SEQUENTIAL,
       IDL_AUTOID_HASH)
    with Convention => C;  -- /usr/gnat/include/idl/tree.h:188
 
-   subtype idl_extensibility_t is idl_extensibility;  -- /usr/gnat/include/idl/tree.h:193
+   
 
-   type idl_extensibility is 
+   type idl_extensibility_t is 
      (IDL_EXTENSIBILITY_FINAL,
       IDL_EXTENSIBILITY_APPENDABLE,
       IDL_EXTENSIBILITY_MUTABLE)
@@ -244,8 +245,8 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --   type as a topic. for ease of use, the sum-total is provided as a single
   --   boolean  
 
-   type idl_nested;
-   subtype idl_nested_t is idl_nested;  -- /usr/gnat/include/idl/tree.h:205
+   
+   
 
   --*< implicit through @default_nested (or not)  
   --*< annotated with @nested  
@@ -255,26 +256,26 @@ package CycloneDDS.Low_Level.idl_tree_h is
       IDL_NESTED,
       IDL_TOPIC)
    with Convention => C;
-   type idl_nested is record
+   type idl_nested_t is record
       annotation : anon2079_enum2081;  -- /usr/gnat/include/idl/tree.h:211
       value : aliased Extensions.bool;  -- /usr/gnat/include/idl/tree.h:212
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:206
 
   -- nullable boolean, like Boolean object in e.g. JavaScript or Java  
-   subtype idl_boolean_t is idl_boolean;  -- /usr/gnat/include/idl/tree.h:216
+   
 
-   type idl_boolean is 
+   type idl_boolean_t is 
      (IDL_DEFAULT,
       IDL_FALSE,
       IDL_TRUE)
    with Convention => C;  -- /usr/gnat/include/idl/tree.h:217
 
   -- annotations  
-   type idl_const;
-   subtype idl_const_t is idl_const;  -- /usr/gnat/include/idl/tree.h:225
+   
+   
 
-   type idl_const is record
+   type idl_const_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:227
       name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:228
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:229
@@ -288,8 +289,8 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --   the resulting constant value is required to be of a specific base type,
   --   e.g. bounds in sequences  
 
-   type idl_literal;
-   subtype idl_literal_t is idl_literal;  -- /usr/gnat/include/idl/tree.h:238
+   
+   
 
    type anon2088_union2090 (discr : unsigned := 0) is record
       case discr is
@@ -325,44 +326,44 @@ package CycloneDDS.Low_Level.idl_tree_h is
    end record
    with Convention => C_Pass_By_Copy,
         Unchecked_Union => True;
-   type idl_literal is record
+   type idl_literal_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:240
       value : aliased anon2088_union2090;  -- /usr/gnat/include/idl/tree.h:256
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:239
 
-   type idl_base_type;
-   subtype idl_base_type_t is idl_base_type;  -- /usr/gnat/include/idl/tree.h:259
+   
+   
 
-   type idl_base_type is record
+   type idl_base_type_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:261
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:260
 
   -- empty  
-   type idl_sequence;
-   subtype idl_sequence_t is idl_sequence;  -- /usr/gnat/include/idl/tree.h:265
+   
+   
 
-   type idl_sequence is record
+   type idl_sequence_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:267
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:268
       maximum : aliased unsigned;  -- /usr/gnat/include/idl/tree.h:269
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:266
 
-   type idl_string;
-   subtype idl_string_t is idl_string;  -- /usr/gnat/include/idl/tree.h:272
+   
+   
 
-   type idl_string is record
+   type idl_string_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:274
       maximum : aliased unsigned;  -- /usr/gnat/include/idl/tree.h:275
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:273
 
-   type idl_module;
-   subtype idl_module_t is idl_module;  -- /usr/gnat/include/idl/tree.h:278
+   
+   
 
-   type idl_module is record
+   type idl_module_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:280
       name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:281
       definitions : System.Address;  -- /usr/gnat/include/idl/tree.h:282
@@ -373,20 +374,20 @@ package CycloneDDS.Low_Level.idl_tree_h is
 
   --*< previous module if module was reopened  
   -- metadata  
-   type idl_declarator;
-   subtype idl_declarator_t is idl_declarator;  -- /usr/gnat/include/idl/tree.h:288
+   
+   
 
-   type idl_declarator is record
+   type idl_declarator_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:290
       name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:291
       const_expr : System.Address;  -- /usr/gnat/include/idl/tree.h:292
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:289
 
-   type idl_member;
-   subtype idl_member_t is idl_member;  -- /usr/gnat/include/idl/tree.h:295
+   
+   
 
-   type idl_member is record
+   type idl_member_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:297
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:298
       declarators : access idl_declarator_t;  -- /usr/gnat/include/idl/tree.h:299
@@ -400,10 +401,10 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --   structs). declarations in the base type that become available in the
   --   derived type as a consequence are imported into the scope  
 
-   type idl_inherit_spec;
-   subtype idl_inherit_spec_t is idl_inherit_spec;  -- /usr/gnat/include/idl/tree.h:308
+   
+   
 
-   type idl_inherit_spec is record
+   type idl_inherit_spec_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:310
       base : System.Address;  -- /usr/gnat/include/idl/tree.h:311
    end record
@@ -414,32 +415,32 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --   this notation makes it possible for "baz" to only be a key member if "bar"
   --   is embedded in "foo" and for key order to differ from field order  
 
-   type idl_key;
-   subtype idl_key_t is idl_key;  -- /usr/gnat/include/idl/tree.h:318
+   
+   
 
-   type idl_key is record
+   type idl_key_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:320
       field_name : access idl_field_name_t;  -- /usr/gnat/include/idl/tree.h:322
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:319
 
   -- store entire field name as context matters for embedded struct fields  
-   type idl_keylist;
-   subtype idl_keylist_t is idl_keylist;  -- /usr/gnat/include/idl/tree.h:325
+   
+   
 
-   type idl_keylist is record
+   type idl_keylist_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:327
       keys : access idl_key_t;  -- /usr/gnat/include/idl/tree.h:328
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:326
 
-   type idl_struct;
-   subtype idl_struct_t is idl_struct;  -- /usr/gnat/include/idl/tree.h:331
+   
+   
 
-   type idl_struct is record
+   type idl_struct_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:333
       inherit_spec : access idl_inherit_spec_t;  -- /usr/gnat/include/idl/tree.h:334
-      name : access idl_name;  -- /usr/gnat/include/idl/tree.h:335
+      name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:335
       members : access idl_member_t;  -- /usr/gnat/include/idl/tree.h:336
       nested : aliased idl_nested_t;  -- /usr/gnat/include/idl/tree.h:338
       keylist : access idl_keylist_t;  -- /usr/gnat/include/idl/tree.h:339
@@ -451,19 +452,19 @@ package CycloneDDS.Low_Level.idl_tree_h is
   -- metadata  
   --*< if type is a topic (sum total of annotations)  
   --*< if type is a topic (#pragma keylist)  
-   type idl_case_label;
-   subtype idl_case_label_t is idl_case_label;  -- /usr/gnat/include/idl/tree.h:344
+   
+   
 
-   type idl_case_label is record
+   type idl_case_label_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:346
       const_expr : System.Address;  -- /usr/gnat/include/idl/tree.h:347
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:345
 
-   type idl_case;
-   subtype idl_case_t is idl_case;  -- /usr/gnat/include/idl/tree.h:350
+   
+   
 
-   type idl_case is record
+   type idl_case_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:352
       labels : access idl_case_label_t;  -- /usr/gnat/include/idl/tree.h:353
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:354
@@ -471,10 +472,10 @@ package CycloneDDS.Low_Level.idl_tree_h is
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:351
 
-   type idl_switch_type_spec;
-   subtype idl_switch_type_spec_t is idl_switch_type_spec;  -- /usr/gnat/include/idl/tree.h:358
+   
+   
 
-   type idl_switch_type_spec is record
+   type idl_switch_type_spec_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:360
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:361
       key : aliased idl_boolean_t;  -- /usr/gnat/include/idl/tree.h:363
@@ -482,12 +483,12 @@ package CycloneDDS.Low_Level.idl_tree_h is
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:359
 
   -- metadata  
-   type idl_union;
-   subtype idl_union_t is idl_union;  -- /usr/gnat/include/idl/tree.h:366
+   
+   
 
-   type idl_union is record
+   type idl_union_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:368
-      name : access idl_name;  -- /usr/gnat/include/idl/tree.h:369
+      name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:369
       switch_type_spec : access idl_switch_type_spec_t;  -- /usr/gnat/include/idl/tree.h:370
       cases : access idl_case_t;  -- /usr/gnat/include/idl/tree.h:371
       default_case : access idl_case_label_t;  -- /usr/gnat/include/idl/tree.h:378
@@ -506,12 +507,12 @@ package CycloneDDS.Low_Level.idl_tree_h is
 
   --*< number of unused labels  
   --*< if type is topic (sum total of annotations)  
-   type idl_enumerator;
-   subtype idl_enumerator_t is idl_enumerator;  -- /usr/gnat/include/idl/tree.h:384
+   
+   
 
-   type idl_enumerator is record
+   type idl_enumerator_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:386
-      name : access idl_name;  -- /usr/gnat/include/idl/tree.h:387
+      name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:387
       value : aliased unsigned;  -- /usr/gnat/include/idl/tree.h:392
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:385
@@ -521,21 +522,21 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --     mapped to a native data type capable of representing a maximally-sized
   --     enumeration  
 
-   type idl_enum;
-   subtype idl_enum_t is idl_enum;  -- /usr/gnat/include/idl/tree.h:395
+   
+   
 
-   type idl_enum is record
+   type idl_enum_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:397
-      name : access idl_name;  -- /usr/gnat/include/idl/tree.h:398
+      name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:398
       enumerators : access idl_enumerator_t;  -- /usr/gnat/include/idl/tree.h:399
       extensibility : aliased idl_extensibility_t;  -- /usr/gnat/include/idl/tree.h:400
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:396
 
-   type idl_typedef;
-   subtype idl_typedef_t is idl_typedef;  -- /usr/gnat/include/idl/tree.h:403
+   
+   
 
-   type idl_typedef is record
+   type idl_typedef_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:405
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:406
       declarators : access idl_declarator_t;  -- /usr/gnat/include/idl/tree.h:407
@@ -544,14 +545,14 @@ package CycloneDDS.Low_Level.idl_tree_h is
 
    type idl_annotation_callback_t is access function
         (arg1 : access CycloneDDS.Low_Level.idl_processor_h.idl_pstate;
-         arg2 : access idl_annotation_appl;
+         arg2 : access idl_annotation_appl_t;
          arg3 : access idl_node_t) return CycloneDDS.Low_Level.idl_retcode_h.idl_retcode_t
    with Convention => C;  -- /usr/gnat/include/idl/tree.h:411
 
-   type idl_annotation_member;
-   subtype idl_annotation_member_t is idl_annotation_member;  -- /usr/gnat/include/idl/tree.h:416
+   
+   
 
-   type idl_annotation_member is record
+   type idl_annotation_member_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:418
       type_spec : System.Address;  -- /usr/gnat/include/idl/tree.h:419
       declarator : access idl_declarator_t;  -- /usr/gnat/include/idl/tree.h:420
@@ -562,10 +563,10 @@ package CycloneDDS.Low_Level.idl_tree_h is
   --*< default value (if any)  
    subtype idl_annotation_definition_t is System.Address;  -- /usr/gnat/include/idl/tree.h:424
 
-   type idl_annotation;
-   subtype idl_annotation_t is idl_annotation;  -- /usr/gnat/include/idl/tree.h:426
+   
+   
 
-   type idl_annotation is record
+   type idl_annotation_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:428
       name : access idl_name_t;  -- /usr/gnat/include/idl/tree.h:429
       definitions : System.Address;  -- /usr/gnat/include/idl/tree.h:431
@@ -574,10 +575,10 @@ package CycloneDDS.Low_Level.idl_tree_h is
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:427
 
   --* definitions that together form the body, e.g. member, enum, etc  
-   type idl_annotation_appl_param;
-   subtype idl_annotation_appl_param_t is idl_annotation_appl_param;  -- /usr/gnat/include/idl/tree.h:435
+   
+   
 
-   type idl_annotation_appl_param is record
+   type idl_annotation_appl_param_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:437
       member : access idl_annotation_member_t;  -- /usr/gnat/include/idl/tree.h:438
       const_expr : System.Address;  -- /usr/gnat/include/idl/tree.h:439
@@ -585,9 +586,9 @@ package CycloneDDS.Low_Level.idl_tree_h is
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/idl/tree.h:436
 
   --*< constant or enumerator  
-   subtype idl_annotation_appl_t is idl_annotation_appl;  -- /usr/gnat/include/idl/tree.h:442
+   
 
-   type idl_annotation_appl is record
+   type idl_annotation_appl_t is record
       node : aliased idl_node_t;  -- /usr/gnat/include/idl/tree.h:444
       annotation : access constant idl_annotation_t;  -- /usr/gnat/include/idl/tree.h:445
       parameters : access idl_annotation_appl_param_t;  -- /usr/gnat/include/idl/tree.h:446

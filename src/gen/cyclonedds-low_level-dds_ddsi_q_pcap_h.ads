@@ -7,7 +7,7 @@ limited with CycloneDDS.Low_Level.dds_ddsi_ddsi_domaingv_h;
 with Interfaces.C.Strings;
 
 with CycloneDDS.Low_Level.dds_ddsrt_time_h;
-limited 
+
 
 limited with CycloneDDS.Low_Level.dds_ddsrt_sockets_posix_h;
 

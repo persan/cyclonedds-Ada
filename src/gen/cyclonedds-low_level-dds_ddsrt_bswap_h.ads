@@ -86,7 +86,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_bswap_h is
         Convention => C, 
         External_Name => "ddsrt_bswap8u";
 
-   function ddsrt_bswap8 (x : long) return CycloneDDS.Low_Level.bits_stdint_intn_h.int64_t  -- /usr/gnat/include/dds/ddsrt/bswap.h:58
+   function ddsrt_bswap8 (x : long) return long  -- /usr/gnat/include/dds/ddsrt/bswap.h:58
    with Import => True, 
         Convention => C, 
         External_Name => "ddsrt_bswap8";

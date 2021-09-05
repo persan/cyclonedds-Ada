@@ -13,5 +13,9 @@ package CycloneDDS.Low_Level is
 
       --  Length of data.
    end Bits_Types_Struct_Iovec_H;
+   package openssl_ossl_typ_h is
+      type SSL is new Integer;
+      type BIO is new Integer;
+   end openssl_ossl_typ_h;
 
 end CycloneDDS.Low_Level;

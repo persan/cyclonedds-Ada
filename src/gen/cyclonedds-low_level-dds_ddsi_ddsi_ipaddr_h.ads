@@ -9,7 +9,7 @@ limited with CycloneDDS.Low_Level.dds_ddsi_ddsi_ownip_h;
 with CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h;
 with Interfaces.C.Strings;
 
-limited 
+
 
 package CycloneDDS.Low_Level.dds_ddsi_ddsi_ipaddr_h is
 

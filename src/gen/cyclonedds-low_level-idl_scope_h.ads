@@ -25,8 +25,8 @@ package CycloneDDS.Low_Level.idl_scope_h is
   -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
   --  
 
-   type idl_scope;
-   subtype idl_scope_t is idl_scope;  -- /usr/gnat/include/idl/scope.h:19
+   
+   
 
    type idl_declaration;
    subtype idl_declaration_t is idl_declaration;  -- /usr/gnat/include/idl/scope.h:21
@@ -86,7 +86,7 @@ package CycloneDDS.Low_Level.idl_scope_h is
       last : access idl_import_t;  -- /usr/gnat/include/idl/scope.h:65
    end record
    with Convention => C_Pass_By_Copy;
-   type idl_scope is record
+   type idl_scope_t is record
       kind : aliased idl_scope_kind;  -- /usr/gnat/include/idl/scope.h:58
       parent : access constant idl_scope_t;  -- /usr/gnat/include/idl/scope.h:59
       name : access constant CycloneDDS.Low_Level.idl_tree_h.idl_name_t;  -- /usr/gnat/include/idl/scope.h:60

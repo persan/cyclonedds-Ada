@@ -31,7 +31,7 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h is
    with Convention => C_Pass_By_Copy,
         Unchecked_Union => True;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:21
 
-   subtype ddsi_guid_prefix_t is ddsi_guid_prefix;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:24
+   
 
    type ddsi_entityid (discr : unsigned := 0) is record
       case discr is
@@ -42,14 +42,14 @@ package CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h is
    with Convention => C_Pass_By_Copy,
         Unchecked_Union => True;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:25
 
-   subtype ddsi_entityid_t is ddsi_entityid;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:27
+   
 
-   type ddsi_guid is record
+   type ddsi_guid_t is record
       prefix : aliased ddsi_guid_prefix_t;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:29
       entityid : aliased ddsi_entityid_t;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:30
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:28
 
-   subtype ddsi_guid_t is ddsi_guid;  -- /usr/gnat/include/dds/ddsi/ddsi_guid.h:31
+   
 
 end CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h;

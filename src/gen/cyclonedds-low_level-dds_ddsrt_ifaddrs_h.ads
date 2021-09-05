@@ -5,7 +5,7 @@ pragma Warnings ("U");
 with Interfaces.C; use Interfaces.C;
 with Interfaces.C.Strings;
 
-limited 
+
 with System;
 with CycloneDDS.Low_Level.dds_ddsrt_retcode_h;
 

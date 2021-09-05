@@ -230,7 +230,7 @@ package CycloneDDS.Low_Level.dds_ddsrt_avl_h is
    end record
    with Convention => C_Pass_By_Copy,
         Unchecked_Union => True;
-   type ddsrt_avl_treedef is record
+   type ddsrt_avl_treedef_t is record
       avlnodeoffset : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/avl.h:193
       keyoffset : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/avl.h:194
       u : aliased anon3450_union3451;  -- /usr/gnat/include/dds/ddsrt/avl.h:198
@@ -241,14 +241,14 @@ package CycloneDDS.Low_Level.dds_ddsrt_avl_h is
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:189
 
   -- for _r variant  
-   subtype ddsrt_avl_treedef_t is ddsrt_avl_treedef;  -- /usr/gnat/include/dds/ddsrt/avl.h:202
+   
 
-   type ddsrt_avl_ctreedef is record
+   type ddsrt_avl_ctreedef_t is record
       t : aliased ddsrt_avl_treedef_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:205
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:204
 
-   subtype ddsrt_avl_ctreedef_t is ddsrt_avl_ctreedef;  -- /usr/gnat/include/dds/ddsrt/avl.h:206
+   
 
    type ddsrt_avl_tree is record
       root : access ddsrt_avl_node_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:209
@@ -257,13 +257,13 @@ package CycloneDDS.Low_Level.dds_ddsrt_avl_h is
 
    subtype ddsrt_avl_tree_t is ddsrt_avl_tree;  -- /usr/gnat/include/dds/ddsrt/avl.h:210
 
-   type ddsrt_avl_ctree is record
+   type ddsrt_avl_ctree_t is record
       t : aliased ddsrt_avl_tree_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:213
       count : aliased unsigned_long;  -- /usr/gnat/include/dds/ddsrt/avl.h:214
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:212
 
-   subtype ddsrt_avl_ctree_t is ddsrt_avl_ctree;  -- /usr/gnat/include/dds/ddsrt/avl.h:215
+   
 
   -- total depth of path  
    type anon3460_array3464 is array (0 .. 95) of System.Address;
@@ -278,22 +278,22 @@ package CycloneDDS.Low_Level.dds_ddsrt_avl_h is
   -- (nodeidx == 0 ? NULL : *(path[nodeidx-1]))  
    subtype ddsrt_avl_path_t is ddsrt_avl_path;  -- /usr/gnat/include/dds/ddsrt/avl.h:222
 
-   type ddsrt_avl_ipath is record
+   type ddsrt_avl_ipath_t is record
       p : aliased ddsrt_avl_path_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:225
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:224
 
-   subtype ddsrt_avl_ipath_t is ddsrt_avl_ipath;  -- /usr/gnat/include/dds/ddsrt/avl.h:226
+   
 
-   type ddsrt_avl_dpath is record
+   type ddsrt_avl_dpath_t is record
       p : aliased ddsrt_avl_path_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:229
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:228
 
-   subtype ddsrt_avl_dpath_t is ddsrt_avl_dpath;  -- /usr/gnat/include/dds/ddsrt/avl.h:230
+   
 
    type anon3471_array3477 is array (0 .. 96) of access ddsrt_avl_node_t;
-   type ddsrt_avl_iter is record
+   type ddsrt_avl_iter_t is record
       td : access constant ddsrt_avl_treedef_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:233
       right : access ddsrt_avl_node_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:234
       todop : System.Address;  -- /usr/gnat/include/dds/ddsrt/avl.h:235
@@ -301,14 +301,14 @@ package CycloneDDS.Low_Level.dds_ddsrt_avl_h is
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:232
 
-   subtype ddsrt_avl_iter_t is ddsrt_avl_iter;  -- /usr/gnat/include/dds/ddsrt/avl.h:237
+   
 
-   type ddsrt_avl_citer is record
+   type ddsrt_avl_citer_t is record
       t : aliased ddsrt_avl_iter_t;  -- /usr/gnat/include/dds/ddsrt/avl.h:240
    end record
    with Convention => C_Pass_By_Copy;  -- /usr/gnat/include/dds/ddsrt/avl.h:239
 
-   subtype ddsrt_avl_citer_t is ddsrt_avl_citer;  -- /usr/gnat/include/dds/ddsrt/avl.h:241
+   
 
   -- avlnodeoffset and keyoffset must both be in [0,2**31-1]  
   -- Not maintaining # nodes  

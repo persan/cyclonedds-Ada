@@ -3,7 +3,7 @@ pragma Style_Checks (Off);
 pragma Warnings ("U");
 
 with Interfaces.C; use Interfaces.C;
-with CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h;
+
 
 package CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h is
 
@@ -61,7 +61,7 @@ package CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h is
 
   -- QoS structure is opaque  
   --* QoS structure  
-   subtype dds_qos_t is CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos;  -- /usr/gnat/include/dds/ddsc/dds_public_qosdefs.h:60
+   
 
   --* Durability QoS: Applies to Topic, DataReader, DataWriter  
    type dds_durability_kind is 
