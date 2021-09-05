@@ -17,6 +17,7 @@ gen:.generate
 	cp .gen/cyclonedds-low_level-dds*_h.ads src/gen
 	cp .gen/cyclonedds-low_level-idl*_h.ads src/gen
 	cd src/gen; rm -f *-stdint_h.ads *-bits_types_h.ads *-bits_stdint_uintn_h.ads *-bits_stdint_intn_h.ads
+	python bin/fix_types.py       
 	python bin/patch_generated
 
 	rm src/gen/cyclonedds-low_level-dds_ddsrt_sockets_h.ads
@@ -39,3 +40,4 @@ gen:.generate
 	touch $@
 
 
+	

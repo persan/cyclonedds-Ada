@@ -4,8 +4,6 @@ pragma Warnings ("U");
 
 with Interfaces.C; use Interfaces.C;
 
-
-
 package CycloneDDS.Low_Level.dds_ddsrt_bswap_h is
 
    --  arg-macro: procedure ddsrt_toBE2 (x)
@@ -44,51 +42,49 @@ package CycloneDDS.Low_Level.dds_ddsrt_bswap_h is
    --    ddsrt_bswap8 (x)
    --  arg-macro: procedure ddsrt_fromBE8u (x)
    --    ddsrt_bswap8u (x)
-  -- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
-  -- *
-  -- * This program and the accompanying materials are made available under the
-  -- * terms of the Eclipse Public License v. 2.0 which is available at
-  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
-  -- * v. 1.0 which is available at
-  -- * http://www.eclipse.org/org/documents/edl-v10.php.
-  -- *
-  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
-  --  
+-- * Copyright(c) 2006 to 2018 ADLINK Technology Limited and others
+-- *
+-- * This program and the accompanying materials are made available under the
+-- * terms of the Eclipse Public License v. 2.0 which is available at
+-- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+-- * v. 1.0 which is available at
+-- * http://www.eclipse.org/org/documents/edl-v10.php.
+-- *
+-- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+   --
 
-   type ddsrt_byte_order_selector is 
-     (DDSRT_BOSEL_NATIVE,
-      DDSRT_BOSEL_BE,
-      DDSRT_BOSEL_LE)
-   with Convention => C;  -- /usr/gnat/include/dds/ddsrt/bswap.h:25
+   type ddsrt_byte_order_selector is
+     (DDSRT_BOSEL_NATIVE, DDSRT_BOSEL_BE, DDSRT_BOSEL_LE) with
+      Convention => C;
 
-   function ddsrt_bswap2u (x : unsigned_short) return unsigned_short  -- /usr/gnat/include/dds/ddsrt/bswap.h:31
-   with Import => True, 
-        Convention => C, 
-        External_Name => "ddsrt_bswap2u";
+   function ddsrt_bswap2u (x : unsigned_short) return unsigned_short with
+      Import        => True,
+      Convention    => C,
+      External_Name => "ddsrt_bswap2u";
 
-   function ddsrt_bswap2 (x : short) return short  -- /usr/gnat/include/dds/ddsrt/bswap.h:36
-   with Import => True, 
-        Convention => C, 
-        External_Name => "ddsrt_bswap2";
+   function ddsrt_bswap2 (x : short) return short with
+      Import        => True,
+      Convention    => C,
+      External_Name => "ddsrt_bswap2";
 
-   function ddsrt_bswap4u (x : unsigned) return unsigned  -- /usr/gnat/include/dds/ddsrt/bswap.h:41
-   with Import => True, 
-        Convention => C, 
-        External_Name => "ddsrt_bswap4u";
+   function ddsrt_bswap4u (x : unsigned) return unsigned with
+      Import        => True,
+      Convention    => C,
+      External_Name => "ddsrt_bswap4u";
 
-   function ddsrt_bswap4 (x : int) return int  -- /usr/gnat/include/dds/ddsrt/bswap.h:46
-   with Import => True, 
-        Convention => C, 
-        External_Name => "ddsrt_bswap4";
+   function ddsrt_bswap4 (x : int) return int with
+      Import        => True,
+      Convention    => C,
+      External_Name => "ddsrt_bswap4";
 
-   function ddsrt_bswap8u (x : unsigned_long) return unsigned_long  -- /usr/gnat/include/dds/ddsrt/bswap.h:51
-   with Import => True, 
-        Convention => C, 
-        External_Name => "ddsrt_bswap8u";
+   function ddsrt_bswap8u (x : unsigned_long) return unsigned_long with
+      Import        => True,
+      Convention    => C,
+      External_Name => "ddsrt_bswap8u";
 
-   function ddsrt_bswap8 (x : long) return long  -- /usr/gnat/include/dds/ddsrt/bswap.h:58
-   with Import => True, 
-        Convention => C, 
-        External_Name => "ddsrt_bswap8";
+   function ddsrt_bswap8 (x : long) return long with
+      Import        => True,
+      Convention    => C,
+      External_Name => "ddsrt_bswap8";
 
 end CycloneDDS.Low_Level.dds_ddsrt_bswap_h;

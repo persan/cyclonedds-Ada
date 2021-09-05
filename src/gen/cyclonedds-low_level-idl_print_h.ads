@@ -24,59 +24,53 @@ package CycloneDDS.Low_Level.idl_print_h is
    --  unsupported macro: IDL_PRINTA__(strp_,print_,object_,...) ((idl_printa_arguments__((strp_), (print_), (object_), IDL_MAYBE__(__VA_ARGS__)) >= 0) ? ((*(idl_printa_strp__()) = IDL_ALLOCA__(idl_printa_size__())), idl_printa__()) : (-1))
    --  unsupported macro: IDL_PRINT__(strp_,print_,object_,...) idl_print__((strp_), (print_), (object_), IDL_MAYBE__(__VA_ARGS__))
    --  unsupported macro: IDL_PRINT(strp_,print_,...) IDL_PRINT__(strp_, print_, __VA_ARGS__, )
-  -- * Copyright(c) 2021 ADLINK Technology Limited and others
-  -- *
-  -- * This program and the accompanying materials are made available under the
-  -- * terms of the Eclipse Public License v. 2.0 which is available at
-  -- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
-  -- * v. 1.0 which is available at
-  -- * http://www.eclipse.org/org/documents/edl-v10.php.
-  -- *
-  -- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
-  --  
+-- * Copyright(c) 2021 ADLINK Technology Limited and others
+-- *
+-- * This program and the accompanying materials are made available under the
+-- * terms of the Eclipse Public License v. 2.0 which is available at
+-- * http://www.eclipse.org/legal/epl-2.0, or the Eclipse Distribution License
+-- * v. 1.0 which is available at
+-- * http://www.eclipse.org/org/documents/edl-v10.php.
+-- *
+-- * SPDX-License-Identifier: EPL-2.0 OR BSD-3-Clause
+   --
 
    type idl_print_t is access function
-        (arg1 : Interfaces.C.Strings.chars_ptr;
-         arg2 : unsigned_long;
-         arg3 : System.Address;
-         arg4 : System.Address) return int
-   with Convention => C;  -- /usr/gnat/include/idl/print.h:33
+     (arg1 : Interfaces.C.Strings.chars_ptr; arg2 : unsigned_long;
+      arg3 : System.Address; arg4 : System.Address) return int with
+      Convention => C;
 
-  --* @private  
+      --* @private
    function idl_printa_arguments_u_u
-     (strp : System.Address;
-      print : idl_print_t;
-      object : System.Address;
-      user_data : System.Address) return int  -- /usr/gnat/include/idl/print.h:36
-   with Import => True, 
-        Convention => C, 
-        External_Name => "idl_printa_arguments__";
+     (strp      : System.Address; print : idl_print_t; object : System.Address;
+      user_data : System.Address) return int with
+      Import        => True,
+      Convention    => C,
+      External_Name => "idl_printa_arguments__";
 
-  --* @private  
-   function idl_printa_size_u_u return unsigned_long  -- /usr/gnat/include/idl/print.h:40
-   with Import => True, 
-        Convention => C, 
-        External_Name => "idl_printa_size__";
+      --* @private
+   function idl_printa_size_u_u return unsigned_long with
+      Import        => True,
+      Convention    => C,
+      External_Name => "idl_printa_size__";
 
-  --* @private  
-   function idl_printa_strp_u_u return System.Address  -- /usr/gnat/include/idl/print.h:43
-   with Import => True, 
-        Convention => C, 
-        External_Name => "idl_printa_strp__";
+      --* @private
+   function idl_printa_strp_u_u return System.Address with
+      Import        => True,
+      Convention    => C,
+      External_Name => "idl_printa_strp__";
 
-  --* @private  
-   function idl_printa_u_u return int  -- /usr/gnat/include/idl/print.h:46
-   with Import => True, 
-        Convention => C, 
-        External_Name => "idl_printa__";
+      --* @private
+   function idl_printa_u_u return int with
+      Import        => True,
+      Convention    => C,
+      External_Name => "idl_printa__";
 
    function idl_print_u_u
-     (strp : System.Address;
-      print : idl_print_t;
-      object : System.Address;
-      user_data : System.Address) return int  -- /usr/gnat/include/idl/print.h:72
-   with Import => True, 
-        Convention => C, 
-        External_Name => "idl_print__";
+     (strp      : System.Address; print : idl_print_t; object : System.Address;
+      user_data : System.Address) return int with
+      Import        => True,
+      Convention    => C,
+      External_Name => "idl_print__";
 
 end CycloneDDS.Low_Level.idl_print_h;

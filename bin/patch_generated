@@ -9,6 +9,7 @@ class SEDer:
         def __init__(self,srcdir,seddir):
                 self.srcdir=srcdir
                 self.srcs=glob.glob(join(srcdir,"*.ads"))
+                self.srcs.sort()
                 self.global_seds=[]
                 self.file_seds=[]
                 self.read_seds(seddir)
@@ -31,6 +32,7 @@ class SEDer:
         def patch(self):                
                 for sed in self.global_seds:
                         srcs=glob.glob("src/gen/*.ads")
+                        srcs.sort()
                         self._patch(sed,  srcs)
                 for sed in self.file_seds:
                         name,ext = splitext(basename(sed))

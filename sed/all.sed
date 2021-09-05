@@ -170,3 +170,34 @@ s!CycloneDDS.Low_Level.stdint_h.uintptr_t!access unsigned!g
 
 s!CycloneDDS.Low_Level.unistd_h.ssize_t!size_t!
 
+
+s!CycloneDDS.Low_Level.dds_ddsi_ddsi_keyhash_h.ddsi_keyhash\b!CycloneDDS.Low_Level.dds_ddsi_ddsi_keyhash_h.ddsi_keyhash_t!
+
+s!limited with CycloneDDS.Low_Level.dds_ddsrt_iovec_h;!with CycloneDDS.Low_Level.dds_ddsrt_iovec_h;!
+s!limited with CycloneDDS.Low_Level.dds_ddsrt_atomics_h;!with CycloneDDS.Low_Level.dds_ddsrt_atomics_h;!
+s!limited with CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h;!limited with CycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h;\
+limited with CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h;!
+s!\bCycloneDDS.Low_Level.dds_ddsc_dds_public_qosdefs_h.dds_qos_t!CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos_t!g
+s!\bCycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos\b!CycloneDDS.Low_Level.dds_ddsi_ddsi_xqos_h.dds_qos_t!g
+s!\bCycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_topic_descriptor;!CycloneDDS.Low_Level.dds_ddsc_dds_public_impl_h.dds_topic_descriptor_t;!g
+s!\bCycloneDDS.Low_Level.dds_ddsi_ddsi_plist_h.ddsi_plist\b!CycloneDDS.Low_Level.dds_ddsi_ddsi_plist_h.ddsi_plist_t!g
+s!\bCycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg\b!CycloneDDS.Low_Level.dds_ddsrt_log_h.ddsrt_log_cfg_t!g
+s!\bCycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid\b!CycloneDDS.Low_Level.dds_ddsi_ddsi_guid_h.ddsi_guid_t!g
+s!\bCycloneDDS.Low_Level.idl_processor_h.idl_pstate;!CycloneDDS.Low_Level.idl_processor_h.idl_pstate_t;!g
+s!\bCycloneDDS.Low_Level.idl_scope_h.idl_declaration;!CycloneDDS.Low_Level.idl_scope_h.idl_declaration_t;!g
+s!\bCycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_fragment_number_set_header;!CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_fragment_number_set_header_t;!g
+
+s!\CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn;!CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn_t;!g
+s!\CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn\)!CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_conn_t)!g
+
+s!\bDDS_Security_LongLongSeq\b!DDS_Security_LongLongSeq_t!g
+s!\bDDS_Security_DataHolder\b!DDS_Security_DataHolder_t!g
+s!\bDDS_Security_DataHolderSeq\b!DDS_Security_DataHolderSeq_t!g
+s!\bDDS_Security_DataTags\b!DDS_Security_DataTags_t!g
+
+s!CycloneDDS.Low_Level.dds_ddsi_ddsi_security_msg_h.nn_participant_generic_message\)!CycloneDDS.Low_Level.dds_ddsi_ddsi_security_msg_h.nn_participant_generic_message_t)!
+
+s!CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_listener\)!CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_listener_t)!
+s!CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_listener;!CycloneDDS.Low_Level.dds_ddsi_ddsi_tran_h.ddsi_tran_listener_t;!
+
+s!CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_sequence_number_set_header;!CycloneDDS.Low_Level.dds_ddsi_q_protocol_h.nn_sequence_number_set_header_t;!
