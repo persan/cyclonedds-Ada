@@ -2,11 +2,11 @@ with "cyclonedds.gpr";
 with "cyclonedds-c.gpr";
 library project Cyclonedds.Ada is
    for Create_Missing_Dirs use "True";
-   for Source_Dirs use ("src/**",".","sed");
+   for Source_Dirs use ("src/**", ".", "sed");
    for Object_Dir use ".obj";
    for Library_Name use "Cyclone";
    for Library_Dir use "lib";
-   for Languages use ("Ada", "C", "MarkDown", "Makefile", "Sed","idl");
+   for Languages use ("Ada", "C", "MarkDown", "Makefile", "Sed", "idl");
 
    package Pretty_Printer is
       for Default_Switches ("ada") use ("-M128",
@@ -36,7 +36,7 @@ library project Cyclonedds.Ada is
       for Driver ("MarkDown") use "";
       for Driver ("Makefile") use "";
       for Driver ("Sed") use "";
-      for Switches ("Ada") use ("-gnat2020", "-g", "-gnatf",  "-fdata-sections", "-ffunction-sections", "-gnatwa", "-gnatyBabcdfhikln");
+      for Switches ("Ada") use ("-gnat2020", "-g", "-gnatf",  "-fdata-sections", "-ffunction-sections", "-gnatwa", "-gnatyBabcdfhikln","-fPIC");
    end Compiler;
 
    package Naming is
