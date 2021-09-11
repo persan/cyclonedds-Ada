@@ -56,7 +56,7 @@ cyclonedds.install:
 cyclonedds.build:cyclonedds
 	cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
 	make -C ${@} -j ${CPUS}
-	${SUDO} {MAKE} ${@:.build=.install}
+	${SUDO} ${MAKE} ${@:.build=.install}
 	
 cyclonedds:
 	git clone https://github.com/eclipse-cyclonedds/cyclonedds.git
