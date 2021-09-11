@@ -2,30 +2,62 @@
 
 
 
-CPUS=$(shell lscpu | grep "^CPU(s):" | awk "{print \$2}")
-export CC=$(shell which gcc)
-export CXX=$(shell which g++)
-PREFIX?=$(shell dirname $(shell dirname $(shell which gcc)))
-#PREFIX=${CURDIR}/target
+-include Makefile.conf
+
 SUDO?=sudo
-all: cyclonedds.build
+all: cyclonedds.build cyclonedds-cxx.build
+
+Makefile.conf:Makefile
+	@echo "CPUS=$(shell cat /proc/cpuinfo  | grep processor | wc -l)">${@}
+	@echo "export CC=$(shell which gcc)" >>${@}
+	@echo "export CXX=$(shell which g++)">>${@}
+	@echo "PREFIX?=$(shell dirname $(shell dirname $(shell which gcc)))">>${@}
 
 .PHONY:cyclonedds.build
+
+cyclonedds-%:
+	git clone https://github.com/eclipse-cyclonedds/${@}.git
+
+cyclonedds-python.install:
+	DCMAKE_INSTALL_PREFIX=${PREFIX}  pip install ${CURDIR}/${@:.install=}
+
+.PHONY:cyclonedds-python.build
+cyclonedds-python.build:cyclonedds-python
+	${MAKE} ${@:.build=.install}
+
+
+cyclonedds-cxx.install:
+	${MAKE} -C ${@:.install=.build} install
+	cp cyclonedds-cxx.gpr    ${PREFIX}/lib/gnat
+	cp cyclonedds-idlcxx.gpr ${PREFIX}/lib/gnat
+
+.PHONY:cyclonedds-cxx.build
+cyclonedds-cxx.build:cyclonedds-cxx
+	cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
+	make -C ${@} -j ${CPUS}
+	${SUDO} ${MAKE} ${@:.build=.install}	
+
+
+cyclonedds.install:
+	${MAKE} -C ${@:.install=.build} install
+	mkdir -p ${PREFIX}/lib/gnat
+	cp cyclonedds.gpr ${PREFIX}/lib/gnat
+	cp cyclonedds-idl.gpr ${PREFIX}/lib/gnat
+	cp cyclonedds-c.gpr ${PREFIX}/lib/gnat
+	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/helloworld/Makefile
+	cp helloworld.gpr ${PREFIX}/share/CycloneDDS/examples/helloworld
+	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/roundtrip/Makefile
+	cp roundtrip.gpr ${PREFIX}/share/CycloneDDS/examples/roundtrip
+	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/shm_throughput/Makefile
+	cp shm_throughput.gpr ${PREFIX}/share/CycloneDDS/examples/shm_throughput
+	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/throughput/Makefile
+	cp throughput.gpr ${PREFIX}/share/CycloneDDS/examples/throughput
+
 cyclonedds.build:cyclonedds
 	cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
 	make -C ${@} -j ${CPUS}
-	${SUDO} make -C ${@} install
-	${SUDO} mkdir -p ${PREFIX}/lib/gnat
-	${SUDO} cp *.gpr ${PREFIX}/lib/gnat
-	${SUDO} cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/helloworld/Makefile
-	${SUDO} cp helloworld.gpr ${PREFIX}/share/CycloneDDS/examples/helloworld
-	${SUDO} cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/roundtrip/Makefile
-	${SUDO} cp roundtrip.gpr ${PREFIX}/share/CycloneDDS/examples/roundtrip
-	${SUDO} cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/shm_throughput/Makefile
-	${SUDO} cp shm_throughput.gpr ${PREFIX}/share/CycloneDDS/examples/shm_throughput
-	${SUDO} cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/throughput/Makefile
-	${SUDO} cp throughput.gpr ${PREFIX}/share/CycloneDDS/examples/throughput
-
+	${SUDO} {MAKE} ${@:.build=.install}
+	
 cyclonedds:
 	git clone https://github.com/eclipse-cyclonedds/cyclonedds.git
 
