@@ -1,13 +1,16 @@
 pragma Ada_2022;
 with Ada.Text_IO;
+with Gnat.Source_Info;
 package body Idlada is
    use Ada.Text_IO;
    -----------------------
    -- Generator_Options --
    -----------------------
    Opts : aliased Idlc_Option_T_Access;
+   Idl_Annotation : aliased Idl_Builtin_Annotation_T_Access;
    function Generator_Options return access Idlc_Option_T_Access is
    begin
+      Ada.Text_IO.Put_Line (GNAT.Source_Info.Enclosing_Entity);
       return Opts'Access;
    end Generator_Options;
 
@@ -17,9 +20,8 @@ package body Idlada is
 
    function Generator_Annotations return access Idl_Builtin_Annotation_T_Access is
    begin
-      return
-        raise Program_Error
-          with "Unimplemented function Generator_Annotations";
+      Ada.Text_IO.Put_Line (GNAT.Source_Info.Enclosing_Entity);
+      return Idl_Annotation'Access;
    end Generator_Annotations;
 
    --------------
@@ -31,6 +33,7 @@ package body Idlada is
       return Interfaces.C.Int
    is
    begin
+      Ada.Text_IO.Put_Line (GNAT.Source_Info.Enclosing_Entity);
       return 0;
    end Generate;
 

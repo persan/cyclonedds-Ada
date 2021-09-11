@@ -1,0 +1,37 @@
+with "../cyclonedds-idl-ada.gpr";
+
+project  CycloneDDS.Idl.Ada.Test is
+   type Boolean is ("False", "True");
+   GENERATE : Boolean := external ("GENERATE", "False");
+
+   for Languages use ("Ada", "idl");
+
+
+   package Compiler is
+      case GENERATE is
+         when "True" =>
+            for Driver ("Ada") use "";
+            for Driver ("idl") use "idlc";
+         when "False" =>
+            for Driver ("Ada") use "gcc";
+            for Driver ("idl") use "";
+      end case;
+      for Switches ("Ada") use ("-g", "-O2");
+   end Compiler;
+
+
+   case GENERATE is
+      when "True" =>
+         for Object_Dir use ".";
+      when "False" =>
+         for Main use ("publisher.adb", "subscriber.adb");
+         for Object_Dir use ".obj";
+   end case;
+
+   for Exec_Dir use "bin";
+   package Naming is
+      for Body_Suffix ("Idl") use ".idl";
+   end Naming;
+
+end CycloneDDS.Idl.Ada.Test;
+

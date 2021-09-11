@@ -1,0 +1,23 @@
+project Idlc is
+   for Create_Missing_Dirs use "True";
+   Src_Root := project'Project_Dir & "cyclonedds/src/";
+   Build_Root := project'Project_Dir & "cyclonedds.build/src/";
+   for Source_Dirs use (Src_Root & "tools/idlc/src",
+                        Src_Root & "tools/idlc/include",
+                        Src_Root & "tools/idlpp/src",
+                        Src_Root & "idl/src",
+                        Build_Root & "idl",
+                        Build_Root & "tools/idlpp/src",
+                        Build_Root & "tools/idlc");
+   for Object_Dir use Src_Root & ".obj";
+   for Main use ("idlc.c");
+   for Languages use ("C");
+   for Exec_Dir use  ".";
+   package Compiler is
+      for Switches ("C") use ("-DHAVE_CONFIG_H");
+   end Compiler;
+   package Linker is
+      for Switches ("C") use ("-l" & "dl", "-l" & "pthread");
+   end Linker;
+end Idlc;
+

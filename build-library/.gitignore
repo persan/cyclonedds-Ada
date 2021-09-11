@@ -1,2 +1,6 @@
 cyclonedds
-cyclonedds.build
+cyclonedds-cxx
+cyclonedds-python
+*.build
+Makefile.conf
+
