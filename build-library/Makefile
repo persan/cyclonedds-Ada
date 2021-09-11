@@ -5,7 +5,7 @@
 -include Makefile.conf
 
 SUDO?=sudo
-all: cyclonedds.build cyclonedds-cxx.build
+all: cyclonedds.build cyclonedds-cxx.build cyclonedds-python.build
 
 Makefile.conf:Makefile
 	@echo "CPUS=$(shell cat /proc/cpuinfo  | grep processor | wc -l)">${@}
