@@ -5,5 +5,4 @@ all:
 	@rm -f *.stdout *.stderr
 	gprbuild -p -j0 -XGENERATE=False
 
-gps:
-	gps&
+
