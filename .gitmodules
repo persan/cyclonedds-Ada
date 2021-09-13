@@ -1,0 +1,11 @@
+[submodule "build-library/cyclonedds-cxx"]
+	path = build-library/cyclonedds-cxx
+	url = https://github.com/eclipse-cyclonedds/cyclonedds-cxx.git
+
+[submodule "build-library/cyclonedds-python"]
+	path = build-library/cyclonedds-python
+	url = https://github.com/eclipse-cyclonedds/cyclonedds-python.git
+
+[submodule "build-library/cyclonedds"]
+	path = build-library/cyclonedds
+	url = https://github.com/eclipse-cyclonedds/cyclonedds.git

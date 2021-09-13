@@ -5,7 +5,7 @@
 -include Makefile.conf
 
 SUDO?=sudo
-all: cyclonedds.build cyclonedds-cxx.build cyclonedds-python.build
+all: cyclonedds.build cyclonedds-cxx.build #cyclonedds-python.build
 
 Makefile.conf:Makefile
 	@echo "CPUS=$(shell cat /proc/cpuinfo  | grep processor | wc -l)">${@}
@@ -15,14 +15,12 @@ Makefile.conf:Makefile
 
 .PHONY:cyclonedds.build
 
-cyclonedds-%:
-	git clone https://github.com/eclipse-cyclonedds/${@}.git
 
 cyclonedds-python.install:
 	DCMAKE_INSTALL_PREFIX=${PREFIX}  pip install ${CURDIR}/${@:.install=}
 
 .PHONY:cyclonedds-python.build
-cyclonedds-python.build:cyclonedds-python
+cyclonedds-python.build:
 	${MAKE} ${@:.build=.install}
 
 
@@ -58,8 +56,6 @@ cyclonedds.build:cyclonedds
 	make -C ${@} -j ${CPUS}
 	${SUDO} ${MAKE} ${@:.build=.install}
 	
-cyclonedds:
-	git clone https://github.com/eclipse-cyclonedds/cyclonedds.git
 
 test:
 	${MAKE} -C ${PREFIX}/share/CycloneDDS/examples/throughput
