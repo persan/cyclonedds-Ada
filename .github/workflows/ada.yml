@@ -22,7 +22,7 @@ jobs:
         sudo apt-get install gnat gprbuild cmake make
 
     - name: Setup cyclone DDS
-      run: make -C build-library
+      run: make -C dependencies
       
     - name: Build Ada
       run: gprbuild -j0 -p 
