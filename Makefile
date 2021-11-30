@@ -3,10 +3,19 @@
 CFLAGS+=-fdump-ada-spec -C
 CFLAGS+=-fada-spec-parent=CycloneDDS.Low_Level
 
-
+-include Makefile.conf
 all:gen
 
+edit:
+	gps -P examples/cyclonedds-ada-examples.gpr
+
 gen:.generate
+
+Makefile.conf:Makefile
+	echo "export PATH=${PATH}" >${@}
+	echo "export GPR_PROJECT_PATH=${CURDIR}:${CURDIR}/dependencies" >${@}
+
+
 
 .generate:Makefile $(wildcard sed/*.sed) src/input.c
 	rm -rf  .gen src/gen
@@ -39,5 +48,3 @@ gen:.generate
 	chmod -w src/gen/*.ads
 	touch $@
 
-
-	

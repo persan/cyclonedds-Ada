@@ -15,7 +15,8 @@ Makefile.conf:Makefile
 
 .PHONY:cyclonedds.build
 
-
+install:cyclonedds.install cyclonedds-cxx.install
+python: cyclonedds-python.build 
 cyclonedds-python.install:
 	DCMAKE_INSTALL_PREFIX=${PREFIX}  pip install ${CURDIR}/${@:.install=}
 
@@ -33,7 +34,7 @@ cyclonedds-cxx.install:
 cyclonedds-cxx.build:cyclonedds-cxx
 	cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
 	make -C ${@} -j ${CPUS}
-	${SUDO} ${MAKE} ${@:.build=.install}	
+	${SUDO} ${MAKE} ${@:.build=.install}
 
 
 cyclonedds.install:
@@ -55,11 +56,16 @@ cyclonedds.build:cyclonedds
 	cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
 	make -C ${@} -j ${CPUS}
 	${SUDO} ${MAKE} ${@:.build=.install}
-	
+
 
 test:
 	${MAKE} -C ${PREFIX}/share/CycloneDDS/examples/throughput
 	${MAKE} -C ${PREFIX}/share/CycloneDDS/examples/roundtrip
 	${MAKE} -C ${PREFIX}/share/CycloneDDS/examples/shm_throughput
 	${MAKE} -C ${PREFIX}/share/CycloneDDS/examples/throughput
-	
+
+update:
+	rm -rf *.build
+	git -C cyclonedds-cxx pull
+	git -C cyclonedds pull
+	git -C cyclonedds-python pull

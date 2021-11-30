@@ -17,6 +17,7 @@ project  CycloneDDS.Idl.Ada.Test is
             for Driver ("idl") use "";
       end case;
       for Switches ("Ada") use ("-g", "-O2");
+      for Switches ("idl") use ("-l", "Ada");
    end Compiler;
 
 

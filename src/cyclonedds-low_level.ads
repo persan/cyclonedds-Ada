@@ -5,7 +5,7 @@ package CycloneDDS.Low_Level is
    package Bits_Socket_H is
       type Msghdr is new Integer;
       type Sockaddr is new Integer;
-      type sockaddr_storage is new Integer;
+      type Sockaddr_Storage is new Integer;
    end Bits_Socket_H;
 
    package Bits_Pthreadtypes_H is

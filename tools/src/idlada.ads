@@ -1,5 +1,6 @@
 with CycloneDDS.Low_Level.Idl_Processor_H;
 with CycloneDDS.Low_Level.Idlc_Options_H;
+with CycloneDDS.Low_Level.Idl_Tree_H;
 with System;
 with Interfaces.C;
 package Idlada is
@@ -23,4 +24,6 @@ package Idlada is
      Export        => True,
      Convention    => C,
      External_Name => "generate";
+   type Node_Type is new Integer;
+   function Idl_Type (Node : Node_Type) return CycloneDDS.Low_Level.Idl_Tree_H.Idl_Type_T is (0);
 end Idlada;
