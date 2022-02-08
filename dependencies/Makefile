@@ -36,21 +36,25 @@ cyclonedds-cxx.build:cyclonedds-cxx
 	make -C ${@} -j ${CPUS}
 	${SUDO} ${MAKE} ${@:.build=.install}
 
-
+EXAMPLES=${PREFIX}/share/CycloneDDS/examples/
 cyclonedds.install:
 	${MAKE} -C ${@:.install=.build} install
-	mkdir -p ${PREFIX}/lib/gnat
+	mkdir -p ${PREFIX}/lib/gnat \
+	         ${EXAMPLES}/helloworld \
+	         ${EXAMPLES}/roundtrip \
+	         ${EXAMPLES}/shm_throughput \
+	         ${EXAMPLES}/throughput
 	cp cyclonedds.gpr ${PREFIX}/lib/gnat
 	cp cyclonedds-idl.gpr ${PREFIX}/lib/gnat
-	cp cyclonedds-c.gpr ${PREFIX}/lib/gnat
-	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/helloworld/Makefile
-	cp helloworld.gpr ${PREFIX}/share/CycloneDDS/examples/helloworld
-	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/roundtrip/Makefile
-	cp roundtrip.gpr ${PREFIX}/share/CycloneDDS/examples/roundtrip
-	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/shm_throughput/Makefile
-	cp shm_throughput.gpr ${PREFIX}/share/CycloneDDS/examples/shm_throughput
-	cp Makefile.in ${PREFIX}/share/CycloneDDS/examples/throughput/Makefile
-	cp throughput.gpr ${PREFIX}/share/CycloneDDS/examples/throughput
+	cp cyclonedds-c.gpr   ${PREFIX}/lib/gnat
+	cp Makefile.in        ${EXAMPLES}/helloworld/Makefile
+	cp helloworld.gpr     ${EXAMPLES}/helloworld
+	cp Makefile.in        ${EXAMPLES}/roundtrip/Makefile
+	cp roundtrip.gpr      ${EXAMPLES}/roundtrip
+	cp Makefile.in        ${EXAMPLES}/shm_throughput/Makefile
+	cp shm_throughput.gpr ${EXAMPLES}/shm_throughput
+	cp Makefile.in        ${EXAMPLES}/throughput/Makefile
+	cp throughput.gpr     ${EXAMPLES}/throughput
 
 cyclonedds.build:cyclonedds
 	cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DBUILD_EXAMPLES=ON  -S ${<} -B ${@}
